@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>博客 on 陈驰水-个人博客</title>
-    <link>https://example.org/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</link>
     <description>Recent content in 博客 on 陈驰水-个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-ch</language>
     <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
     <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
     <copyright>© 2025 陈驰水</copyright>
-    <lastBuildDate>Sat, 08 Feb 2025 20:10:03 +0800</lastBuildDate><atom:link href="https://example.org/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Feb 2025 20:10:03 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     <follow_challenge>
       <feedId>your-rss-feed</feedId>
       <userId>your-rss-user</userId>
@@ -18,10 +18,10 @@
     
     <item>
       <title>PTA</title>
-      <link>https://example.org/posts/pta/</link>
+      <link>http://localhost:1313/posts/pta/</link>
       <pubDate>Sat, 08 Feb 2025 20:10:03 +0800</pubDate>
       <author>walter.chen.bj@gmail.com (陈驰水)</author>
-      <guid>https://example.org/posts/pta/</guid>
+      <guid>http://localhost:1313/posts/pta/</guid>
       <description></description>
       
     </item>

@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>动态规划 on 陈驰水-个人博客</title>
-    <link>https://example.org/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+    <link>http://localhost:1313/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
     <description>Recent content in 动态规划 on 陈驰水-个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-ch</language>
     <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
     <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
     <copyright>© 2025 陈驰水</copyright>
-    <lastBuildDate>Mon, 10 Feb 2025 15:55:43 +0800</lastBuildDate><atom:link href="https://example.org/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Feb 2025 15:55:43 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/index.xml" rel="self" type="application/rss+xml" />
     <follow_challenge>
       <feedId>your-rss-feed</feedId>
       <userId>your-rss-user</userId>
@@ -18,10 +18,10 @@
     
     <item>
       <title>猫和老鼠 LC</title>
-      <link>https://example.org/posts/%E7%8C%AB%E5%92%8C%E8%80%81%E9%BC%A0-lc/</link>
+      <link>http://localhost:1313/posts/%E7%8C%AB%E5%92%8C%E8%80%81%E9%BC%A0-lc/</link>
       <pubDate>Mon, 10 Feb 2025 15:55:43 +0800</pubDate>
       <author>walter.chen.bj@gmail.com (陈驰水)</author>
-      <guid>https://example.org/posts/%E7%8C%AB%E5%92%8C%E8%80%81%E9%BC%A0-lc/</guid>
+      <guid>http://localhost:1313/posts/%E7%8C%AB%E5%92%8C%E8%80%81%E9%BC%A0-lc/</guid>
       <description></description>
       
     </item>
