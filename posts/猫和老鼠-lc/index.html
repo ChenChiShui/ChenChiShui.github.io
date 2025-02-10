@@ -121,7 +121,7 @@
     "keywords": ["博弈","动态规划","图论","拓扑排序"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "3542"
+    "wordCount": "3540"
   }]
   </script>
 
@@ -154,6 +154,139 @@
   
 
 <script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/lib/katex/katex.min.8fee1bb91734542a6701c61b7be516ff2eb2df248bf4e4591aacc8f4e9df40c7ca9e9c0b3f657b166f5f13e69a8fb50a139b3babcef20aeeea18f0fbcd4169fb.css" integrity="sha512-j&#43;4buRc0VCpnAcYbe&#43;UW/y6y3ySL9ORZGqzI9OnfQMfKnpwLP2V7Fm9fE&#43;aaj7UKE5s7q87yCu7qGPD7zUFp&#43;w==" />
+
+
+<script defer src="/lib/katex/katex.min.8c68eaeb75cfdcfac071717a969e1b9d9230ad52c6a2ac21ff846eaf6a258364cbb79e5e3552e32c280faeb4f4eda4d7c5bd1492e30a961c737e1e5305300281.js" integrity="sha512-jGjq63XP3PrAcXF6lp4bnZIwrVLGoqwh/4Rur2olg2TLt55eNVLjLCgPrrT07aTXxb0UkuMKlhxzfh5TBTACgQ=="></script>
+
+
+<script defer src="/lib/katex/auto-render.min.e9b2833d28623d18c071d78ef13e9c79d695122d296af3dbcee7bf1bf6518b0565bab59939267fbc8f5faf696193c20f5caef3e7501969cfb306f6738032730d.js" integrity="sha512-6bKDPShiPRjAcdeO8T6cedaVEi0pavPbzue/G/ZRiwVlurWZOSZ/vI9fr2lhk8IPXK7z51AZac&#43;zBvZzgDJzDQ=="
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -641,7 +774,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-10T15:55:43&#43;08:00">2025 年 2 月 10 日</time><span class="px-2 text-primary-500">&middot;</span><span>3542 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">8 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-02-10T15:55:43&#43;08:00">2025 年 2 月 10 日</time><span class="px-2 text-primary-500">&middot;</span><span>3540 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">8 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1324,8 +1457,11 @@ OOOO OOOO OOOO OOOO
 </ul>
 <p>如果想用 bool 类型表示回合，就又引出了新的问题。<strong>在无法确定回合数的情况下，如果不加上其他限制，对于平局会进入无限循环的搜索。</strong></p>
 <p>但是对于 int 类型表示回合数，在此题的时间复杂度是不够的：</p>
-<blockquote>
-<p>其中猫和鼠的数据范围都是 N，如果第三个参数为上述的 int 行，其上界为 $2 * n^2$。则搜索状态为 $ O n ^4 $，而此题的初始状态数上述提到过了是 N，因此总复杂度为 $ O n ^ 5 $。不能满足时间要求。</p></blockquote>
+
+
+<p>在本题中，猫和鼠的数据范围都是 n 。如果第三个参数为上述的 <code>int</code> 行，其上界为： \( 2 \times n^2 \) 则搜索状态为  \( O(n^4) \)，而此题的初始状态数上述提到过了是  n ，因此总复杂度为： \( O(n^5) \) 不能满足时间要求。</p>
+
+
 <p>根据上面的分析，此题的问题变为：<strong>在使用 bool 表示当前是谁的回合时，如何避免出现无限循环的搜索并尽可能剪枝。</strong></p>
 <p>对于回合数作为第三个参数时的官方题解如下：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
