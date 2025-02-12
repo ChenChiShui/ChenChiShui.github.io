@@ -9,7 +9,7 @@
     <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
     <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
     <copyright>© 2025 陈驰水</copyright>
-    <lastBuildDate>Mon, 10 Feb 2025 15:55:43 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Feb 2025 22:59:33 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <follow_challenge>
       <feedId>your-rss-feed</feedId>
       <userId>your-rss-user</userId>
@@ -19,9 +19,19 @@
     <item>
       <title>算法与数据结构</title>
       <link>http://localhost:1313/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
-      <pubDate>Mon, 10 Feb 2025 15:55:43 +0800</pubDate>
+      <pubDate>Wed, 12 Feb 2025 22:59:33 +0800</pubDate>
       <author>walter.chen.bj@gmail.com (陈驰水)</author>
       <guid>http://localhost:1313/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>杂谈</title>
+      <link>http://localhost:1313/categories/%E6%9D%82%E8%B0%88/</link>
+      <pubDate>Sat, 08 Feb 2025 21:17:16 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>http://localhost:1313/categories/%E6%9D%82%E8%B0%88/</guid>
       <description></description>
       
     </item>
