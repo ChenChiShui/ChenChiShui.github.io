@@ -129,14 +129,20 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://chenchishui.github.io/posts/%E7%AE%97%E6%B3%95%E9%A2%98-%E7%B4%A2%E5%BC%95/</loc>
+    <lastmod>2025-02-02T22:27:38+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://chenchishui.github.io/posts/%E5%85%B3%E4%BA%8E%E6%88%91/</loc>
-    <lastmod>2025-02-08T21:17:16+08:00</lastmod>
+    <lastmod>2025-02-01T20:34:12+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://chenchishui.github.io/categories/%E6%9D%82%E8%B0%88/</loc>
-    <lastmod>2025-02-08T21:17:16+08:00</lastmod>
+    <lastmod>2025-02-01T20:34:12+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
