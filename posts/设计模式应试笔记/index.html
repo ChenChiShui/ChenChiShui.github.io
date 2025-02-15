@@ -119,7 +119,7 @@
     "keywords": ["设计模式","面试"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "36004"
+    "wordCount": "36258"
   }]
   </script>
 
@@ -639,7 +639,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-14T19:03:36&#43;08:00">2025 年 2 月 14 日</time><span class="px-2 text-primary-500">&middot;</span><span>36004 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">72 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-02-14T19:03:36&#43;08:00">2025 年 2 月 14 日</time><span class="px-2 text-primary-500">&middot;</span><span>36258 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">73 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1414,9 +1414,28 @@
   <span
     
       class="dark:text-neutral-300"
-    >本博客为<strong>吉林大学设计模式本科课程</strong>复习笔记。</span>
+    >本博客为<strong>吉林大学设计模式本科课程</strong>复习笔记。内容参考了教案和 gonghr 学长的博客。</span>
 </div>
 
+<blockquote>
+<p>如果你在准备考试，可以看下面根据历年题总结出的重点排序。</p>
+<p>2022级考试<strong>几乎完美符合</strong>下面总结的重点。</p>
+<p><strong>重要度从高到低：</strong>
+组合 or 装饰
+状态 or 策略
+适配器 + 桥接（或其他）or 外观
+观察者 or 中介者
+抽象工厂 or 建造者（大概率抽象工厂）
+其他小点：原型，代理，单例，命令，职责链，迭代器</p>
+<p><strong>很少考察的内容：</strong></p>
+<p>模板方法不单独考（大概率配合策略模式）
+简单工厂和工厂方法大概率被抽象工厂替代考察
+迭代器和命令难度较高（没考过）</p>
+<p><strong>多模式混用：</strong>
+适配器 + 其他（大概率桥接）
+模板方法 + 策略模式
+装饰 + 组合
+命令模式 + 其他（难度较高）</p></blockquote>
 
 
 <h2 class="relative group">面向对象七原则 
@@ -6130,20 +6149,8 @@
 </h3>
 <p><strong>软件公司要开发一个图形界面组件库，界面组件分为两大类，一类是单元控件（例如：按钮、文本框等），一类是容器控件，例如对话框、表单等，请问采用何种模式设计比较好？请画出UML设计类图</strong>
 组合模式，</p>
-<p>
-  <figure>
-    <img class="my-0 rounded-md" loading="lazy" src="http://smj6tci7o.hb-bkt.clouddn.com/image-20241112154553442.png" alt="image-20241112154553442" />
-    
-  </figure>
-</p>
 <p><strong>化妆品公司的报表系统可将不同月份的销售数据以柱状图、曲线图和饼状图等多种形式展示出来。各个月份的销售数据可以从文本文件中获取，也可以从数据库中获取，还可以从Excel文件中获取，如果需要从Excel文件中获取数据，则需要调用与Excel相关的API，而这个API是现有系统所不具备的，该API由厂商提供。请问采用何种模式设计比较好？请画出UML设计类图。</strong>
 桥接模式+适配器模式</p>
-<p>
-  <figure>
-    <img class="my-0 rounded-md" loading="lazy" src="http://smj6tci7o.hb-bkt.clouddn.com/image-20241112191135727.png" alt="image-20241112191135727" />
-    
-  </figure>
-</p>
 <p><strong>你认为面向对象方法中类设计的难点是什么，如何应对？</strong>
 难点：设计可复用的类要求必须找到相关的对象，以适当的粒度归类，在定义类的接口和继承层次，建立对象间的基本关系。你的设计应该对手头的问题有针对性，同时对将来的问题和需求也要有足够的通用性。你也希望避免重复设计或尽可能少做重复设计。
 应对方法：学习设计模式，用更加简单方便的设计和体系结构。</p>
