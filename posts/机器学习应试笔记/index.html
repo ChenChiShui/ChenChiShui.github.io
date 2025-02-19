@@ -594,7 +594,7 @@ window.addEventListener("scroll", function (e) {
   const heading = document.querySelector("h1");
   const headingDistance = heading.getBoundingClientRect();
   const headingOffset = headingDistance.bottom + scroll;
-  const threshold = headingOffset * 3.5;
+  const threshold = headingOffset * 2.8;
 
   if (scroll > headingOffset) {
     if (currScrollDirection !== lastScrollDirection) {
