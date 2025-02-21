@@ -1378,7 +1378,6 @@ $$O(m n)$$ 其中 n 是数组长度，m 是资源数量。</p>
     
 </h3>
 <p>​	dp[i][j] = 处理前 i 个元素时，使用 j 次资源后的最优解（最大收益/最小代价）</p>
-<hr>
 
 
 <h3 class="relative group">状态转移 
@@ -1402,7 +1401,6 @@ $$O(m n)$$ 其中 n 是数组长度，m 是资源数量。</p>
 dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
 </li>
 </ul>
-<hr>
 
 
 <h3 class="relative group">初始化 
@@ -1471,7 +1469,6 @@ dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
     ><a href="https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/" target="_blank">2209. 用地毯覆盖后的最少白色砖块</a></span>
 </div>
 
-<hr>
 
 
 <h3 class="relative group">原题 
@@ -1531,7 +1528,8 @@ dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1"># 如果最后地毯没用完，说明一定可以使得白砖全部被铺满</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">numCarpets</span><span class="p">]</span> <span class="k">if</span> <span class="n">dp</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">numCarpets</span><span class="p">]</span> <span class="o">!=</span> <span class="n">inf</span> <span class="k">else</span> <span class="mi">0</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><hr>
+
 
 <h2 class="relative group">买卖股票的最佳时机 IV 
     <div id="%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-iv" class="anchor"></div>
