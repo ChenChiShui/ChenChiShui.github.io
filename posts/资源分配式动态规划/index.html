@@ -122,7 +122,7 @@
     "keywords": ["动态规划","背包问题","记忆化搜索"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2584"
+    "wordCount": "2570"
   }]
   </script>
 
@@ -854,7 +854,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-21T14:48:57&#43;08:00">2025 年 2 月 21 日</time><span class="px-2 text-primary-500">&middot;</span><span>2584 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-02-21T14:48:57&#43;08:00">2025 年 2 月 21 日</time><span class="px-2 text-primary-500">&middot;</span><span>2570 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1158,12 +1158,19 @@ window.addEventListener("scroll", function (e) {
       <ul>
         <li><a href="#状态定义">状态定义</a></li>
         <li><a href="#状态转移">状态转移</a></li>
+        <li><a href="#初始化">初始化</a></li>
+      </ul>
+    </li>
+    <li><a href="#用地毯覆盖后的最少白色砖块">用地毯覆盖后的最少白色砖块</a>
+      <ul>
+        <li><a href="#原题">原题</a></li>
+        <li><a href="#思路与题解">思路与题解</a></li>
       </ul>
     </li>
     <li><a href="#买卖股票的最佳时机-iv">买卖股票的最佳时机 IV</a>
       <ul>
-        <li><a href="#原题">原题</a></li>
-        <li><a href="#思路与题解">思路与题解</a></li>
+        <li><a href="#原题-1">原题</a></li>
+        <li><a href="#思路与题解-1">思路与题解</a></li>
       </ul>
     </li>
     <li><a href="#其他题目">其他题目</a></li>
@@ -1190,12 +1197,19 @@ window.addEventListener("scroll", function (e) {
       <ul>
         <li><a href="#状态定义">状态定义</a></li>
         <li><a href="#状态转移">状态转移</a></li>
+        <li><a href="#初始化">初始化</a></li>
+      </ul>
+    </li>
+    <li><a href="#用地毯覆盖后的最少白色砖块">用地毯覆盖后的最少白色砖块</a>
+      <ul>
+        <li><a href="#原题">原题</a></li>
+        <li><a href="#思路与题解">思路与题解</a></li>
       </ul>
     </li>
     <li><a href="#买卖股票的最佳时机-iv">买卖股票的最佳时机 IV</a>
       <ul>
-        <li><a href="#原题">原题</a></li>
-        <li><a href="#思路与题解">思路与题解</a></li>
+        <li><a href="#原题-1">原题</a></li>
+        <li><a href="#思路与题解-1">思路与题解</a></li>
       </ul>
     </li>
     <li><a href="#其他题目">其他题目</a></li>
@@ -1313,7 +1327,7 @@ window.addEventListener("scroll", function (e) {
   <span
     
       class="dark:text-neutral-300"
-    >“资源分配型” 动态规划的总结与例题。</span>
+    ><strong>“资源分配型” 动态规划的总结与例题，还包含背包问题的理解。</strong></span>
 </div>
 
 
@@ -1362,8 +1376,8 @@ $$O(m n)$$ 其中 n 是数组长度，m 是资源数量。</p>
     </span>        
     
 </h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">处理前</span> <span class="n">i</span> <span class="n">个元素时</span><span class="err">，</span><span class="n">使用</span> <span class="n">j</span> <span class="n">次资源后的最优解</span><span class="err">（</span><span class="n">最大收益</span><span class="o">/</span><span class="n">最小代价</span><span class="err">）</span>
-</span></span></code></pre></div>
+<p>​	dp[i][j] = 处理前 i 个元素时，使用 j 次资源后的最优解（最大收益/最小代价）</p>
+
 
 <h3 class="relative group">状态转移 
     <div id="%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB" class="anchor"></div>
@@ -1378,32 +1392,48 @@ $$O(m n)$$ 其中 n 是数组长度，m 是资源数量。</p>
 <ul>
 <li>
 <p>决策 1：不使用资源</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div></li>
+<p>dp[i][j] = dp[i-1][j] + 当前代价（如白砖 + 1，股票未交易保持状态等）</p>
+</li>
+<li>
+<p>决策 2：使用资源</p>
+<p>if j &gt;= 1:
+dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
+</li>
 </ul>
-<p>dp[i][j] = dp[i-1][j] + 当前代价（如白砖+1，股票未交易保持状态等）</p>
-<pre tabindex="0"><code>
-- 决策 2：使用资源
 
-```python
-if j &gt;= 1:
-    dp[i][j] = max/min(dp[i-L][j-1], ...)  # L 为资源覆盖长度
-</code></pre><pre tabindex="0"><code>
-### 初始化
 
-- 基准状态
-
-  ```python
-dp[0][0] = 初始代价/收益（如第一个元素是否被覆盖）
-</code></pre><ul>
+<h3 class="relative group">初始化 
+    <div id="%E5%88%9D%E5%A7%8B%E5%8C%96" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%88%9D%E5%A7%8B%E5%8C%96" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>
+<p>基准状态</p>
+<p>dp[0][0] = 初始代价/收益（如第一个元素是否被覆盖）</p>
+</li>
 <li>
 <p>资源越界处理</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div></li>
+<p>for i in range(L):  # 比如前 L 个元素使用一次资源的情况</p>
+</li>
 </ul>
-<p>for i in range(L):  # 比如前 L 个元素使用一次资源的情况
-dp[i][1] = 0</p>
-<pre tabindex="0"><code>
-## 用地毯覆盖后的最少白色砖块
 
+
+<h2 class="relative group">用地毯覆盖后的最少白色砖块 
+    <div id="%E7%94%A8%E5%9C%B0%E6%AF%AF%E8%A6%86%E7%9B%96%E5%90%8E%E7%9A%84%E6%9C%80%E5%B0%91%E7%99%BD%E8%89%B2%E7%A0%96%E5%9D%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%94%A8%E5%9C%B0%E6%AF%AF%E8%A6%86%E7%9B%96%E5%90%8E%E7%9A%84%E6%9C%80%E5%B0%91%E7%99%BD%E8%89%B2%E7%A0%96%E5%9D%97" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
 
   
 
@@ -1438,51 +1468,64 @@ dp[i][1] = 0</p>
 </div>
 
 
-### 原题
 
-给你一个下标从 0 开始的二进制字符串 `floor`，它表示地板上砖块的颜色。
-- `floor[i] = &#39;0&#39;` 表示地板上第 i 块砖块的颜色是黑色 
-- `floor[i] = &#39;1&#39;` 表示地板上第 i 块砖块的颜色是白色 
-
-同时给你 `numCarpets` 和 `carpetLen`。你有 `numCarpets` 条黑色的地毯，每一条黑色的地毯长度都为 `carpetLen` 块砖块。请你使用这些地毯去覆盖砖块，使得未被覆盖的剩余白色砖块的数目**最小**。地毯相互之间可以覆盖。 
-
-请你返回没被覆盖的白色砖块的**最少数目**。
-
-示例：
-</code></pre><p>输入：floor = &ldquo;10110101&rdquo;, numCarpets = 2, carpetLen = 2
+<h3 class="relative group">原题 
+    <div id="%E5%8E%9F%E9%A2%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%8E%9F%E9%A2%98" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>给你一个下标从 0 开始的二进制字符串 <code>floor</code>，它表示地板上砖块的颜色。</p>
+<ul>
+<li><code>floor[i] = '0'</code> 表示地板上第 i 块砖块的颜色是黑色</li>
+<li><code>floor[i] = '1'</code> 表示地板上第 i 块砖块的颜色是白色</li>
+</ul>
+<p>同时给你 <code>numCarpets</code> 和 <code>carpetLen</code>。你有 <code>numCarpets</code> 条黑色的地毯，每一条黑色的地毯长度都为 <code>carpetLen</code> 块砖块。请你使用这些地毯去覆盖砖块，使得未被覆盖的剩余白色砖块的数目<strong>最小</strong>。地毯相互之间可以覆盖。</p>
+<p>请你返回没被覆盖的白色砖块的<strong>最少数目</strong>。</p>
+<p>示例：</p>
+<pre tabindex="0"><code>输入：floor = &#34;10110101&#34;, numCarpets = 2, carpetLen = 2
 输出：2
-如右侧所示：░█▒▒█▒█░，灰色是被地毯覆盖</p>
-<pre tabindex="0"><code>
-### 思路与题解
-
-其中地砖为`进度轴`、地毯为`资源轴`。
-
-设置地砖为 i，地毯为 j，则状态定义为：**前 i 个地砖用 j 个地毯后的最小白砖数量**。
-
-状态转移方程见下面代码的注释：
-
-```python
-# 动态规划，有限资源分配问题
-# 如果想到状态定义就不算难：前 i 个地砖用 j 个地毯后的最小白砖数量
-class Solution:
-    def minimumWhiteTiles(self, floor: str, numCarpets: int, carpetLen: int) -&gt; int:
-        n = len(floor)
-        dp = [[inf] * (numCarpets + 1) for _ in range(n)]
-        dp[0][0] = int(floor[0])
-        for i in range(carpetLen): # 前 carpetLen 个白格被盖住
-            dp[i][1] = 0
-        for i in range(n):
-            for j in range(numCarpets + 1):
-                if floor[i] == &#39;1&#39;: # 如果是白格，最小格子数加一
-                    dp[i][j] = min(dp[i][j], dp[i - 1][j] + 1)
-                if floor[i] == &#39;0&#39;: # 黑格不加
-                    dp[i][j] = min(dp[i][j], dp[i - 1][j])
-                if i - carpetLen &gt;= 0 and j - 1 &gt;= 0: # 贪心，尽量让地毯不重复铺
-                    dp[i][j] = min(dp[i - carpetLen][j - 1], dp[i][j])
-
-        # 如果最后地毯没用完，说明一定可以使得白砖全部被铺满
-        return dp[n - 1][numCarpets] if dp[n - 1][numCarpets] != inf else 0
+如右侧所示：░█▒▒█▒█░，灰色是被地毯覆盖
 </code></pre>
+
+<h3 class="relative group">思路与题解 
+    <div id="%E6%80%9D%E8%B7%AF%E4%B8%8E%E9%A2%98%E8%A7%A3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%80%9D%E8%B7%AF%E4%B8%8E%E9%A2%98%E8%A7%A3" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>其中地砖为<code>进度轴</code>、地毯为<code>资源轴</code>。</p>
+<p>设置地砖为 i，地毯为 j，则状态定义为：<strong>前 i 个地砖用 j 个地毯后的最小白砖数量</strong>。</p>
+<p>状态转移方程见下面代码的注释：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 动态规划，有限资源分配问题</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果想到状态定义就不算难：前 i 个地砖用 j 个地毯后的最小白砖数量</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">minimumWhiteTiles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">floor</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">numCarpets</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">carpetLen</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">floor</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dp</span> <span class="o">=</span> <span class="p">[[</span><span class="n">inf</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">numCarpets</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">carpetLen</span><span class="p">):</span> <span class="c1"># 前 carpetLen 个白格被盖住</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numCarpets</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">floor</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="c1"># 如果是白格，最小格子数加一</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">floor</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">:</span> <span class="c1"># 黑格不加</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">i</span> <span class="o">-</span> <span class="n">carpetLen</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># 贪心，尽量让地毯不重复铺</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">carpetLen</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 如果最后地毯没用完，说明一定可以使得白砖全部被铺满</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">numCarpets</span><span class="p">]</span> <span class="k">if</span> <span class="n">dp</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">numCarpets</span><span class="p">]</span> <span class="o">!=</span> <span class="n">inf</span> <span class="k">else</span> <span class="mi">0</span>
+</span></span></code></pre></div>
 
 <h2 class="relative group">买卖股票的最佳时机 IV 
     <div id="%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-iv" class="anchor"></div>
@@ -1530,12 +1573,12 @@ class Solution:
 
 
 <h3 class="relative group">原题 
-    <div id="%E5%8E%9F%E9%A2%98" class="anchor"></div>
+    <div id="%E5%8E%9F%E9%A2%98-1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%8E%9F%E9%A2%98" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%8E%9F%E9%A2%98-1" aria-label="锚点">#</a>
     </span>        
     
 </h3>
@@ -1567,12 +1610,12 @@ class Solution:
 
 
 <h3 class="relative group">思路与题解 
-    <div id="%E6%80%9D%E8%B7%AF%E4%B8%8E%E9%A2%98%E8%A7%A3" class="anchor"></div>
+    <div id="%E6%80%9D%E8%B7%AF%E4%B8%8E%E9%A2%98%E8%A7%A3-1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E6%80%9D%E8%B7%AF%E4%B8%8E%E9%A2%98%E8%A7%A3" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E6%80%9D%E8%B7%AF%E4%B8%8E%E9%A2%98%E8%A7%A3-1" aria-label="锚点">#</a>
     </span>        
     
 </h3>
