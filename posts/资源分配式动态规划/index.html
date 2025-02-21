@@ -1352,6 +1352,7 @@ window.addEventListener("scroll", function (e) {
 </ul>
 <p>此外，从<strong>时间复杂度</strong>也能看出该选择此类动态规划，一般该类问题复杂度为:
 $$O(m n)$$ 其中 n 是数组长度，m 是资源数量。</p>
+<hr>
 
 
 <h2 class="relative group">通常模板 
@@ -1377,6 +1378,7 @@ $$O(m n)$$ 其中 n 是数组长度，m 是资源数量。</p>
     
 </h3>
 <p>​	dp[i][j] = 处理前 i 个元素时，使用 j 次资源后的最优解（最大收益/最小代价）</p>
+<hr>
 
 
 <h3 class="relative group">状态转移 
@@ -1400,6 +1402,7 @@ $$O(m n)$$ 其中 n 是数组长度，m 是资源数量。</p>
 dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
 </li>
 </ul>
+<hr>
 
 
 <h3 class="relative group">初始化 
@@ -1422,6 +1425,7 @@ dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
 <p>for i in range(L):  # 比如前 L 个元素使用一次资源的情况</p>
 </li>
 </ul>
+<hr>
 
 
 <h2 class="relative group">用地毯覆盖后的最少白色砖块 
@@ -1467,6 +1471,7 @@ dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
     ><a href="https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/" target="_blank">2209. 用地毯覆盖后的最少白色砖块</a></span>
 </div>
 
+<hr>
 
 
 <h3 class="relative group">原题 
@@ -1490,7 +1495,8 @@ dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
 <pre tabindex="0"><code>输入：floor = &#34;10110101&#34;, numCarpets = 2, carpetLen = 2
 输出：2
 如右侧所示：░█▒▒█▒█░，灰色是被地毯覆盖
-</code></pre>
+</code></pre><hr>
+
 
 <h3 class="relative group">思路与题解 
     <div id="%E6%80%9D%E8%B7%AF%E4%B8%8E%E9%A2%98%E8%A7%A3" class="anchor"></div>
@@ -1607,6 +1613,7 @@ dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
 <p><code>0 &lt;= prices[i] &lt;= 1000</code></p>
 </li>
 </ul>
+<hr>
 
 
 <h3 class="relative group">思路与题解 
@@ -1648,7 +1655,8 @@ dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
 </span></span><span class="line"><span class="cl">                <span class="c1"># 两种可能 前为刚卖的 后为之前就没有</span>
 </span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">dfs</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> <span class="o">+</span> <span class="n">prices</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">dfs</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">dfs</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># 最后一定是不持有股票</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><hr>
+
 
 <h2 class="relative group">其他题目 
     <div id="%E5%85%B6%E4%BB%96%E9%A2%98%E7%9B%AE" class="anchor"></div>
@@ -1695,6 +1703,7 @@ dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
 
 <p>状态定义是：<strong>数组中前 i 个数在当前切割成 j 个数组</strong></p>
 <p>此外，该题也需要使用前缀和来获取 o1 的区间求和。</p>
+<hr>
 
 
 <h2 class="relative group">背包问题 
@@ -1771,7 +1780,8 @@ dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
 <pre tabindex="0"><code>输入：`coins = [1, 2, 5]`, `amount = 11`  
 输出：`3`  
 解释：11 = 5 + 5 + 1
-</code></pre><p><strong>题解：</strong></p>
+</code></pre><hr>
+<p><strong>题解：</strong></p>
 <p>此题是经典的<code>完全背包</code>问题。</p>
 <p>但由于其要得到的是最少硬币数量，因此可以看作每个硬币的<strong>价值</strong>相同（其中的价值不是 amount，而是上面状态转移方程中的 value[]）。</p>
 <p>因此可以节省一个维度，代码如下：</p>
@@ -1833,7 +1843,8 @@ dp[i][j] = max/min(dp[i - L][j - 1], &hellip;)  # L 为资源覆盖长度</p>
 5=2+2+1
 5=2+1+1+1
 5=1+1+1+1+1
-</code></pre><p><strong>题解：</strong></p>
+</code></pre><hr>
+<p><strong>题解：</strong></p>
 <ul>
 <li>此题要的是凑出最大零钱的种类，那么为什么不能直接用Ⅰ的思路？</li>
 <li><strong>Ⅰ的遍历顺序无关</strong>：因为求的是最小值，无论是先遍历硬币还是金额，最终都能得到最少硬币数（例如 <code>coins = [1,2,5]</code>，<code>amount=5</code>，无论顺序如何，最少硬币数都是1）。</li>
