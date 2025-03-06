@@ -9,12 +9,22 @@
     <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
     <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
     <copyright>© 2025 陈驰水</copyright>
-    <lastBuildDate>Fri, 21 Feb 2025 14:48:57 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Mar 2025 19:33:19 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/posts/index.xml" rel="self" type="application/rss+xml" />
     <follow_challenge>
       <feedId>your-rss-feed</feedId>
       <userId>your-rss-user</userId>
     </follow_challenge>
     
+    
+    <item>
+      <title>Pytorch 备忘录</title>
+      <link>https://blog.chencs.online/posts/pytorch_memo/</link>
+      <pubDate>Thu, 06 Mar 2025 19:33:19 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/posts/pytorch_memo/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>“资源分配型” 动态规划总结</title>
