@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "840"
+    "wordCount": "890"
   }]
   </script>
 
@@ -759,7 +759,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-02T22:27:38&#43;08:00">2025 年 2 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>840 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-02-02T22:27:38&#43;08:00">2025 年 2 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>890 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1038,6 +1038,7 @@ window.addEventListener("scroll", function (e) {
     <li><a href="#动态规划">动态规划</a>
       <ul>
         <li><a href="#区间-dp">区间 DP</a></li>
+        <li><a href="#打家劫舍型-dp">打家劫舍型 DP</a></li>
       </ul>
     </li>
     <li><a href="#双指针">双指针</a></li>
@@ -1069,6 +1070,7 @@ window.addEventListener("scroll", function (e) {
     <li><a href="#动态规划">动态规划</a>
       <ul>
         <li><a href="#区间-dp">区间 DP</a></li>
+        <li><a href="#打家劫舍型-dp">打家劫舍型 DP</a></li>
       </ul>
     </li>
     <li><a href="#双指针">双指针</a></li>
@@ -1227,7 +1229,6 @@ window.addEventListener("scroll", function (e) {
     
 </h2>
 <p><a href="https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/" target="_blank">leetcode 2209</a>  - 资源分配问题，dp[i][j]表示：前 i 个地砖用 j 个地毯后的最小白砖数量。其中 i 为进度轴、j 为资源轴。</p>
-<p><a href="https://www.lanqiao.cn/problems/107/learning/?page=1&amp;first_category_id=1&amp;sort=problem_id&amp;second_category_id=3&amp;asc=1" target="_blank">蓝桥 对局匹配</a> - 将数值分成 k 组，其中 i+k，i+2*k……为一组，可以保证组之间互不干扰。而在组中，就是<code>打家劫舍</code>问题。</p>
 <p><a href="https://leetcode.cn/problems/palindrome-partitioning-iii/" target="_blank">leetcode 1278. 分割回文串 III</a> - 是前面两个记忆化搜索的分割字符串的延续。思路还是<code>资源分配 DP</code>，前 i 给字符分割成 j 给字符串的最小修改次数。</p>
 <p><a href="https://leetcode.cn/problems/palindrome-partitioning-iv/" target="_blank">leecode 1745. 分割回文串 IV </a> - 和上面的 Ⅲ 几乎完全一致，不过是把维护修改数量改成维护 bool 值。</p>
 
@@ -1243,6 +1244,20 @@ window.addEventListener("scroll", function (e) {
     
 </h3>
 <p><a href="https://www.acwing.com/problem/content/description/6138/" target="_blank">奶牛体检</a>  - 区间DP + 前缀和，比较规矩的模板</p>
+
+
+<h3 class="relative group">打家劫舍型 DP 
+    <div id="%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%9E%8B-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%9E%8B-dp" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://www.lanqiao.cn/problems/107/learning/?page=1&amp;first_category_id=1&amp;sort=problem_id&amp;second_category_id=3&amp;asc=1" target="_blank">蓝桥 对局匹配</a> - 将数值分成 k 组，其中 i+k，i+2*k……为一组，可以保证组之间互不干扰。而在组中，就是<code>打家劫舍</code>问题。</p>
+<p><a href="https://leetcode.cn/problems/the-number-of-beautiful-subsets/" target="_blank">leetcode 2597. 美丽子集的数目</a> - 和上面的对局匹配几乎完全一致，不过要多想一下为什么 k 组之间相互独立</p>
 
 
 <h2 class="relative group">双指针 
