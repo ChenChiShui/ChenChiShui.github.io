@@ -39,13 +39,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://blog.chencs.online/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2025-03-06T19:33:19+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://blog.chencs.online/categories/%E5%BA%94%E8%AF%95%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://blog.chencs.online/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2025-03-06T19:33:19+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -137,6 +131,18 @@
   <url>
     <loc>https://blog.chencs.online/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%BA%94%E8%AF%95%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-02-14T19:03:36+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://blog.chencs.online/categories/%E5%BA%94%E8%AF%95%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2025-02-14T19:03:36+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://blog.chencs.online/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2025-02-14T18:10:27+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
