@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pytorch on 陈驰水-个人博客</title>
-    <link>/tags/pytorch/</link>
+    <link>https://blog.chencs.online/tags/pytorch/</link>
     <description>Recent content in Pytorch on 陈驰水-个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-ch</language>
     <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
     <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
     <copyright>© 2025 陈驰水</copyright>
-    <lastBuildDate>Thu, 06 Mar 2025 19:33:19 +0800</lastBuildDate><atom:link href="/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Mar 2025 19:33:19 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
     <follow_challenge>
       <feedId>your-rss-feed</feedId>
       <userId>your-rss-user</userId>
@@ -18,10 +18,10 @@
     
     <item>
       <title>Pytorch 备忘录</title>
-      <link>/posts/pytorch_memo/</link>
+      <link>https://blog.chencs.online/posts/pytorch_memo/</link>
       <pubDate>Thu, 06 Mar 2025 19:33:19 +0800</pubDate>
       <author>walter.chen.bj@gmail.com (陈驰水)</author>
-      <guid>/posts/pytorch_memo/</guid>
+      <guid>https://blog.chencs.online/posts/pytorch_memo/</guid>
       <description></description>
       
     </item>
