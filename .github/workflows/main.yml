@@ -1,0 +1,57 @@
+name: Google Indexing API Auto Submit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # 每天 UTC 00:00 运行
+
+jobs:
+  google-indexing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install google-auth requests
+
+      - name: Generate Google API Access Token
+        id: get_token
+        run: |
+          echo '${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}' > service_account.json
+          token=$(python - <<EOF
+          import json
+          from google.oauth2 import service_account
+          from google.auth.transport.requests import Request
+          
+          SCOPES = ["https://www.googleapis.com/auth/indexing"]
+          SERVICE_ACCOUNT_FILE = "service_account.json"
+          
+          credentials = service_account.Credentials.from_service_account_file(
+              SERVICE_ACCOUNT_FILE, scopes=SCOPES
+          )
+          credentials.refresh(Request())
+          print(credentials.token)
+          EOF
+          )
+          echo "access_token=$token" >> $GITHUB_OUTPUT
+
+      - name: Submit URLs to Google Indexing API
+        env:
+          ACCESS_TOKEN: ${{ steps.get_token.outputs.access_token }}
+        run: |
+          URLS_TO_SUBMIT=("https://linkchain.github.io/posts/gpt-api-function-call/" "https://linkchain.github.io/posts/chatgpt-azure-openai-preface")
+          for URL in "${URLS_TO_SUBMIT[@]}"; do
+            RESPONSE=$(curl -X POST \
+              -H "Content-Type: application/json" \
+              -H "Authorization: Bearer $ACCESS_TOKEN" \
+              -d "{\"url\": \"$URL\", \"type\": \"URL_UPDATED\"}" \
+              "https://indexing.googleapis.com/v3/urlNotifications:publish")
+            echo "Submitted $URL: $RESPONSE"
+          done
