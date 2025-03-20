@@ -19,7 +19,7 @@ jobs:
           python-version: '3.9'
 
       - name: Install dependencies
-        run: pip install google-auth requests lxml
+        run: pip install google-auth requests
 
       - name: Generate Google API Access Token
         id: get_token
@@ -40,42 +40,32 @@ jobs:
           print(credentials.token)
           EOF
           )
-          echo "access_token=$token" >> $GITHUB_ENV
-
-      - name: Fetch sitemap and extract URLs
-        id: fetch_sitemap
-        run: |
-          python - <<EOF
-          import requests
-          from lxml import etree
-          import os
-
-          SITE_URL = "https://blog.chencs.online/sitemap.xml"
-          response = requests.get(SITE_URL)
-          response.raise_for_status()
-
-          # 解析 XML
-          root = etree.fromstring(response.content)
-          namespaces = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
-          
-          urls = [url.text for url in root.xpath('//ns:url/ns:loc', namespaces=namespaces)]
-          
-          # 修正 URL 格式，防止多余的 ":"
-          urls_str = " ".join(urls)
-          print(f"Extracted {len(urls)} URLs from sitemap.")
-
-          # 存入 GITHUB_ENV 供后续步骤使用
-          with open(os.environ['GITHUB_ENV'], "a") as env_file:
-              env_file.write(f'URLS_TO_SUBMIT="{urls_str}"\n')
-          EOF
+          echo "access_token=$token" >> $GITHUB_OUTPUT
 
       - name: Submit URLs to Google Indexing API
+        env:
+          ACCESS_TOKEN: ${{ steps.get_token.outputs.access_token }}
         run: |
-          for url in $URLS_TO_SUBMIT; do
+          URLS_TO_SUBMIT=(
+            "https://blog.chencs.online/about/"
+            "https://blog.chencs.online"
+            "https://blog.chencs.online/posts/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E6%80%BB%E7%BB%93%E4%B8%8E%E4%BE%8B%E9%A2%98/"
+            "https://blog.chencs.online/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+            "https://blog.chencs.online/posts/%E7%AE%97%E6%B3%95%E9%A2%98-%E7%B4%A2%E5%BC%95/"
+            "https://blog.chencs.online/posts/"
+            "https://blog.chencs.online/posts/%E7%8C%AB%E5%92%8C%E8%80%81%E9%BC%A0-lc/"
+            "https://blog.chencs.online/posts/os-note/"
+            "https://blog.chencs.online/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%94%E8%AF%95%E7%AC%94%E8%AE%B0/"
+            "https://blog.chencs.online/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%BA%94%E8%AF%95%E7%AC%94%E8%AE%B0/"
+            "https://blog.chencs.online/posts/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"
+            "https://blog.chencs.online/posts/%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D%E5%BC%8F%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"
+            "https://blog.chencs.online/posts/house_price/"
+          )
+          for URL in "${URLS_TO_SUBMIT[@]}"; do
             RESPONSE=$(curl -X POST \
               -H "Content-Type: application/json" \
               -H "Authorization: Bearer $ACCESS_TOKEN" \
-              -d "{\"url\": \"$url\", \"type\": \"URL_UPDATED\"}" \
+              -d "{\"url\": \"$URL\", \"type\": \"URL_UPDATED\"}" \
               "https://indexing.googleapis.com/v3/urlNotifications:publish")
-            echo "Submitted $url: $RESPONSE"
+            echo "Submitted $URL: $RESPONSE"
           done
