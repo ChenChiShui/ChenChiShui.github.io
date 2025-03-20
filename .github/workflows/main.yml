@@ -60,12 +60,13 @@ jobs:
           
           urls = [url.text for url in root.xpath('//ns:url/ns:loc', namespaces=namespaces)]
           
-          # 将 URL 列表写入环境变量
+          # 修正 URL 格式，防止多余的 ":"
           urls_str = " ".join(urls)
           print(f"Extracted {len(urls)} URLs from sitemap.")
-          
+
+          # 存入 GITHUB_ENV 供后续步骤使用
           with open(os.environ['GITHUB_ENV'], "a") as env_file:
-              env_file.write(f"URLS_TO_SUBMIT={urls_str}\n")
+              env_file.write(f'URLS_TO_SUBMIT="{urls_str}"\n')
           EOF
 
       - name: Submit URLs to Google Indexing API
