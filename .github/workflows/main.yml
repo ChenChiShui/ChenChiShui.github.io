@@ -45,20 +45,32 @@ jobs:
       - name: Fetch sitemap and extract URLs
         id: fetch_sitemap
         run: |
-          SITE_URL="https://blog.chencs.online/sitemap.xml"
-          echo "Fetching sitemap from $SITE_URL"
+          python - <<EOF
+          import requests
+          from lxml import etree
+          import os
+
+          SITE_URL = "https://blog.chencs.online/sitemap.xml"
+          response = requests.get(SITE_URL)
+          response.raise_for_status()
+
+          # 解析 XML
+          root = etree.fromstring(response.content)
+          namespaces = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
           
-          urls=$(curl -s $SITE_URL | xmllint --xpath '//loc/text()' -)
+          urls = [url.text for url in root.xpath('//ns:url/ns:loc', namespaces=namespaces)]
           
-          # 将 URLs 形式化为 JSON
-          urls_json=$(echo "$urls" | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          # 将 URL 列表写入环境变量
+          urls_str = " ".join(urls)
+          print(f"Extracted {len(urls)} URLs from sitemap.")
           
-          echo "URLs extracted: $urls_json"
-          echo "urls=$urls_json" >> $GITHUB_ENV
+          with open(os.environ['GITHUB_ENV'], "a") as env_file:
+              env_file.write(f"URLS_TO_SUBMIT={urls_str}\n")
+          EOF
 
       - name: Submit URLs to Google Indexing API
         run: |
-          for url in $(echo $urls | jq -r '.[]'); do
+          for url in $URLS_TO_SUBMIT; do
             RESPONSE=$(curl -X POST \
               -H "Content-Type: application/json" \
               -H "Authorization: Bearer $ACCESS_TOKEN" \
