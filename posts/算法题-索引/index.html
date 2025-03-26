@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2038"
+    "wordCount": "2332"
   }]
   </script>
 
@@ -759,7 +759,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-02T22:27:38&#43;08:00">2025 年 2 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>2038 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">5 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-02-02T22:27:38&#43;08:00">2025 年 2 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>2332 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">5 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1048,7 +1048,14 @@ window.addEventListener("scroll", function (e) {
     <li><a href="#滑动窗口">滑动窗口</a></li>
     <li><a href="#字符串">字符串</a></li>
     <li><a href="#数论">数论</a></li>
-    <li><a href="#图论">图论</a></li>
+    <li><a href="#图论">图论</a>
+      <ul>
+        <li><a href="#搜索-1">搜索</a></li>
+        <li><a href="#拓扑排序">拓扑排序</a></li>
+        <li><a href="#最短路">最短路</a></li>
+        <li><a href="#最小生成树">最小生成树</a></li>
+      </ul>
+    </li>
     <li><a href="#线段树">线段树</a></li>
     <li><a href="#模拟">模拟</a></li>
     <li><a href="#思维题">思维题</a>
@@ -1087,7 +1094,14 @@ window.addEventListener("scroll", function (e) {
     <li><a href="#滑动窗口">滑动窗口</a></li>
     <li><a href="#字符串">字符串</a></li>
     <li><a href="#数论">数论</a></li>
-    <li><a href="#图论">图论</a></li>
+    <li><a href="#图论">图论</a>
+      <ul>
+        <li><a href="#搜索-1">搜索</a></li>
+        <li><a href="#拓扑排序">拓扑排序</a></li>
+        <li><a href="#最短路">最短路</a></li>
+        <li><a href="#最小生成树">最小生成树</a></li>
+      </ul>
+    </li>
     <li><a href="#线段树">线段树</a></li>
     <li><a href="#模拟">模拟</a></li>
     <li><a href="#思维题">思维题</a>
@@ -1377,10 +1391,65 @@ window.addEventListener("scroll", function (e) {
     </span>        
     
 </h2>
-<p><a href="https://www.lanqiao.cn/problems/19719/learning/" target="_blank">蓝桥 吊坠</a>  - 字符串破坏成链DP + 克鲁斯卡尔 能过 80%，优化常数能过 90%。想过 100% 需要后缀自动机。此题用图论的并查集克鲁斯卡尔。</p>
+
+
+<h3 class="relative group">搜索 
+    <div id="%E6%90%9C%E7%B4%A2-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%90%9C%E7%B4%A2-1" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
 <p><a href="https://leetcode.cn/problems/number-of-provinces/" target="_blank">leetcode 547. 省份数量</a> - 最基础的图论 DFS。</p>
 <p><a href="https://leetcode.cn/problems/get-watched-videos-by-your-friends/" target="_blank">leetcode 1311. 获取你好友已观看的视频</a> - 最基础的图论 BFS，加一个 map 转化 vector 用 lambda 排序。</p>
 <p><a href="https://leetcode.cn/problems/shortest-path-with-alternating-colors/" target="_blank">leetcode 1129. 颜色交替的最短路径</a> - 必须交替走两种颜色的路径，由于路径长度都为一，因此还是 BFS。不过要维护两种颜色的 visited 和 两种颜色分别作为第一步的 ans。</p>
+
+
+<h3 class="relative group">拓扑排序 
+    <div id="%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://leetcode.cn/problems/course-schedule-iv/" target="_blank">leetcode 1462. 课程表 IV</a> - 拓扑排序。维护一个 dp 数组，拓扑排序时，已确认 node 是 next 的先导。则状态转移方程：<code>dp[i][next] = dp[i][next] || dp[i][node]</code>。其中<code>dp[i][j]</code> 表示 i 是 j 的先导。</p>
+<p><a href="https://leetcode.cn/problems/redundant-connection-ii/" target="_blank">leetcode 685. 冗余连接 II</a> - 基环树 + 分类讨论。需要的算法是判断入度和判断环，都是基于拓扑排序。</p>
+
+
+<h3 class="relative group">最短路 
+    <div id="%E6%9C%80%E7%9F%AD%E8%B7%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%9C%80%E7%9F%AD%E8%B7%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://leetcode.cn/problems/network-delay-time/" target="_blank">leetocde 743. 网络延迟时间</a> - spfa 和 dijk 都写了。</p>
+<p><a href="https://leetcode.cn/problems/path-with-maximum-probability/" target="_blank">leetcode 1514. 概率最大的路径</a> - dijk 做法。</p>
+<p><a href="https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/" target="_blank">leetcode 2642. 设计可以求最短路径的图类</a> - spfa 做法。</p>
+<p><a href="https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-ii/" target="_blank">leetcode 3342. 到达最后一个房间的最少时间 II</a> - 网格图最短路，由于需要判断当前 dis 和 dis_num 因此不太适合 BFS。此题我用了 SPFA，会卡常数。网格图这种稠密图更适合 Dijk。</p>
+<p><a href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/" target="_blank">leetocd 1334. 阈值距离内邻居最少的城市</a> Floyd 多源最短路。</p>
+
+
+<h3 class="relative group">最小生成树 
+    <div id="%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://www.lanqiao.cn/problems/19719/learning/" target="_blank">蓝桥 吊坠</a>  - 字符串破坏成链DP + 克鲁斯卡尔 能过 80%，优化常数能过 90%。想过 100% 需要后缀自动机。此题用图论的并查集克鲁斯卡尔。</p>
 
 
 <h2 class="relative group">线段树 
