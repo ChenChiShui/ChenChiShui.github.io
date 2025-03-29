@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2432"
+    "wordCount": "2652"
   }]
   </script>
 
@@ -759,7 +759,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-02T22:27:38&#43;08:00">2025 年 2 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>2432 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">5 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-02-02T22:27:38&#43;08:00">2025 年 2 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>2652 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1046,6 +1046,8 @@ window.addEventListener("scroll", function (e) {
       </ul>
     </li>
     <li><a href="#双指针">双指针</a></li>
+    <li><a href="#前缀和--差分数组">前缀和 &amp; 差分数组</a></li>
+    <li><a href="#堆--栈--队列">堆 &amp; 栈 &amp; 队列</a></li>
     <li><a href="#滑动窗口">滑动窗口</a></li>
     <li><a href="#字符串">字符串</a></li>
     <li><a href="#数论">数论</a></li>
@@ -1093,6 +1095,8 @@ window.addEventListener("scroll", function (e) {
       </ul>
     </li>
     <li><a href="#双指针">双指针</a></li>
+    <li><a href="#前缀和--差分数组">前缀和 &amp; 差分数组</a></li>
+    <li><a href="#堆--栈--队列">堆 &amp; 栈 &amp; 队列</a></li>
     <li><a href="#滑动窗口">滑动窗口</a></li>
     <li><a href="#字符串">字符串</a></li>
     <li><a href="#数论">数论</a></li>
@@ -1286,6 +1290,8 @@ window.addEventListener("scroll", function (e) {
     
 </h3>
 <p><a href="https://www.acwing.com/problem/content/description/6138/" target="_blank">奶牛体检</a>  - 区间DP + 前缀和，比较规矩的模板</p>
+<p><a href="https://leetcode.cn/problems/stone-game-vii/" target="_blank">leetcode 1690. 石子游戏 VII</a> - 区间DP + 前缀和，需要将博弈转化到递归，进而想到重复子问题。</p>
+<p><a href="https://www.luogu.com.cn/problem/P1005" target="_blank">luogu P1005</a> - 区间DP (记忆化版)，此题要处理大数输出。</p>
 
 
 <h3 class="relative group">打家劫舍型 DP 
@@ -1355,6 +1361,33 @@ window.addEventListener("scroll", function (e) {
     
 </h2>
 <p><a href="https://leetcode.cn/problems/valid-palindrome-ii/" target="_blank">leetcode 680</a>  - 经典题验证回文串</p>
+
+
+<h2 class="relative group">前缀和 &amp; 差分数组 
+    <div id="%E5%89%8D%E7%BC%80%E5%92%8C--%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%89%8D%E7%BC%80%E5%92%8C--%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p><a href="https://leetcode.cn/problems/count-submatrices-with-top-left-element-and-sum-less-than-k/" target="_blank">leetcode 3070. 元素和小于等于 k 的子矩阵的数目</a> - 二维前缀和板子。</p>
+<p><a href="https://leetcode.cn/problems/zero-array-transformation-i/" target="_blank">leetcode 3355. 零数组变换 I</a> - 差分数组板子，最后有一个小贪心。</p>
+
+
+<h2 class="relative group">堆 &amp; 栈 &amp; 队列 
+    <div id="%E5%A0%86--%E6%A0%88--%E9%98%9F%E5%88%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%A0%86--%E6%A0%88--%E9%98%9F%E5%88%97" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p><a href="https://leetcode.cn/problems/most-frequent-ids/" target="_blank">3092. 最高频率的 ID</a> - 懒删除堆，实际上是哈希表加堆。</p>
 
 
 <h2 class="relative group">滑动窗口 
@@ -1436,6 +1469,7 @@ window.addEventListener("scroll", function (e) {
 </h3>
 <p><a href="https://leetcode.cn/problems/course-schedule-iv/" target="_blank">leetcode 1462. 课程表 IV</a> - 拓扑排序。维护一个 dp 数组，拓扑排序时，已确认 node 是 next 的先导。则状态转移方程：<code>dp[i][next] = dp[i][next] || dp[i][node]</code>。其中<code>dp[i][j]</code> 表示 i 是 j 的先导。</p>
 <p><a href="https://leetcode.cn/problems/redundant-connection-ii/" target="_blank">leetcode 685. 冗余连接 II</a> - 基环树 + 分类讨论。需要的算法是判断入度和判断环，都是基于拓扑排序。</p>
+<p><a href="https://leetcode.cn/problems/longest-cycle-in-a-graph/" target="_blank">leetcode 2360. 图中的最长环</a> - 由于每个节点最多一个出边。因此不存在嵌套的环，每个节点至多在一个环中。拓扑排序：找到在环中的节点 + DFS：遍历每个环。</p>
 
 
 <h3 class="relative group">最短路 
