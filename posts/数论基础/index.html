@@ -121,7 +121,7 @@
     "keywords": ["数论","模板"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1177"
+    "wordCount": "1545"
   }]
   </script>
 
@@ -894,7 +894,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-15T19:28:36&#43;08:00">2025 年 2 月 15 日</time><span class="px-2 text-primary-500">&middot;</span><span>1177 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-02-15T19:28:36&#43;08:00">2025 年 2 月 15 日</time><span class="px-2 text-primary-500">&middot;</span><span>1545 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">4 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1196,6 +1196,7 @@ window.addEventListener("scroll", function (e) {
     </li>
     <li><a href="#质因数分解">质因数分解</a></li>
     <li><a href="#欧拉函数">欧拉函数</a></li>
+    <li><a href="#逆元法求组合数">逆元法求组合数</a></li>
   </ul>
 </nav>
   </div>
@@ -1220,6 +1221,7 @@ window.addEventListener("scroll", function (e) {
     </li>
     <li><a href="#质因数分解">质因数分解</a></li>
     <li><a href="#欧拉函数">欧拉函数</a></li>
+    <li><a href="#逆元法求组合数">逆元法求组合数</a></li>
   </ul>
 </nav>
   </div>
@@ -1578,6 +1580,65 @@ window.addEventListener("scroll", function (e) {
 <p><strong>例题：</strong></p>
 <p><a href="https://www.acwing.com/problem/content/description/4971/" target="_blank">蓝桥杯 互质数的个数</a> - 欧拉函数板子</p>
 
+
+<h2 class="relative group">逆元法求组合数 
+    <div id="%E9%80%86%E5%85%83%E6%B3%95%E6%B1%82%E7%BB%84%E5%90%88%E6%95%B0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%80%86%E5%85%83%E6%B3%95%E6%B1%82%E7%BB%84%E5%90%88%E6%95%B0" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p><strong>费马小定理：</strong></p>
+<p>若  p 是素数，且 a 是整数，满足 \( p \nmid a \)  <strong>即 a 不能被 p 整除</strong>，则有：</p>
+<p>$$ a^{p-1} \equiv 1 \pmod{p} \ $$</p>
+<p><strong>组合数公式：</strong></p>
+<p>$$ \text{comb}(n, m) \equiv \frac{n!}{m!(n - m)!} \pmod{\text{MOD}} $$</p>
+<p>$$ \text{comb}(n, m) \equiv \text{fact}[n] \cdot \text{inv}[m] \cdot \text{inv}[n - m] \pmod{\text{MOD}} $$</p>
+<p>$$ 其中 \ \text{inv}[i] = \left( \text{fact}[i] \right)^{-1} \bmod \text{MOD} $$</p>
+<p><strong>根据费马小定理：</strong></p>
+<p>$$ inv[i] = fact[i]^{-1} \equiv fact[i]^{\text{MOD} - 2} \pmod{\text{MOD}} $$</p>
+<p><strong>此外有逆元递推式：</strong></p>
+<p>$$\text{inv}[i] = \text{inv}[i + 1] \times (i + 1) \bmod \text{MOD} \quad $$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">MOD</span> <span class="o">=</span> <span class="mi">998244353</span><span class="p">;</span> <span class="c1">// 需要保证 MOD 是质数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">int</span> <span class="n">MAXN</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">100000</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">long</span> <span class="kt">long</span><span class="o">&gt;</span> <span class="n">inv</span><span class="p">(</span><span class="n">MAXN</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">long</span> <span class="kt">long</span><span class="o">&gt;</span> <span class="n">fact</span><span class="p">(</span><span class="n">MAXN</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 快速幂
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">long</span> <span class="kt">long</span> <span class="nf">qpow</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">i</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">%=</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">long</span> <span class="kt">long</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="n">res</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// On 求阶乘数组
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">MAXN</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fact</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">fact</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">MOD</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// On 求逆元数组，inv[MAXN - 1] 用费马小定理
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">inv</span><span class="p">[</span><span class="n">MAXN</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">qpow</span><span class="p">(</span><span class="n">fact</span><span class="p">[</span><span class="n">MAXN</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">MOD</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">MOD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">MAXN</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 递推求逆元 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">inv</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">MOD</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 也可以直接快速幂求
+</span></span></span><span class="line"><span class="cl"><span class="c1">// inv[i] = qpow(fact[i], MOD - 2, MOD)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 组合数公式，分母两个阶乘变成逆元
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">long</span> <span class="kt">long</span> <span class="nf">comb</span><span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">fact</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">inv</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">%</span> <span class="n">MOD</span><span class="p">)</span> <span class="o">%</span> <span class="n">MOD</span> <span class="o">*</span> <span class="p">(</span><span class="n">inv</span><span class="p">[</span><span class="n">m</span> <span class="o">-</span> <span class="n">n</span><span class="p">]</span> <span class="o">%</span> <span class="n">MOD</span><span class="p">)</span> <span class="o">%</span> <span class="n">MOD</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 
           
@@ -2085,7 +2146,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-02T22:27:38&#43;08:00">2025 年 2 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>2742 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span>
+  <time datetime="2025-02-02T22:27:38&#43;08:00">2025 年 2 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>2746 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span>
   
 
   
