@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2838"
+    "wordCount": "2966"
   }]
   </script>
 
@@ -759,7 +759,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>2838 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>2966 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1057,6 +1057,7 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#拓扑排序">拓扑排序</a></li>
         <li><a href="#最短路">最短路</a></li>
         <li><a href="#最小生成树">最小生成树</a></li>
+        <li><a href="#lca">LCA</a></li>
       </ul>
     </li>
     <li><a href="#线段树">线段树</a></li>
@@ -1106,6 +1107,7 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#拓扑排序">拓扑排序</a></li>
         <li><a href="#最短路">最短路</a></li>
         <li><a href="#最小生成树">最小生成树</a></li>
+        <li><a href="#lca">LCA</a></li>
       </ul>
     </li>
     <li><a href="#线段树">线段树</a></li>
@@ -1459,6 +1461,7 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/number-of-provinces/" target="_blank">leetcode 547. 省份数量</a> - 最基础的图论 DFS。</p>
 <p><a href="https://leetcode.cn/problems/get-watched-videos-by-your-friends/" target="_blank">leetcode 1311. 获取你好友已观看的视频</a> - 最基础的图论 BFS，加一个 map 转化 vector 用 lambda 排序。</p>
 <p><a href="https://leetcode.cn/problems/shortest-path-with-alternating-colors/" target="_blank">leetcode 1129. 颜色交替的最短路径</a> - 必须交替走两种颜色的路径，由于路径长度都为一，因此还是 BFS。不过要维护两种颜色的 visited 和 两种颜色分别作为第一步的 ans。</p>
+<p><a href="https://www.lanqiao.cn/problems/17118/learning/" target="_blank">蓝桥 走方格</a>  比较板子的走迷宫 BFS，但题目描述和样例都很烂，没有大样例的 debug 需要花一段时间。</p>
 
 
 <h3 class="relative group">拓扑排序 
@@ -1505,6 +1508,19 @@ window.addEventListener("scroll", function (e) {
 </h3>
 <p><a href="https://www.lanqiao.cn/problems/19719/learning/" target="_blank">蓝桥 吊坠</a>  - 字符串破坏成链DP + 克鲁斯卡尔 能过 80%，优化常数能过 90%。想过 100% 需要后缀自动机。此题用图论的并查集克鲁斯卡尔。</p>
 <p><a href="https://leetcode.cn/problems/min-cost-to-connect-all-points/" target="_blank">leetcode 1584. 连接所有点的最小费用</a> 克鲁斯卡尔板子。</p>
+
+
+<h3 class="relative group">LCA 
+    <div id="lca" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#lca" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://www.lanqiao.cn/problems/17124/learning/" target="_blank">蓝桥 彩色二叉树</a> - 两点 LCA，简单的倍增法。用树上两点距离 x y，存储所有标记操作。遍历标记操作，找 x y 距离小于 y 并最晚标记的颜色。 理论复杂度较高，但实际能过全部数据。</p>
 
 
 <h2 class="relative group">线段树 
