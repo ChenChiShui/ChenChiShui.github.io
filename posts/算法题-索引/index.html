@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2966"
+    "wordCount": "3380"
   }]
   </script>
 
@@ -759,7 +759,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>2966 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>3380 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">7 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1043,11 +1043,16 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#状态机-dp">状态机 DP</a></li>
         <li><a href="#经典线性-dp">经典线性 DP</a></li>
         <li><a href="#博弈-dp">博弈 DP</a></li>
+        <li><a href="#其他-dp">其他 DP</a></li>
       </ul>
     </li>
     <li><a href="#双指针">双指针</a></li>
     <li><a href="#前缀和--差分数组">前缀和 &amp; 差分数组</a></li>
-    <li><a href="#堆--栈--队列">堆 &amp; 栈 &amp; 队列</a></li>
+    <li><a href="#堆--栈--队列">堆 &amp; 栈 &amp; 队列</a>
+      <ul>
+        <li><a href="#top-k">top K</a></li>
+      </ul>
+    </li>
     <li><a href="#滑动窗口">滑动窗口</a></li>
     <li><a href="#字符串">字符串</a></li>
     <li><a href="#数论">数论</a></li>
@@ -1061,7 +1066,11 @@ window.addEventListener("scroll", function (e) {
       </ul>
     </li>
     <li><a href="#线段树">线段树</a></li>
-    <li><a href="#模拟">模拟</a></li>
+    <li><a href="#模拟">模拟</a>
+      <ul>
+        <li><a href="#日期模拟">日期模拟</a></li>
+      </ul>
+    </li>
     <li><a href="#思维题">思维题</a>
       <ul>
         <li><a href="#异或和">异或和</a></li>
@@ -1093,11 +1102,16 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#状态机-dp">状态机 DP</a></li>
         <li><a href="#经典线性-dp">经典线性 DP</a></li>
         <li><a href="#博弈-dp">博弈 DP</a></li>
+        <li><a href="#其他-dp">其他 DP</a></li>
       </ul>
     </li>
     <li><a href="#双指针">双指针</a></li>
     <li><a href="#前缀和--差分数组">前缀和 &amp; 差分数组</a></li>
-    <li><a href="#堆--栈--队列">堆 &amp; 栈 &amp; 队列</a></li>
+    <li><a href="#堆--栈--队列">堆 &amp; 栈 &amp; 队列</a>
+      <ul>
+        <li><a href="#top-k">top K</a></li>
+      </ul>
+    </li>
     <li><a href="#滑动窗口">滑动窗口</a></li>
     <li><a href="#字符串">字符串</a></li>
     <li><a href="#数论">数论</a></li>
@@ -1111,7 +1125,11 @@ window.addEventListener("scroll", function (e) {
       </ul>
     </li>
     <li><a href="#线段树">线段树</a></li>
-    <li><a href="#模拟">模拟</a></li>
+    <li><a href="#模拟">模拟</a>
+      <ul>
+        <li><a href="#日期模拟">日期模拟</a></li>
+      </ul>
+    </li>
     <li><a href="#思维题">思维题</a>
       <ul>
         <li><a href="#异或和">异或和</a></li>
@@ -1307,6 +1325,7 @@ window.addEventListener("scroll", function (e) {
     </span>        
     
 </h3>
+<p><a href="https://www.acwing.com/problem/content/description/5409/" target="_blank">蓝桥 松散子序列</a> - 打家劫舍板子，一种做法 <code>dp[i][1] 表示 i 选了的最大值</code> <code>dp[i][0] 表示 i 没选的最大值</code>，空间优化做法为 <code>dp[i] 就表示当前最大值</code></p>
 <p><a href="https://www.lanqiao.cn/problems/107/learning/?page=1&amp;first_category_id=1&amp;sort=problem_id&amp;second_category_id=3&amp;asc=1" target="_blank">蓝桥 对局匹配</a> - 将数值分成 k 组，其中 i+k，i+2*k……为一组，可以保证组之间互不干扰。而在组中，就是<code>打家劫舍</code>问题。</p>
 <p><a href="https://leetcode.cn/problems/the-number-of-beautiful-subsets/" target="_blank">leetcode 2597. 美丽子集的数目</a> - 和上面的对局匹配几乎完全一致，不过要多想一下为什么 k 组之间相互独立</p>
 <p><a href="https://leetcode.cn/problems/solving-questions-with-brainpower/" target="_blank">leetcode 2140. 解决智力问题</a> - 打家劫舍变形，从左往右刷表法。每次维护的是 x + dx 下标的值</p>
@@ -1354,6 +1373,19 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://www.lanqiao.cn/problems/19731/learning/" target="_blank">蓝桥 魔法迅游</a> - 比较复杂的状态机 DP，也包含了前缀优化 DP 的思路。状态转移很复杂，模拟量较大。</p>
 
 
+<h3 class="relative group">其他 DP 
+    <div id="%E5%85%B6%E4%BB%96-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%85%B6%E4%BB%96-dp" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://www.acwing.com/file_system/file/content/whole/index/content/11610280/" target="_blank">蓝桥 选数异或</a>  转化任务为 O1 查找区间内是否存在 x。但区间长度最多支持 On，因此将问题在此转化为：以 r 为基准维护最短失败区间长度。而这步需要 ：维护 r 前最近的 x 位置（哈希表），如果 x 位置在区间外，则延续当前最短失败区间（状态转移方程）。想到这步之后就是基本的线性 DP 了。</p>
+
+
 <h2 class="relative group">双指针 
     <div id="%E5%8F%8C%E6%8C%87%E9%92%88" class="anchor"></div>
     
@@ -1378,7 +1410,9 @@ window.addEventListener("scroll", function (e) {
     
 </h2>
 <p><a href="https://leetcode.cn/problems/count-submatrices-with-top-left-element-and-sum-less-than-k/" target="_blank">leetcode 3070. 元素和小于等于 k 的子矩阵的数目</a> - 二维前缀和板子。</p>
+<p><a href="https://www.acwing.com/solution/content/274731/" target="_blank">ccfcsp 坐标变换（其二）</a> - 前缀和 + 模拟，注意下三角函数库函数输入为弧度制。并需要控制输出精度。</p>
 <p><a href="https://leetcode.cn/problems/zero-array-transformation-i/" target="_blank">leetcode 3355. 零数组变换 I</a> - 差分数组板子，最后有一个小贪心。</p>
+<p><a href="https://www.acwing.com/file_system/file/content/whole/index/content/11722454/" target="_blank">蓝桥 等差数列</a> - 给一个少了 n 个元素的数列，给出完全包含其全部元素的等差数列。实际只是排序后记录临近差值，然后求全部 gcd。</p>
 
 
 <h2 class="relative group">堆 &amp; 栈 &amp; 队列 
@@ -1392,6 +1426,20 @@ window.addEventListener("scroll", function (e) {
     
 </h2>
 <p><a href="https://leetcode.cn/problems/most-frequent-ids/" target="_blank">3092. 最高频率的 ID</a> - 懒删除堆，实际上是哈希表加堆。</p>
+
+
+<h3 class="relative group">top K 
+    <div id="top-k" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#top-k" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://leetcode.cn/problems/kth-largest-element-in-an-array/" target="_blank">leetcode 215. 数组中的第K个最大元素</a> topK 板子。我经常错写为把 k 弹出再压入，实际上是当 pq 的长度大于 k 时应该直接弹出旧的并压入新的。</p>
+<p><a href="https://www.lanqiao.cn/problems/17120/learning/" target="_blank">蓝桥 选段排序</a> 贪心 + topK：贪心可知，最优排序区间中至少有一段点是 p 或 q（这个贪心并不好想），因此问题转化为 p-&gt;n 和 q-&gt;0 的 topk 问题。</p>
 
 
 <h2 class="relative group">滑动窗口 
@@ -1520,7 +1568,8 @@ window.addEventListener("scroll", function (e) {
     </span>        
     
 </h3>
-<p><a href="https://www.lanqiao.cn/problems/17124/learning/" target="_blank">蓝桥 彩色二叉树</a> - 两点 LCA，简单的倍增法。用树上两点距离 x y，存储所有标记操作。遍历标记操作，找 x y 距离小于 y 并最晚标记的颜色。 理论复杂度较高，但实际能过全部数据。</p>
+<p><a href="https://www.lanqiao.cn/problems/17124/learning/" target="_blank">蓝桥 彩色二叉树</a> - 完全二叉树的两点 LCA，倍增法的缩减版。用树上两点距离 x y，存储所有标记操作。遍历标记操作，找 x y 距离小于 y 并最晚标记的颜色。 理论复杂度较高，但实际能过全部数据。</p>
+<p><a href="https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves/" target="_blank">leetcode 1123. 最深叶节点的最近公共祖先</a> - 也可以不用 LCA 做，但可以练一下</p>
 
 
 <h2 class="relative group">线段树 
@@ -1548,12 +1597,23 @@ window.addEventListener("scroll", function (e) {
     
 </h2>
 <p><a href="https://www.lanqiao.cn/problems/19729/learning/" target="_blank">蓝桥 连连看</a> - 需要先简单转化一下，得到模拟所有主副对角线，之后哈希统计。转化稍微需要一点思维。</p>
+<p><a href="https://leetcode.cn/problems/difference-of-number-of-distinct-values-on-diagonals/" target="_blank">leetcode 2711. 对角线上不同值的数量差</a> - 简单二维模拟，用个 set 就秒了</p>
+<p><a href="https://www.acwing.com/problem/content/description/5085/" target="_blank">ccfcsp 矩阵计算</a> - 模拟矩阵的点乘和积乘，此题正常算的复杂度很勉强。矩阵计算需要把点乘放到最后，因此用乘法交换律从右向左算。</p>
+
+
+<h3 class="relative group">日期模拟 
+    <div id="%E6%97%A5%E6%9C%9F%E6%A8%A1%E6%8B%9F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%97%A5%E6%9C%9F%E6%A8%A1%E6%8B%9F" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
 <p><a href="https://www.lanqiao.cn/problems/19730/learning/" target="_blank">蓝桥 神奇闹钟</a> - 日期时间模拟，考库函数。日期做差。</p>
 <p><a href="https://www.lanqiao.cn/problems/2271/learning/" target="_blank">蓝桥 跑步</a> - 日期时间模拟，注意 weekday() 下标从 0 开始。</p>
 <p><a href="https://www.lanqiao.cn/problems/17113/learning/" target="_blank">蓝桥 跑步计划</a> - 日期时间模拟，和上一道题十分相似</p>
-<p><a href="https://leetcode.cn/problems/difference-of-number-of-distinct-values-on-diagonals/" target="_blank">leetcode 2711. 对角线上不同值的数量差</a> - 简单二维模拟，用个 set 就秒了</p>
-<p><a href="https://www.acwing.com/problem/content/description/5085/" target="_blank">ccfcsp 矩阵计算</a> - 模拟矩阵的点乘和积乘，此题正常算的复杂度很勉强。矩阵计算需要把点乘放到最后，因此用乘法交换律从右向左算。</p>
-<p><a href="https://www.acwing.com/solution/content/274731/" target="_blank">ccfcsp 坐标变换（其二）</a> - 前缀和 + 模拟，注意下三角函数库函数输入为弧度制。并需要控制输出精度。</p>
 
 
 <h2 class="relative group">思维题 
@@ -1827,7 +1887,7 @@ window.addEventListener("scroll", function (e) {
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-01-11T15:54:40&#43;08:00">2025 年 1 月 11 日</time>
+                    <time datetime="2025-01-10T15:54:40&#43;08:00">2025 年 1 月 10 日</time>
                   
                 </span>
               </span>
