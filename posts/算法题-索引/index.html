@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "3886"
+    "wordCount": "4255"
   }]
   </script>
 
@@ -759,7 +759,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>3886 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">8 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>4255 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">9 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1043,6 +1043,7 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#状态机-dp">状态机 DP</a></li>
         <li><a href="#经典线性-dp">经典线性 DP</a></li>
         <li><a href="#博弈-dp">博弈 DP</a></li>
+        <li><a href="#数位-dp">数位 DP</a></li>
         <li><a href="#其他-dp">其他 DP</a></li>
       </ul>
     </li>
@@ -1051,6 +1052,7 @@ window.addEventListener("scroll", function (e) {
     <li><a href="#堆--栈--队列">堆 &amp; 栈 &amp; 队列</a>
       <ul>
         <li><a href="#top-k">top K</a></li>
+        <li><a href="#单调队列">单调队列</a></li>
       </ul>
     </li>
     <li><a href="#滑动窗口">滑动窗口</a></li>
@@ -1106,6 +1108,7 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#状态机-dp">状态机 DP</a></li>
         <li><a href="#经典线性-dp">经典线性 DP</a></li>
         <li><a href="#博弈-dp">博弈 DP</a></li>
+        <li><a href="#数位-dp">数位 DP</a></li>
         <li><a href="#其他-dp">其他 DP</a></li>
       </ul>
     </li>
@@ -1114,6 +1117,7 @@ window.addEventListener("scroll", function (e) {
     <li><a href="#堆--栈--队列">堆 &amp; 栈 &amp; 队列</a>
       <ul>
         <li><a href="#top-k">top K</a></li>
+        <li><a href="#单调队列">单调队列</a></li>
       </ul>
     </li>
     <li><a href="#滑动窗口">滑动窗口</a></li>
@@ -1389,6 +1393,24 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://www.lanqiao.cn/problems/19731/learning/" target="_blank">蓝桥 魔法迅游</a> - 比较复杂的状态机 DP，也包含了前缀优化 DP 的思路。状态转移很复杂，模拟量较大。</p>
 
 
+<h3 class="relative group">数位 DP 
+    <div id="%E6%95%B0%E4%BD%8D-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%95%B0%E4%BD%8D-dp" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://leetcode.cn/problems/numbers-with-repeated-digits?envType=problem-list-v2&amp;envId=1FXH8Bdi" target="_blank">leetcode 1012. 至少有 1 位重复的数字</a> - 先导零 + 掩码</p>
+<p><a href="https://leetcode.cn/problems/count-of-integers?envType=problem-list-v2&amp;envId=1FXH8Bdi" target="_blank">leetcode 2719. 统计整数数目</a> - 数位 DP 板子，无先导零</p>
+<p><a href="https://leetcode.cn/problems/number-of-digit-one?envType=problem-list-v2&amp;envId=1FXH8Bdi" target="_blank">leetcode 233. 数字 1 的个数</a> - 最基础的数位 DP，无先导零</p>
+<p><a href="https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones?envType=problem-list-v2&amp;envId=1FXH8Bdi" target="_blank">leetcode 600. 不含连续1的非负整数</a> - 简单数位 DP，无先导零，用一个 pre 存储上一个位置的数字。且此题是二进制串。</p>
+<p><a href="https://leetcode.cn/problems/count-special-integers?envType=problem-list-v2&amp;envId=1FXH8Bdi" target="_blank">leetcode 2376. 统计特殊整数</a> - 需要考虑掩码和先导零</p>
+<p><a href="https://www.lanqiao.cn/problems/3528/learning/" target="_blank">蓝桥 奇怪的数</a> - 数位 DP 过 60%，后 40% 卡内存。正解是将 pos 转为奇或偶两种状态的五维 DP。</p>
+
+
 <h3 class="relative group">其他 DP 
     <div id="%E5%85%B6%E4%BB%96-dp" class="anchor"></div>
     
@@ -1456,6 +1478,19 @@ window.addEventListener("scroll", function (e) {
 </h3>
 <p><a href="https://leetcode.cn/problems/kth-largest-element-in-an-array/" target="_blank">leetcode 215. 数组中的第K个最大元素</a> topK 板子。我经常错写为把 k 弹出再压入，实际上是当 pq 的长度大于 k 时应该直接弹出旧的并压入新的。</p>
 <p><a href="https://www.lanqiao.cn/problems/17120/learning/" target="_blank">蓝桥 选段排序</a> 贪心 + topK：贪心可知，最优排序区间中至少有一段点是 p 或 q（这个贪心并不好想），因此问题转化为 p-&gt;n 和 q-&gt;0 的 topk 问题。</p>
+
+
+<h3 class="relative group">单调队列 
+    <div id="%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://leetcode.cn/problems/sliding-window-maximum/" target="_blank">leetcode 239. 滑动窗口最大值</a> - 滑动窗口维护单调队列板子题，用于 On 时间内查找窗口最值</p>
 
 
 <h2 class="relative group">滑动窗口 
@@ -1613,6 +1648,7 @@ window.addEventListener("scroll", function (e) {
 </h2>
 <p><a href="https://leetcode.cn/problems/range-frequency-queries/description/" target="_blank">leetcode 2080</a> - 统计区间内数字频数，将静态线段树板子的 max 改成统计词频的哈希表即可。（此题<code>二分 + 前缀和</code>更优）</p>
 <p><a href="https://leetcode.cn/problems/range-sum-query-mutable/description/" target="_blank">leetcode 307</a> - 经典的区间和检索，静态线段树板子</p>
+<p><a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/" target="_blank">leetcode 1438. 绝对差不超过限制的最长连续子数组</a> - 区间线段树 + 滑动窗口，CPP 能过，python 卡常。更好的解法是单调队列</p>
 
 
 <h2 class="relative group">模拟 
@@ -1661,6 +1697,8 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://www.lanqiao.cn/problems/19714/learning/" target="_blank">蓝桥 数字诗意</a> - 还是那个找规律，答案是所有的 2 ** n ，用 n &amp; (n - 1) == 0 判断</p>
 <p><a href="https://www.lanqiao.cn/problems/19735/learning/" target="_blank">蓝桥 蓝桥村的真相</a> - 稍微难一点的找规律，和考公题一样。</p>
 <p><a href="https://leetcode.cn/problems/airplane-seat-assignment-probability/" target="_blank">leetcode 1227. 飞机座位分配概率</a> - 经典概率论思维题</p>
+<p><a href="https://www.lanqiao.cn/problems/3526/learning/" target="_blank">蓝桥 子树的大小</a> - 思维 + 完全 N 叉树概念了解即可。之后通过遍历最左和最右节点来进行求和。</p>
+<p><a href="https://www.lanqiao.cn/problems/3527/learning/" target="_blank">蓝桥 阶乘的和</a> - 将阶乘和数组，模拟从最小因子开始合并，若可整除则升级，贪心推进求出最终最大因子值 （需要一点点 gcd 的知识）</p>
 
 
 <h3 class="relative group">异或和 
