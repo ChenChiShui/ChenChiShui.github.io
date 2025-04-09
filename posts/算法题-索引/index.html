@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "4255"
+    "wordCount": "4340"
   }]
   </script>
 
@@ -759,7 +759,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>4255 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">9 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>4340 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">9 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1081,6 +1081,7 @@ window.addEventListener("scroll", function (e) {
       <ul>
         <li><a href="#异或和">异或和</a></li>
         <li><a href="#贡献法">贡献法</a></li>
+        <li><a href="#鸽巢原理">鸽巢原理</a></li>
       </ul>
     </li>
     <li><a href="#贪心">贪心</a></li>
@@ -1146,6 +1147,7 @@ window.addEventListener("scroll", function (e) {
       <ul>
         <li><a href="#异或和">异或和</a></li>
         <li><a href="#贡献法">贡献法</a></li>
+        <li><a href="#鸽巢原理">鸽巢原理</a></li>
       </ul>
     </li>
     <li><a href="#贪心">贪心</a></li>
@@ -1728,6 +1730,19 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://www.acwing.com/problem/content/description/6125/" target="_blank">农夫约翰的奶酪块</a> - 贡献法，三维映射到二维</p>
 <p><a href="https://www.acwing.com/problem/content/6126/" target="_blank">哞叫时间</a> - 比较麻烦的模拟，基本方法是：先尝试该某点，获取哈希表计数，撤回对该点的修改</p>
 <p><a href="https://www.acwing.com/problem/content/description/6137/" target="_blank">哞叫时间Ⅱ</a> - 在遍历过程中维护三个数组，“遍历右，维护左”</p>
+
+
+<h3 class="relative group">鸽巢原理 
+    <div id="%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://www.lanqiao.cn/problems/2206/learning/" target="_blank">蓝桥 取模</a> - 乍一看是中国剩余定理。但实际上是 “反证 + 鸽巢原理”，若模值两两不同，则必为 n % m == m - 1（因为小于 m - 1 的已经被占了），遍历验证是否存在不满足的情况。</p>
 
 
 <h2 class="relative group">贪心 
