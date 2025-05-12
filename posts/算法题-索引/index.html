@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "5535"
+    "wordCount": "5649"
   }]
   </script>
 
@@ -762,7 +762,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>5535 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">12 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>5649 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">12 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1790,6 +1790,7 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/move-zeroes/" target="_blank">HOT100 283. 移动零</a> - left 表示非零的已经好的位置，right 遇到非零就和 left 交换</p>
 <p><a href="https://leetcode.cn/problems/container-with-most-water/" target="_blank">HOT100 11. 盛最多水的容器</a> - 因为面积由 <code>min(height[l], height[r]) </code>决定，因此先挪更短指针一定是最优解</p>
 <p><a href="https://leetcode.cn/problems/3sum/" target="_blank">HOT100 15. 三数之和</a> - 思路先排序，遍历 i 作为基准，之后 l r 双指针。如果 l 和 r 的 sum 大于目标，则减小 r，反之增加 l。但此题要求不能重复，因此要去掉重复的 i ，和重复的 j，导致边界条件非常麻烦。</p>
+<p><a href="https://leetcode.cn/problems/trapping-rain-water/" target="_blank">HOT100 42. 接雨水</a> - <strong>典中典</strong> 1. 前缀后缀法：通法，思维量较小。统计每个数的最大前后缀；2. 双指针实际上就说前缀后缀的优化版，核心就是哪侧前或后缀更小，就缩那测 ；3.单调递减栈，找上一个更大的，然后填坑。<strong>双指针是最优解，前缀后缀和单调栈更常用</strong></p>
 
 
 <h3 class="relative group">异或和 
