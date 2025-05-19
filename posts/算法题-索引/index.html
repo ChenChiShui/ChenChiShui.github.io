@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "5896"
+    "wordCount": "6337"
   }]
   </script>
 
@@ -762,7 +762,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>5896 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">12 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>6337 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">13 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1090,7 +1090,9 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#拓扑排序">拓扑排序</a></li>
         <li><a href="#最短路">最短路</a></li>
         <li><a href="#最小生成树">最小生成树</a></li>
+        <li><a href="#并查集">并查集</a></li>
         <li><a href="#lca">LCA</a></li>
+        <li><a href="#trie">Trie</a></li>
       </ul>
     </li>
     <li><a href="#线段树">线段树</a></li>
@@ -1159,7 +1161,9 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#拓扑排序">拓扑排序</a></li>
         <li><a href="#最短路">最短路</a></li>
         <li><a href="#最小生成树">最小生成树</a></li>
+        <li><a href="#并查集">并查集</a></li>
         <li><a href="#lca">LCA</a></li>
+        <li><a href="#trie">Trie</a></li>
       </ul>
     </li>
     <li><a href="#线段树">线段树</a></li>
@@ -1474,6 +1478,7 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://www.acwing.com/file_system/file/content/whole/index/content/11722454/" target="_blank">蓝桥 等差数列</a> - 给一个少了 n 个元素的数列，给出完全包含其全部元素的等差数列。说是差分数组，实际只是排序后记录临近差值，然后求全部 gcd。</p>
 <p><a href="https://leetcode.cn/problems/subarray-sum-equals-k/" target="_blank">HOT100 560. 和为 K 的子数组</a> - 前缀和 + 两数之和，也可以滑动窗口。用哈希表记录每一个前缀和，如果能和当前的前置和组成</p>
 <p><a href="https://leetcode.cn/problems/maximum-subarray/" target="_blank">HOT100 53. 最大子数组和</a> - 当前最大的前缀和减去最小的前缀和就是答案。（也可以更优雅的分治法）</p>
+<p><a href="https://leetcode.cn/problems/product-of-array-except-self/" target="_blank">HOT100 238. 除自身以外数组的乘积</a>  - 前缀后缀积，如果想控制 O1 空间复杂度，可以只维护 suf 数组和一个 “当前 pre”。</p>
 
 
 <h2 class="relative group">堆 &amp; 栈 &amp; 队列 
@@ -1629,6 +1634,8 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/get-watched-videos-by-your-friends/" target="_blank">leetcode 1311. 获取你好友已观看的视频</a> - 最基础的图论 BFS，加一个 map 转化 vector 用 lambda 排序。</p>
 <p><a href="https://leetcode.cn/problems/shortest-path-with-alternating-colors/" target="_blank">leetcode 1129. 颜色交替的最短路径</a> - 必须交替走两种颜色的路径，由于路径长度都为一，因此还是 BFS。不过要维护两种颜色的 visited 和 两种颜色分别作为第一步的 ans。</p>
 <p><a href="https://www.lanqiao.cn/problems/17118/learning/" target="_blank">蓝桥 走方格</a>  比较板子的走迷宫 BFS，但题目描述和样例都很烂，没有大样例的 debug 需要花一段时间。</p>
+<p><a href="https://leetcode.cn/problems/number-of-islands/" target="_blank">HOT100 200. 岛屿数量</a> - 最基础的 BFS</p>
+<p><a href="https://leetcode.cn/problems/rotting-oranges/" target="_blank">HOT100 994. 腐烂的橘子</a> - 同样基础的 BFS</p>
 
 
 <h3 class="relative group">拓扑排序 
@@ -1641,6 +1648,7 @@ window.addEventListener("scroll", function (e) {
     </span>        
     
 </h3>
+<p><a href="https://leetcode.cn/problems/course-schedule/" target="_blank">HOT100 207. 课程表</a> - 判断是否有环，可以拓扑排序或 DFS</p>
 <p><a href="https://leetcode.cn/problems/course-schedule-iv/" target="_blank">leetcode 1462. 课程表 IV</a> - 拓扑排序。维护一个 dp 数组，拓扑排序时，已确认 node 是 next 的先导。则状态转移方程：<code>dp[i][next] = dp[i][next] || dp[i][node]</code>。其中<code>dp[i][j]</code> 表示 i 是 j 的先导。</p>
 <p><a href="https://leetcode.cn/problems/redundant-connection-ii/" target="_blank">leetcode 685. 冗余连接 II</a> - 基环树 + 分类讨论。需要的算法是判断入度和判断环，都是基于拓扑排序。</p>
 <p><a href="https://leetcode.cn/problems/longest-cycle-in-a-graph/" target="_blank">leetcode 2360. 图中的最长环</a> - 由于每个节点最多一个出边。因此不存在嵌套的环，每个节点至多在一个环中。拓扑排序：找到在环中的节点 + DFS：遍历每个环。</p>
@@ -1662,7 +1670,8 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/" target="_blank">leetcode 2642. 设计可以求最短路径的图类</a> - spfa 做法。</p>
 <p><a href="https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-i/" target="_blank">leetcode 3341. 到达最后一个房间的最少时间 I</a> - 经典网格图 dijk</p>
 <p><a href="https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-ii/" target="_blank">leetcode 3342. 到达最后一个房间的最少时间 II</a> - 网格图最短路，由于需要判断当前 dis 和 dis_num 因此不太适合 BFS。此题我用了 SPFA，会卡常数。网格图这种稠密图更适合 Dijk。</p>
-<p><a href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/" target="_blank">leetocd 1334. 阈值距离内邻居最少的城市</a> Floyd 多源最短路。</p>
+<p><a href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/" target="_blank">leetcode 1334. 阈值距离内邻居最少的城市</a> Floyd 多源最短路。</p>
+<p><a href="https://leetcode.cn/problems/grid-teleportation-traversal/" target="_blank">leetcode 3552. 网格传送门旅游</a> - 01BFS，实际上是将 queue 换成双端队列，不消耗步数就插入队列顶部，也可以视作只有01距离的 dijk</p>
 
 
 <h3 class="relative group">最小生成树 
@@ -1679,6 +1688,19 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/min-cost-to-connect-all-points/" target="_blank">leetcode 1584. 连接所有点的最小费用</a> 克鲁斯卡尔板子。</p>
 
 
+<h3 class="relative group">并查集 
+    <div id="%E5%B9%B6%E6%9F%A5%E9%9B%86" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://leetcode.cn/problems/minimum-swaps-to-sort-by-digit-sum/" target="_blank">leetcode 3551. 数位和排序需要的最小交换次数</a> - 排序最小交换次数问题，实际上就是寻找数组中的连通块数量（将下标视作链表），找连通块可以用 BFS DFS 并查集等等。</p>
+
+
 <h3 class="relative group">LCA 
     <div id="lca" class="anchor"></div>
     
@@ -1691,6 +1713,19 @@ window.addEventListener("scroll", function (e) {
 </h3>
 <p><a href="https://www.lanqiao.cn/problems/17124/learning/" target="_blank">蓝桥 彩色二叉树</a> - 完全二叉树的两点 LCA，倍增法的缩减版。用树上两点距离 x y，存储所有标记操作。遍历标记操作，找 x y 距离小于 y 并最晚标记的颜色。 理论复杂度较高，但实际能过全部数据。</p>
 <p><a href="https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves/" target="_blank">leetcode 1123. 最深叶节点的最近公共祖先</a> - 也可以不用 LCA 做，但可以练一下</p>
+
+
+<h3 class="relative group">Trie 
+    <div id="trie" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#trie" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://leetcode.cn/problems/implement-trie-prefix-tree/" target="_blank">HOT100 208. 实现 Trie (前缀树)</a> - Trie 树板子，构造题</p>
 
 
 <h2 class="relative group">线段树 
@@ -1724,6 +1759,9 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://www.lanqiao.cn/problems/17145/learning/" target="_blank">蓝桥 交易账本</a> - 中高强度的模拟，幸好样例给的不错</p>
 <p><a href="https://leetcode.cn/problems/push-dominoes/" target="_blank">leetcode 838. 推多米诺</a> - 小模拟多米诺骨牌，用 BFS 能减少分类讨论</p>
 <p><a href="https://leetcode.cn/problems/minimum-domino-rotations-for-equal-row/" target="_blank">leetcode 1007. 行相等的最少多米诺旋转</a> - 小模拟找最小</p>
+<p><a href="https://leetcode.cn/problems/set-matrix-zeroes/" target="_blank">HOT100 73. 矩阵置零</a> - 模拟，要找节约内存的最优解。用第一行和第一列的来记录本行或列是否要归零。用 bool 记录第一行或列自己是否要归零</p>
+<p><a href="https://leetcode.cn/problems/spiral-matrix/" target="_blank">HOT100 54. 螺旋矩阵</a> - 纯模拟，右下左上的顺序</p>
+<p><a href="https://leetcode.cn/problems/rotate-image/" target="_blank">HOT100 48. 旋转图像</a> - 纯模拟 先换主对角线 再换左右 就是向右选择 90°</p>
 
 
 <h3 class="relative group">日期模拟 
@@ -1765,6 +1803,8 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/next-permutation/" target="_blank">HOT100 31. 下一个排列</a> - 经典下一个排序算法，需要两次从后向前遍历找两个下标，交换后反转降序数组。</p>
 <p><a href="https://leetcode.cn/problems/merge-intervals/" target="_blank">HOT100 56. 合并区间</a> - 区间排序后，重叠则合并，不重叠则加入结果。</p>
 <p><a href="https://leetcode.cn/problems/rotate-array/" target="_blank">HOT100 189. 轮转数组</a> - 最优解法是：reverse(0, n - 1) ; reverse(0, k - 1); reverse(k, n - 1)</p>
+<p><a href="https://leetcode.cn/problems/first-missing-positive/" target="_blank">HOT100 41. 缺失的第一个正数</a> - 利用交换将正数放入对应下标，最终首个不匹配位置即为缺失的最小正整数。</p>
+<p><a href="https://leetcode.cn/problems/search-a-2d-matrix-ii/" target="_blank">HOT100 240. 搜索二维矩阵 II</a> - 最优解法是将其视作一根以右上角为顶点的二分查找树，时间复杂度是 O(m + n)</p>
 
 
 <h3 class="relative group">哈希 
