@@ -702,7 +702,7 @@ window.addEventListener("scroll", function (e) {
   if (heading && window.location.pathname !== "/") {
     const headingRect = heading.getBoundingClientRect();
     const headingOffset = headingRect.bottom + scroll;
-    const switchPoint = headingOffset - 100; 
+    const switchPoint = headingOffset - 50; 
     const restorePoint = headingOffset + 50; 
 
     if (scrollDirection === "down" && scroll > switchPoint && !isArticleTitleVisible) {
