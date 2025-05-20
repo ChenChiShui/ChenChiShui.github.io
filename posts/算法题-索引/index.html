@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "6433"
+    "wordCount": "6819"
   }]
   </script>
 
@@ -762,7 +762,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>6433 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">13 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>6819 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">14 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1115,6 +1115,12 @@ window.addEventListener("scroll", function (e) {
       </ul>
     </li>
     <li><a href="#贪心">贪心</a></li>
+    <li><a href="#面试智力题">面试智力题</a>
+      <ul>
+        <li><a href="#鸡蛋坠楼">鸡蛋坠楼</a></li>
+        <li><a href="#概率论">概率论</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -1190,6 +1196,12 @@ window.addEventListener("scroll", function (e) {
       </ul>
     </li>
     <li><a href="#贪心">贪心</a></li>
+    <li><a href="#面试智力题">面试智力题</a>
+      <ul>
+        <li><a href="#鸡蛋坠楼">鸡蛋坠楼</a></li>
+        <li><a href="#概率论">概率论</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -1347,6 +1359,8 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/subsets/" target="_blank">HOT100 78. 子集</a> - 经典搜索回溯问题</p>
 <p><a href="https://leetcode.cn/problems/letter-combinations-of-a-phone-number/" target="_blank">HOT100 17. 电话号码的字母组合</a> - 哈希表 + 基础回溯</p>
 <p><a href="https://leetcode.cn/problems/combination-sum/" target="_blank">HOT100 39. 组合总和</a> - 对结果查重的回溯问题，需要注意分割数组</p>
+<p><a href="https://leetcode.cn/problems/word-search/" target="_blank">HOT100 79. 单词搜索</a> - 走格子回溯路径，注意剪枝。优化：词频判断提前返回</p>
+<p><a href="https://leetcode.cn/problems/palindrome-partitioning/" target="_blank">HOT100 131. 分割回文串</a>  - j 从 i 起枚举子串终点，判断是否回文，若是则加入路径并递归，完成后回溯。</p>
 
 
 <h2 class="relative group">动态规划 
@@ -1817,7 +1831,6 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://www.lanqiao.cn/problems/19700/learning/?page=1&amp;first_category_id=1&amp;second_category_id=3&amp;name=%E5%8F%AC%E5%94%A4%E6%95%B0%E5%AD%A6%E7%B2%BE%E7%81%B5" target="_blank">蓝桥 召唤数学精灵</a> - 杯特有的找规律，不得不品尝。前面位置的题不会了就缩小数据范围找规律试试。</p>
 <p><a href="https://www.lanqiao.cn/problems/19714/learning/" target="_blank">蓝桥 数字诗意</a> - 还是那个找规律，答案是所有的 2 ** n ，用 n &amp; (n - 1) == 0 判断</p>
 <p><a href="https://www.lanqiao.cn/problems/19735/learning/" target="_blank">蓝桥 村的真相</a> - 稍微难一点的找规律，和考公题一样。</p>
-<p><a href="https://leetcode.cn/problems/airplane-seat-assignment-probability/" target="_blank">leetcode 1227. 飞机座位分配概率</a> - 经典概率论思维题</p>
 <p><a href="https://www.lanqiao.cn/problems/3526/learning/" target="_blank">蓝桥 子树的大小</a> - 思维 + 完全 N 叉树概念了解即可。之后通过遍历最左和最右节点来进行求和。</p>
 <p><a href="https://www.lanqiao.cn/problems/3527/learning/" target="_blank">蓝桥 阶乘的和</a> - 将阶乘和数组，模拟从最小因子开始合并，若可整除则升级，贪心推进求出最终最大因子值 （需要一点点 gcd 的知识）</p>
 <p><a href="https://leetcode.cn/problems/rabbits-in-forest/" target="_blank">leetcode 781. 森林中的兔子</a> - 思维题：如果同种兔子数量不大于他所说的个数，则有 i+1 种兔子，如果大于，则进行分组即可。</p>
@@ -1929,6 +1942,64 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/maximum-value-of-an-ordered-triplet-ii/" target="_blank">leetcode2874. 有序三元组中的最大值 II</a> - 贪心使得 nums[i] 和 nums[k] 最大，因此只用维护最大前缀后缀即可</p>
 <p><a href="https://www.lanqiao.cn/problems/17148/learning/" target="_blank">蓝桥 最长回文前后缀</a> - 双指针回文贪心，如果严格复杂度需要马拉车算法，实际上用双指针处理前后缀即可。</p>
 <p><a href="https://www.lanqiao.cn/problems/3518/learning/" target="_blank">蓝桥 三国游戏</a> - 贪心 + 排序。同一选择只会有一种赢。</p>
+
+
+<h2 class="relative group">面试智力题 
+    <div id="%E9%9D%A2%E8%AF%95%E6%99%BA%E5%8A%9B%E9%A2%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%9D%A2%E8%AF%95%E6%99%BA%E5%8A%9B%E9%A2%98" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">鸡蛋坠楼 
+    <div id="%E9%B8%A1%E8%9B%8B%E5%9D%A0%E6%A5%BC" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%B8%A1%E8%9B%8B%E5%9D%A0%E6%A5%BC" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://leetcode.cn/problems/egg-drop-with-2-eggs-and-n-floors/" target="_blank">leetcode 1884. 鸡蛋掉落-两枚鸡蛋</a> - 找到所有 n * (1 + n) / 2 即全部累计的数</p>
+<p><a href="https://leetcode.cn/problems/super-egg-drop/" target="_blank">leetcode 887. 鸡蛋掉落</a> ：</p>
+<ol>
+<li>
+<p>从 n 直接得到次数比较难，类似上一题（k == 2）的特例</p>
+<p>可以枚举 i 找其能找的最大楼层，降低难度</p>
+</li>
+<li>
+<p>考虑子问题，关键两个因素是“剩余的尝试次数 i 和剩余的鸡蛋数量 j“</p>
+<p>此外其时间复杂度 n * k 为 1e6，更能考虑其 i 与 j 为关键状态</p>
+</li>
+<li>
+<p>在某楼层扔鸡蛋，会产生两种状态</p>
+<p>鸡蛋碎了 -&gt; 产生 dfs(i - 1, j - 1) 的子问题 -&gt; 其本身也测出来该楼层正误 -&gt; 获得 dfs(i - 1, j - 1) + 1 的楼层</p>
+<p>鸡蛋没碎 -&gt; 产生 dfs(i - 1, j) 的子问题 -&gt; 即该楼层以上能测出多少楼层</p>
+<p>该楼层以下 + 该楼层以上 -&gt; dfs(i - 1, j - 1) + 1 + dfs(i - 1, j)</p>
+</li>
+<li>
+<p>当 i == 0 或 j == 0 时测不出来楼层 返回 0</p>
+</li>
+</ol>
+
+
+<h3 class="relative group">概率论 
+    <div id="%E6%A6%82%E7%8E%87%E8%AE%BA" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%A6%82%E7%8E%87%E8%AE%BA" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://leetcode.cn/problems/airplane-seat-assignment-probability/" target="_blank">leetcode 1227. 飞机座位分配概率</a> - 除第一人外，每人坐对概率对称，最终乘客有一半概率坐上自己的座位。</p>
 
           
           
