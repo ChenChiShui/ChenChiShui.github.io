@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "7225"
+    "wordCount": "7304"
   }]
   </script>
 
@@ -762,7 +762,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>7225 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">15 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>7304 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">15 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1752,6 +1752,7 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/redundant-connection-ii/" target="_blank">leetcode 685. 冗余连接 II</a> - 基环树 + 分类讨论。需要的算法是判断入度和判断环，都是基于拓扑排序。</p>
 <p><a href="https://leetcode.cn/problems/longest-cycle-in-a-graph/" target="_blank">leetcode 2360. 图中的最长环</a> - 由于每个节点最多一个出边。因此不存在嵌套的环，每个节点至多在一个环中。拓扑排序：找到在环中的节点 + DFS：遍历每个环。</p>
 <p><a href="https://leetcode.cn/problems/maximum-weighted-k-edge-path/" target="_blank">leetcode 3543. K 条边路径的最大边权和</a> - 先拓扑排序判断有向图顺序，在根据排序进行 DP。状态 <code>dp[i][j]</code> 表示 终点在 i 点、经过 j 条路径的全部可能的总长度大小。通过拓扑排序可以保证只需要遍历一轮 n。或者使用记忆化搜索更加简单。</p>
+<p><a href="https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/" target="_blank">leetcode 1857. 有向图中最大颜色值</a> - 拓扑排序 + 图上 DP，拓扑排序判断环，并顺便完成 DP 状态的更新。<code>dp[v][c]</code> 表示以 v 为终点，颜色 c 的最大数量 ，当然也可以 DFS 记忆化搜索。</p>
 
 
 <h3 class="relative group">最短路 
