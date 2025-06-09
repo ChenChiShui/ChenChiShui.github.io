@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "7504"
+    "wordCount": "7645"
   }]
   </script>
 
@@ -762,7 +762,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>7504 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">15 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>7645 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">16 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -1053,7 +1053,6 @@ window.addEventListener("scroll", function (e) {
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#二分查找">二分查找</a></li>
     <li><a href="#记忆化搜索">记忆化搜索</a></li>
     <li><a href="#搜索">搜索</a>
       <ul>
@@ -1091,9 +1090,9 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#快速幂">快速幂</a></li>
         <li><a href="#质数筛">质数筛</a></li>
         <li><a href="#组合数学">组合数学</a></li>
+        <li><a href="#质因数">质因数</a></li>
       </ul>
     </li>
-    <li><a href="#链表">链表</a></li>
     <li><a href="#图论">图论</a>
       <ul>
         <li><a href="#搜索-1">搜索</a></li>
@@ -1102,9 +1101,10 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#最小生成树">最小生成树</a></li>
         <li><a href="#并查集">并查集</a></li>
         <li><a href="#lca">LCA</a></li>
-        <li><a href="#trie">Trie</a></li>
+        <li><a href="#前缀树-trie">前缀树 Trie</a></li>
       </ul>
     </li>
+    <li><a href="#链表">链表</a></li>
     <li><a href="#线段树">线段树</a></li>
     <li><a href="#模拟">模拟</a>
       <ul>
@@ -1117,10 +1117,10 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#双指针">双指针</a></li>
         <li><a href="#异或和">异或和</a></li>
         <li><a href="#贡献法">贡献法</a></li>
-        <li><a href="#heading"></a></li>
         <li><a href="#鸽巢原理">鸽巢原理</a></li>
       </ul>
     </li>
+    <li><a href="#二分查找">二分查找</a></li>
     <li><a href="#贪心">贪心</a></li>
     <li><a href="#面试智力题">面试智力题</a>
       <ul>
@@ -1141,7 +1141,6 @@ window.addEventListener("scroll", function (e) {
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#二分查找">二分查找</a></li>
     <li><a href="#记忆化搜索">记忆化搜索</a></li>
     <li><a href="#搜索">搜索</a>
       <ul>
@@ -1179,9 +1178,9 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#快速幂">快速幂</a></li>
         <li><a href="#质数筛">质数筛</a></li>
         <li><a href="#组合数学">组合数学</a></li>
+        <li><a href="#质因数">质因数</a></li>
       </ul>
     </li>
-    <li><a href="#链表">链表</a></li>
     <li><a href="#图论">图论</a>
       <ul>
         <li><a href="#搜索-1">搜索</a></li>
@@ -1190,9 +1189,10 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#最小生成树">最小生成树</a></li>
         <li><a href="#并查集">并查集</a></li>
         <li><a href="#lca">LCA</a></li>
-        <li><a href="#trie">Trie</a></li>
+        <li><a href="#前缀树-trie">前缀树 Trie</a></li>
       </ul>
     </li>
+    <li><a href="#链表">链表</a></li>
     <li><a href="#线段树">线段树</a></li>
     <li><a href="#模拟">模拟</a>
       <ul>
@@ -1205,10 +1205,10 @@ window.addEventListener("scroll", function (e) {
         <li><a href="#双指针">双指针</a></li>
         <li><a href="#异或和">异或和</a></li>
         <li><a href="#贡献法">贡献法</a></li>
-        <li><a href="#heading"></a></li>
         <li><a href="#鸽巢原理">鸽巢原理</a></li>
       </ul>
     </li>
+    <li><a href="#二分查找">二分查找</a></li>
     <li><a href="#贪心">贪心</a></li>
     <li><a href="#面试智力题">面试智力题</a>
       <ul>
@@ -1303,26 +1303,6 @@ window.addEventListener("scroll", function (e) {
 <p>本分类从 2025.01 开始。</p></blockquote>
 
 
-<h2 class="relative group">二分查找 
-    <div id="%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE" aria-label="锚点">#</a>
-    </span>        
-    
-</h2>
-<p><a href="https://leetcode.cn/problems/magnetic-force-between-two-balls/description/" target="_blank">leetcode 1552</a> - 最大化最小</p>
-<p><a href="https://leetcode.cn/problems/minimum-limit-of-balls-in-a-bag/description/" target="_blank">leetcode 1760</a> - 最小化最大</p>
-<p><a href="https://leetcode.cn/problems/minimum-time-to-repair-cars/description/" target="_blank">leetcode 2594</a> - 最小化最大，本质上是最小化</p>
-<p><a href="https://leetcode.cn/problems/find-the-smallest-divisor-given-a-threshold/" target="_blank">leetcode 1283. 使结果不超过阈值的最小除数</a> - 基础的最小化最大</p>
-<p><a href="https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/" target="_blank">leetcode 81. 搜索选择排序数组Ⅱ</a> - 经典旋转数组二分，要考虑比较多的边界</p>
-<p><a href="https://leetcode.cn/problems/search-in-rotated-sorted-array/" target="_blank">leetcode 33. 搜索选择排序数组</a> - 上一道题的简化版</p>
-<p><a href="https://www.luogu.com.cn/problem/P1068" target="_blank">luogu P1068</a> - 模拟排序 记得看下字符串输入输出</p>
-<p><a href="https://www.lanqiao.cn/problems/2383/learning/" target="_blank">蓝桥 卡片</a> - 找规律 + 二分答案。规律和二分都非常好想。</p>
-
-
 <h2 class="relative group">记忆化搜索 
     <div id="%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2" class="anchor"></div>
     
@@ -1357,6 +1337,7 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/palindrome-partitioning/" target="_blank">leetcode 131</a> - 经典回溯法，分割字符串</p>
 <p><a href="https://leetcode.cn/problems/sum-of-all-subset-xor-totals/" target="_blank">leetcode 1863. 找出所有子集的异或总和再求和</a> 选或不选的搜索，注意”异或操作“并不能直接累计</p>
 <p><a href="https://leetcode.cn/problems/generate-parentheses/" target="_blank">HOT100 22. 括号生成</a> - 虽然在回溯的提单，但其实只需要可以在搜索过程中剪枝即可</p>
+<p><a href="https://www.lanqiao.cn/problems/20112/learning/" target="_blank">蓝桥 不同的总分值</a> - 最简答的选或不选搜索</p>
 
 
 <h3 class="relative group">回溯 
@@ -1725,19 +1706,17 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/number-of-ways-to-assign-edge-weights-i/" target="_blank">leetcode 3558. 给边赋权值的方案数 I</a> - 两个步骤：1. 遍历树的最深深度 2. 求该深度个数中（每个数都是1或2），一共有多少种总长度奇数的路径，因此可以用组合数学求和。其中求和 1 个奇数、3个奇数 …… 的组合数，根据二项式定理，就是 2 ^ (i - 1) 种。</p>
 
 
-<h2 class="relative group">链表 
-    <div id="%E9%93%BE%E8%A1%A8" class="anchor"></div>
+<h3 class="relative group">质因数 
+    <div id="%E8%B4%A8%E5%9B%A0%E6%95%B0" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E9%93%BE%E8%A1%A8" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E8%B4%A8%E5%9B%A0%E6%95%B0" aria-label="锚点">#</a>
     </span>        
     
-</h2>
-<p><strong>比赛很少考，面试经常考</strong></p>
-<p><a href="https://www.acwing.com/problem/content/description/5725/" target="_blank">CSP 十滴水</a> - 递归加双向链表模拟即可。实际上 map 的底层是红黑树，能够实现 log 级别模拟双向链表 ，因此可以直接用 map 逃课。</p>
-<p><a href="https://leetcode.cn/problems/linked-list-cycle-ii/" target="_blank">HOT100 142. 环形链表 II</a> - 快慢指针找入环的第一个节点，技巧题。当快慢指针第一次相遇时候，将快指针重新回到头节点，快慢同步走，再次相遇就是环入口。</p>
+</h3>
+<p><a href="https://www.lanqiao.cn/problems/20117/learning/" target="_blank">蓝桥 儿童数</a> - 利用唯一分解定理（每个正整数可以唯一表示为若干个质数的幂的乘积）将 1~2024 所有整数质因数分解，统计所有质因数总次数，若某质因数次数 ≥61，则按次数 //61 +1 参与组合乘积。</p>
 
 
 <h2 class="relative group">图论 
@@ -1849,17 +1828,32 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/number-of-ways-to-assign-edge-weights-ii/" target="_blank">leetcode 3559. 给边赋权值的方案数 II</a> - 用倍增法 LCA 求两节点距离，后续的组合数学部分见 3558 题。</p>
 
 
-<h3 class="relative group">Trie 
-    <div id="trie" class="anchor"></div>
+<h3 class="relative group">前缀树 Trie 
+    <div id="%E5%89%8D%E7%BC%80%E6%A0%91-trie" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#trie" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%89%8D%E7%BC%80%E6%A0%91-trie" aria-label="锚点">#</a>
     </span>        
     
 </h3>
 <p><a href="https://leetcode.cn/problems/implement-trie-prefix-tree/" target="_blank">HOT100 208. 实现 Trie (前缀树)</a> - Trie 树板子，构造题</p>
+
+
+<h2 class="relative group">链表 
+    <div id="%E9%93%BE%E8%A1%A8" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%93%BE%E8%A1%A8" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p><strong>比赛很少考，面试经常考</strong></p>
+<p><a href="https://www.acwing.com/problem/content/description/5725/" target="_blank">CSP 十滴水</a> - 递归加双向链表模拟即可。实际上 map 的底层是红黑树，能够实现 log 级别模拟双向链表 ，因此可以直接用 map 逃课。</p>
+<p><a href="https://leetcode.cn/problems/linked-list-cycle-ii/" target="_blank">HOT100 142. 环形链表 II</a> - 快慢指针找入环的第一个节点，技巧题。当快慢指针第一次相遇时候，将快指针重新回到头节点，快慢同步走，再次相遇就是环入口。</p>
 
 
 <h2 class="relative group">线段树 
@@ -2006,18 +2000,6 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://www.acwing.com/problem/content/description/6137/" target="_blank">哞叫时间Ⅱ</a> - 在遍历过程中维护三个数组，“遍历右，维护左”</p>
 
 
-<h3 class="relative group"> 
-    <div id="heading" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#heading" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-
-
 <h3 class="relative group">鸽巢原理 
     <div id="%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86" class="anchor"></div>
     
@@ -2029,6 +2011,26 @@ window.addEventListener("scroll", function (e) {
     
 </h3>
 <p><a href="https://www.lanqiao.cn/problems/2206/learning/" target="_blank">蓝桥 取模</a> - 乍一看是中国剩余定理。但实际上是 “反证 + 鸽巢原理”，若模值两两不同，则必为 n % m == m - 1（因为小于 m - 1 的已经被占了），遍历验证是否存在不满足的情况。</p>
+
+
+<h2 class="relative group">二分查找 
+    <div id="%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p><a href="https://leetcode.cn/problems/magnetic-force-between-two-balls/description/" target="_blank">leetcode 1552</a> - 最大化最小</p>
+<p><a href="https://leetcode.cn/problems/minimum-limit-of-balls-in-a-bag/description/" target="_blank">leetcode 1760</a> - 最小化最大</p>
+<p><a href="https://leetcode.cn/problems/minimum-time-to-repair-cars/description/" target="_blank">leetcode 2594</a> - 最小化最大，本质上是最小化</p>
+<p><a href="https://leetcode.cn/problems/find-the-smallest-divisor-given-a-threshold/" target="_blank">leetcode 1283. 使结果不超过阈值的最小除数</a> - 基础的最小化最大</p>
+<p><a href="https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/" target="_blank">leetcode 81. 搜索选择排序数组Ⅱ</a> - 经典旋转数组二分，要考虑比较多的边界</p>
+<p><a href="https://leetcode.cn/problems/search-in-rotated-sorted-array/" target="_blank">leetcode 33. 搜索选择排序数组</a> - 上一道题的简化版</p>
+<p><a href="https://www.luogu.com.cn/problem/P1068" target="_blank">luogu P1068</a> - 模拟排序 记得看下字符串输入输出</p>
+<p><a href="https://www.lanqiao.cn/problems/2383/learning/" target="_blank">蓝桥 卡片</a> - 找规律 + 二分答案。规律和二分都非常好想。</p>
 
 
 <h2 class="relative group">贪心 
@@ -2052,6 +2054,7 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://leetcode.cn/problems/maximum-value-of-an-ordered-triplet-ii/" target="_blank">leetcode2874. 有序三元组中的最大值 II</a> - 贪心使得 nums[i] 和 nums[k] 最大，因此只用维护最大前缀后缀即可</p>
 <p><a href="https://www.lanqiao.cn/problems/17148/learning/" target="_blank">蓝桥 最长回文前后缀</a> - 双指针回文贪心，如果严格复杂度需要马拉车算法，实际上用双指针处理前后缀即可。</p>
 <p><a href="https://www.lanqiao.cn/problems/3518/learning/" target="_blank">蓝桥 三国游戏</a> - 贪心 + 排序。同一选择只会有一种赢。</p>
+<p><a href="https://www.lanqiao.cn/problems/20137/learning/" target="_blank">蓝桥 球衣号码</a> - 简单推理可得，编码的最大值只和最小和最大的号有关</p>
 
 
 <h2 class="relative group">面试智力题 
