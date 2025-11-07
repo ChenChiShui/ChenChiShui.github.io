@@ -4,13 +4,31 @@
 
   <url>
     <loc>https://blog.chencs.online/categories/</loc>
-    <lastmod>2025-03-06T19:33:19+08:00</lastmod>
+    <lastmod>2025-10-08T22:27:38+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://blog.chencs.online/posts/</loc>
-    <lastmod>2025-03-06T19:33:19+08:00</lastmod>
+    <lastmod>2025-10-08T22:27:38+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://blog.chencs.online/</loc>
+    <lastmod>2025-10-08T22:27:38+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://blog.chencs.online/posts/graduate_application_experience/</loc>
+    <lastmod>2025-10-08T22:27:38+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://blog.chencs.online/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2025-10-08T22:27:38+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -28,12 +46,6 @@
   </url>
   <url>
     <loc>https://blog.chencs.online/posts/pytorch_memo/</loc>
-    <lastmod>2025-03-06T19:33:19+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://blog.chencs.online/</loc>
     <lastmod>2025-03-06T19:33:19+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -64,12 +76,6 @@
   </url>
   <url>
     <loc>https://blog.chencs.online/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/</loc>
-    <lastmod>2025-02-21T14:48:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://blog.chencs.online/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2025-02-21T14:48:57+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
