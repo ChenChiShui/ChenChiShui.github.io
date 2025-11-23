@@ -119,7 +119,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "8537"
+    "wordCount": "8658"
   }]
   </script>
 
@@ -785,7 +785,7 @@ window.addEventListener("scroll", function (e) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>8537 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">18 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>8658 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">18 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -2162,6 +2162,7 @@ window.addEventListener("scroll", function (e) {
 <p><a href="https://www.lanqiao.cn/problems/3518/learning/" target="_blank">蓝桥 三国游戏</a> - 贪心 + 排序。同一选择只会有一种赢。</p>
 <p><a href="https://www.lanqiao.cn/problems/20137/learning/" target="_blank">蓝桥 球衣号码</a> - 简单推理可得，编码的最大值只和最小和最大的号有关</p>
 <p><a href="https://leetcode.cn/problems/longest-binary-subsequence-less-than-or-equal-to-k/" target="_blank">leetcode 2311. 小于等于 K 的最长二进制子序列</a>  -  从后往前找尽量多的 1 ，多余的 0 直接补上即可</p>
+<p><a href="https://leetcode.cn/problems/greatest-sum-divisible-by-three/" target="_blank">leetcode 1262. 可被三整除的最大和</a> - 经典凑 mod3 的贪心，思路挺有意思的。可以找最小的 x1 % 3 == 1 和 x2 % 3 == 2，为这个 x1 x2 也可以是其他数凑的。状态转移比如当 x2 % 3 == 2 时： x1 = min(x1, x2 + nums[i]), x2 = min(x2, nums[i])，从而包装 x1 和 x2 没有依赖关系。最后 用 s - x1 或 s - x2 做答案。</p>
 
 
 <h2 class="relative group">面试智力题 
