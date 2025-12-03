@@ -1,0 +1,3469 @@
+<!doctype html>
+<html
+  lang="cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-ch">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>算法题 - 分类索引 &middot; 陈驰水-个人博客</title>
+    <meta name="title" content="算法题 - 分类索引 &middot; 陈驰水-个人博客">
+  
+
+  
+  
+    <meta name="description" content="来自陈驰水的一个关于算法与编程的技术博客">
+  
+  
+  
+  
+  <link rel="canonical" href="https://blog.chencs.online/posts/%E7%AE%97%E6%B3%95%E9%A2%98-%E7%B4%A2%E5%BC%95/">
+  
+
+  
+  
+    <meta name="author" content="陈驰水">
+  
+  
+    
+      
+        
+          <link href="https://github.com/ChenChiShui" rel="me">
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://leetcode.cn/u/walter_chen/" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.kaggle.com/walterchencs" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.xiaohongshu.com/user/profile/61cda3a2000000000201d31d" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://steamcommunity.com/profiles/76561198325927123/" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://blog.chencs.online/posts/%E7%AE%97%E6%B3%95%E9%A2%98-%E7%B4%A2%E5%BC%95/">
+  <meta property="og:site_name" content="陈驰水-个人博客">
+  <meta property="og:title" content="算法题 - 分类索引">
+  <meta property="og:description" content="来自陈驰水的一个关于算法与编程的技术博客">
+  <meta property="og:locale" content="zh_ch">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-01-02T22:27:38+08:00">
+    <meta property="article:modified_time" content="2025-01-02T22:27:38+08:00">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="算法题 - 分类索引">
+  <meta name="twitter:description" content="来自陈驰水的一个关于算法与编程的技术博客">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION">
+  
+  
+    <meta name="msvalidate.01" content="YOUR_BING_SITE_VERIFICATION">
+  
+  
+    <meta name="p:domain_verify" content="YOUR_PINTEREST_SITE_VERIFICATION">
+  
+  
+    <meta name="yandex-verification" content="YOUR_YANDEX_SITE_VERIFICATION">
+  
+  
+    <meta name="fediverse:creator" content="@yourhandle@mastodon.instance">
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.609ab222ee8a0be99169823d7982c8964dde6d7c4e0118054e190183ff6bb424e2bdb939cc66a393c0068c00836a921e48d871dd7e14a6e0e159f20ff25dfc55.css"
+    integrity="sha512-YJqyIu6KC&#43;mRaYI9eYLIlk3ebXxOARgFThkBg/9rtCTivbk5zGajk8AGjACDapIeSNhx3X4UpuDhWfIP8l38VQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9cc802d09f28c6af56ceee7bc6e320a39251fdae98243f2a9942f221ac57a9f49c51609699a91794a7b2580ee1deaa8e4d794a68ffa94aa317c66e893ce51e02.js"
+      integrity="sha512-nMgC0J8oxq9Wzu57xuMgo5JR/a6YJD8qmULyIaxXqfScUWCWmakXlKeyWA7h3qqOTXlKaP&#43;pSqMXxm6JPOUeAg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "",
+    "name": "算法题 - 分类索引",
+    "headline": "算法题 - 分类索引",
+    
+    
+    "inLanguage": "zh-ch",
+    "url" : "https://blog.chencs.online/posts/%E7%AE%97%E6%B3%95%E9%A2%98-%E7%B4%A2%E5%BC%95/",
+    "author" : {
+      "@type": "Person",
+      "name": "陈驰水"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-01-02T22:27:38\u002b08:00",
+    "datePublished": "2025-01-02T22:27:38\u002b08:00",
+    
+    "dateModified": "2025-01-02T22:27:38\u002b08:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "8658"
+  }]
+  </script>
+
+
+
+  
+  
+    
+  
+  <script
+    defer
+    src="https://analytics.yoursite.com/script.js"
+    data-site="ABC12345"></script>
+
+
+
+
+
+  
+
+  <script
+    data-id="umami-script"
+    async
+    src="https://analytics.yoursite.com/script.js"
+    data-website-id="ABC12345"
+    ></script>
+
+
+
+
+  <script type="text/javascript">
+    document.querySelector('script[data-id="umami-script"]').addEventListener("load", function () {
+      const type = document.head.querySelector('meta[property = "og:type"]').getAttribute("content");
+      let title = document.head.querySelector('meta[property = "og:title"]').getAttribute("content");
+      let url = document.head.querySelector('meta[property = "og:url"]').getAttribute("content");
+      umami.track(type + ":" + title, { url: url });
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+      <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCcZ7EjQ2Uz89-YfrDGtBCI6RLbjtnY-Bw",
+      authDomain: "walter-blog-d4a72.firebaseapp.com",
+      projectId: "walter-blog-d4a72",
+      storageBucket: "walter-blog-d4a72.firebasestorage.app",
+      messagingSenderId: "328082427833",
+      appId: "1:328082427833:web:f9dc1638b594e8c7443068",
+      measurementId: "G-YHMGY7E0PL"
+    };
+
+        var app = firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+        var auth = firebase.auth();
+
+      </script>
+    
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+
+
+<div id="island-header"
+  class="fixed rounded-full place-self-center top-4 pl-[24px] pr-[24px] w-full min-w-se max-w-se se:max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl"
+  style="z-index: 100;">
+  <div id="menu-blur"
+    class="absolute rounded-full opacity-0 inset-x-0 h-full nozoom shadow-2xl backdrop-blur-2xl shadow-lg">
+  </div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+      class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+      
+      
+      
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">陈驰水-个人博客</span>
+
+          
+          <img id="logo-bar" src="/img/Sick%20Shooting%20Star%20Sticker.gif" width="250"
+            height="250"
+            class="logo max-h-[2rem] max-w-[2rem] object-scale-down object-left nozoom" alt="陈驰水-个人博客" />
+          
+
+        </a>
+      </div>
+      
+      <div class="flex flex-1 items-center justify-between">
+        <nav id="title-bar"  class="hidden se:flex md:ml-7">
+
+          
+          <a id="page-title-bar" href="/"
+            class="relative text-base font-bold text-gray-500 hover:text-gray-900">陈驰水-个人博客</a>
+          
+          <a id="article-title-bar" href="#the-top"
+            class="absolute se:flex text-sm md:text-base font-bold text-gray-500 hover:text-gray-900">算法题 - 分类索引</a>
+        </nav>
+        <nav class="space-x-3"></nav>
+        <nav class="main-menu hidden md:flex items-center space-x-5 md:ml-12 h-12">
+            
+            
+            
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        文章
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        标签
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        分类
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/posts/%E5%8F%8B%E9%93%BE/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="友链">
+        友链
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/posts/%E5%85%B3%E4%BA%8E%E6%88%91/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="关于我">
+        关于
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search"
+              class="text-base hover:text-primary-600 dark:hover:text-primary-400" title="搜索 (/)">
+              <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+            </button>
+            
+
+          
+          
+          <div
+            class="ltr:mr-14 rtl:ml-14 flex items-center">
+            <button id="appearance-switcher" aria-label="Dark mode switcher" type="button"
+              class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+              <div class="flex items-center justify-center dark:hidden">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+              </div>
+              <div class="items-center justify-center hidden dark:flex">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+              </div>
+            </button>
+          </div>
+          
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+          <span></span>
+
+          
+
+
+          
+          <button id="search-button-mobile" aria-label="Search"
+            class="text-base hover:text-primary-600 dark:hover:text-primary-400" title="搜索 (/)">
+            <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+          </button>
+          
+
+          
+          
+          <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button"
+            class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+            <div class="flex items-center justify-center dark:hidden">
+              <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div class="items-center justify-center hidden dark:flex">
+              <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+          
+
+        </div>
+      </div>
+      <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" class="block">
+          
+          <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+          </div>
+          <div id="menu-wrapper" style="padding-top:5px;"
+            class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+            <ul
+              class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+              <li id="menu-close-button">
+                <span
+                  class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span>
+              </li>
+
+              
+
+              
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            文章
+        </p>
+    </a>
+</li>
+
+
+
+
+              
+
+              
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            标签
+        </p>
+    </a>
+</li>
+
+
+
+
+              
+
+              
+  <li class="mt-1">
+    <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            分类
+        </p>
+    </a>
+</li>
+
+
+
+
+              
+
+              
+  <li class="mt-1">
+    <a href="/posts/%E5%8F%8B%E9%93%BE/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="友链">
+            友链
+        </p>
+    </a>
+</li>
+
+
+
+
+              
+
+              
+  <li class="mt-1">
+    <a href="/posts/%E5%85%B3%E4%BA%8E%E6%88%91/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="关于我">
+            关于
+        </p>
+    </a>
+</li>
+
+
+
+
+              
+
+            </ul>
+            
+            
+
+          </div>
+        </label>
+      </div>
+    </div>
+
+    
+
+    
+    <script>
+      (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+          $(e).children('p').addClass('active');
+        });
+      })();
+    </script>
+    
+
+  </div>
+</div>
+
+<script>
+let lastScroll = 0;
+let isArticleTitleVisible = false;
+
+window.addEventListener("scroll", function (e) {
+  const scroll = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollDirection = scroll > lastScroll ? "down" : "up";
+
+  const title_bar = document.getElementById("title-bar");
+  const heading = document.querySelector("h1");
+
+  var background_blur = document.getElementById('menu-blur');
+  background_blur.style.opacity = (scroll / 300);
+
+  if (heading && window.location.pathname !== "/") {
+    const headingRect = heading.getBoundingClientRect();
+    const headingOffset = headingRect.bottom + scroll;
+    const switchPoint = headingOffset - 50; 
+    const restorePoint = headingOffset + 50; 
+
+    if (scrollDirection === "down" && scroll > switchPoint && !isArticleTitleVisible) {
+      title_bar.classList.add("title-switched");
+      isArticleTitleVisible = true;
+    } else if (scrollDirection === "up" && scroll < restorePoint && isArticleTitleVisible) {
+      title_bar.classList.remove("title-switched");
+      isArticleTitleVisible = false;
+    }
+  }
+
+  lastScroll = scroll <= 0 ? 0 : scroll; 
+});
+</script>
+
+<script>
+let lastScrollTop = 0;
+let lastScrollDirection = 0;
+let island_header_style_top = 1;
+let accumulated_scroll = 0;
+
+window.addEventListener("scroll", function (e) {
+  const scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  let currScrollDirection = scroll - lastScrollTop > 0 ? 1 : -1; 
+
+  const island_header = document.getElementById("island-header");
+  const heading = document.querySelector("h1");
+  const headingDistance = heading.getBoundingClientRect();
+  const headingOffset = headingDistance.bottom + scroll;
+  const threshold = headingOffset * 2.8;
+
+  if (scroll > headingOffset) {
+    if (currScrollDirection !== lastScrollDirection) {
+      accumulated_scroll = 0;
+    } else {
+      accumulated_scroll += Math.abs(scroll - lastScrollTop);
+    }
+
+    if ((accumulated_scroll > threshold || currScrollDirection == -1) && (scroll > headingOffset + threshold / 2)) {
+      island_header_style_top = Math.max(
+        -4.5,
+        Math.min(
+          1,
+          (island_header_style_top - ((scroll - lastScrollTop) / 12) ** 3)
+        )
+      );
+
+      island_header.style.top = island_header_style_top + "rem";
+    }
+  }
+
+  lastScrollTop = scroll;
+  lastScrollDirection = currScrollDirection;
+});
+
+</script>
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+    
+    
+  
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/img/hero1_hu_28a323972c46b86b.png"
+      alt="算法题 - 分类索引"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+      integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/img/hero1_hu_28a323972c46b86b.png"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >陈驰水-个人博客</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/"
+      >posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/%E7%AE%97%E6%B3%95%E9%A2%98-%E7%B4%A2%E5%BC%95/"
+      >算法题 - 分类索引</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        算法题 - 分类索引
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-01-02T22:27:38&#43;08:00">2025 年 1 月 2 日</time><span class="px-2 text-primary-500">&middot;</span><span>8658 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">18 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title="啟用阅读模式"
+    data-title-i18n-disable="啟用阅读模式"
+    data-title-i18n-enable="停用阅读模式">
+    <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg></span></span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    算法与数据结构
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="陈驰水"
+        src="/img/avatar1_hu_63b293dd7b22b4b6.png"
+        data-zoom-src="/img/avatar1_hu_543b8db368682948.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        陈驰水
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">感谢您看到这里，祝您生活愉快</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/ChenChiShui"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:walter_chen.cc@foxmail.com"
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://leetcode.cn/u/walter_chen/"
+          target="_blank"
+          aria-label="Leetcode"
+          title="Leetcode"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill=currentColor width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <path d="M21.469 23.907l-3.595 3.473c-0.624 0.625-1.484 0.885-2.432 0.885s-1.807-0.26-2.432-0.885l-5.776-5.812c-0.62-0.625-0.937-1.537-0.937-2.485 0-0.952 0.317-1.812 0.937-2.432l5.76-5.844c0.62-0.619 1.5-0.859 2.448-0.859s1.808 0.26 2.432 0.885l3.595 3.473c0.687 0.688 1.823 0.663 2.536-0.052 0.708-0.713 0.735-1.848 0.047-2.536l-3.473-3.511c-0.901-0.891-2.032-1.505-3.261-1.787l3.287-3.333c0.688-0.687 0.667-1.823-0.047-2.536s-1.849-0.735-2.536-0.052l-13.469 13.469c-1.307 1.312-1.989 3.113-1.989 5.113 0 1.996 0.683 3.86 1.989 5.168l5.797 5.812c1.307 1.307 3.115 1.937 5.115 1.937 1.995 0 3.801-0.683 5.109-1.989l3.479-3.521c0.688-0.683 0.661-1.817-0.052-2.531s-1.849-0.74-2.531-0.052zM27.749 17.349h-13.531c-0.932 0-1.692 0.801-1.692 1.791 0 0.991 0.76 1.797 1.692 1.797h13.531c0.933 0 1.693-0.807 1.693-1.797 0-0.989-0.76-1.791-1.693-1.791z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.kaggle.com/walterchencs"
+          target="_blank"
+          aria-label="Kaggle"
+          title="Kaggle"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="currentColor" width="800px" height="800px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione-monotone" preserveAspectRatio="xMidYMid meet"><path d="M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2m6.016 44.508l-8.939-12.666l-2.922 2.961v9.705h-5.963V17.492h5.963v11.955l11.211-11.955h7.836L33.293 29.426l12.518 17.082h-7.795" fill="currentColor"></path></svg></span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.xiaohongshu.com/user/profile/61cda3a2000000000201d31d"
+          target="_blank"
+          aria-label="Xiaohongshu"
+          title="Xiaohongshu"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="256"
+   height="256"
+   viewBox="0 0 256 256"
+   sodipodi:docname="XiaohongshuLOGO.png"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.6914062"
+     inkscape:cx="127.81422"
+     inkscape:cy="128"
+     inkscape:window-width="1600"
+     inkscape:window-height="928"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <path
+       style="fill:currentColor;stroke:none"
+       d="M 29,0.33332825 C 13.959937,3.4666748 1.5356731,15.204498 0,31 -1.586103,47.314209 0,64.597672 0,81 v 102 c 0,18.76035 -4.7369685,44.19888 7.3333335,60 C 20.372129,260.06897 44.156731,256 63,256 h 111 35 c 5.78276,0 12.33244,0.84741 18,-0.33333 15.0401,-3.13336 27.46432,-14.87115 29,-30.66667 1.58612,-16.31419 0,-33.59769 0,-50 V 73 C 256,54.239685 260.73697,28.801102 248.66667,13 235.62787,-4.0689697 211.84329,0 193,0 H 82 47 C 41.217228,0 34.667561,-0.84741211 29,0.33332825 M 120,91 l -7,19 h 12 l -10,24 9,1 c -0.98794,2.68155 -2.31718,7.73317 -4.33334,9.83334 C 118.18945,146.3721 115.92654,146 114,146 c -4.35942,0 -13.16798,1.80539 -15.5,-3 -1.069664,-2.20416 0.465553,-4.98451 1.333336,-7 1.813624,-4.21228 4.222554,-8.51549 5.166664,-13 -2.17548,0 -4.92464,0.42967 -7,-0.33333 -7.778526,-2.85974 0.874031,-15.36435 2.66666,-19.66667 1.25875,-3.020981 2.75652,-9.584732 5.5,-11.5 C 110.01874,88.810822 115.88325,90.674988 120,91 m -79,63 c 2.750713,0 6.837379,0.81721 8.5,-2 1.769028,-2.99753 0.5,-9.58963 0.5,-13 V 106 C 50,102.90659 48.438198,93.464493 51.166668,91.5 53.41069,89.884308 62.832935,90.226166 63.833332,93 65.47065,97.539825 64,105.16241 64,110 v 32 c 0,5.48389 0.949112,11.8645 -1.333332,17 -2.177158,4.89861 -12.303417,9.27243 -17.333336,5.5 C 43.120155,162.84012 41.545292,156.59013 41,154 M 193,91 v 5 c 3.72887,0 8.4108,-0.763367 12,0.333328 11.97635,3.659424 11,15.422502 11,25.666672 1.99706,0 4.04419,-0.15562 6,0.33333 11.49335,2.87334 10,14.36401 10,23.66667 0,4.95615 0.93086,10.82184 -2.33333,15 -3.59567,4.60246 -9.48195,4 -14.66667,4 -1.6116,0 -4.26318,0.51051 -5.66667,-0.5 -2.62326,-1.88875 -3.78159,-7.50485 -4.33333,-10.5 3.28711,0 9.2179,1.12517 11.83333,-1.33334 C 219.9164,149.76859 218.65411,138.43454 215,136.5 c -1.93661,-1.02527 -4.88672,-0.5 -7,-0.5 h -15 v 29 h -14 v -29 h -14 v -14 h 14 v -12 h -9 V 96 h 9 v -5 h 14 m -32,5 v 14 h -8 v 42 h 13 v 13 H 120 L 125.33334,152.5 138,152 v -42 h -8 V 96 h 31 m 57,14 c 0,-2.84204 -0.51608,-6.25871 0.33333,-9 3.34434,-10.793121 19.61577,-2.093994 11.5,6.83333 -0.92279,1.01507 -2.54419,1.51106 -3.83333,1.83334 C 223.43948,110.30679 220.61993,110 218,110 M 41,110 36.833332,147 30,159 24,143 27,110 h 14 m 46,0 3,33 -6,15 h -2 c -5.366936,-8.49765 -6.053299,-17.26251 -7,-27 -0.672195,-6.91406 -2,-14.04004 -2,-21 h 14 m 106,0 v 12 h 9 v -12 h -9 m -75,42 -5,13 H 91 L 96.333336,151.5 104,151.66666 Z"
+       id="path1" />
+  </g>
+</svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://steamcommunity.com/profiles/76561198325927123/"
+          target="_blank"
+          aria-label="Steam"
+          title="Steam"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111.2 248-248.4 248-113.8 0-209.6-76.3-239-180.4l95.2 39.3c6.4 32.1 34.9 56.4 68.9 56.4 39.2 0 71.9-32.4 70.2-73.5l84.5-60.2c52.1 1.3 95.8-40.9 95.8-93.5 0-51.6-42-93.5-93.7-93.5s-93.7 42-93.7 93.5v1.2L176.6 279c-15.5-.9-30.7 3.4-43.5 12.1L0 236.1C10.2 108.4 117.1 8 247.6 8 384.8 8 496 119 496 256zM155.7 384.3l-30.5-12.6a52.79 52.79 0 0 0 27.2 25.8c26.9 11.2 57.8-1.6 69-28.4 5.4-13 5.5-27.3.1-40.3-5.4-13-15.5-23.2-28.5-28.6-12.9-5.4-26.7-5.2-38.9-.6l31.5 13c19.8 8.2 29.2 30.9 20.9 50.7-8.3 19.9-31 29.2-50.8 21zm173.8-129.9c-34.4 0-62.4-28-62.4-62.3s28-62.3 62.4-62.3 62.4 28 62.4 62.3-27.9 62.3-62.4 62.3zm.1-15.6c25.9 0 46.9-21 46.9-46.8 0-25.9-21-46.8-46.9-46.8s-46.9 21-46.9 46.8c.1 25.8 21.1 46.8 46.9 46.8z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#记忆化搜索">记忆化搜索</a></li>
+    <li><a href="#搜索">搜索</a>
+      <ul>
+        <li><a href="#回溯">回溯</a></li>
+      </ul>
+    </li>
+    <li><a href="#动态规划">动态规划</a>
+      <ul>
+        <li><a href="#资源分配-dp">资源分配 DP</a></li>
+        <li><a href="#区间-dp">区间 DP</a></li>
+        <li><a href="#打家劫舍型-dp">打家劫舍型 DP</a></li>
+        <li><a href="#状态机-dp">状态机 DP</a></li>
+        <li><a href="#经典线性-dp">经典线性 DP</a></li>
+        <li><a href="#状压-dp">状压 DP</a></li>
+        <li><a href="#博弈-dp">博弈 DP</a></li>
+        <li><a href="#数位-dp">数位 DP</a></li>
+        <li><a href="#其他-dp">其他 DP</a></li>
+      </ul>
+    </li>
+    <li><a href="#前缀和--差分数组">前缀和 &amp; 差分数组</a></li>
+    <li><a href="#堆--栈--队列--桶">堆 &amp; 栈 &amp; 队列 &amp; 桶</a>
+      <ul>
+        <li><a href="#栈">栈</a>
+          <ul>
+            <li><a href="#单调栈">单调栈</a></li>
+          </ul>
+        </li>
+        <li><a href="#堆">堆</a>
+          <ul>
+            <li><a href="#top-k">top K</a></li>
+          </ul>
+        </li>
+        <li><a href="#单调队列">单调队列</a></li>
+        <li><a href="#桶">桶</a></li>
+      </ul>
+    </li>
+    <li><a href="#滑动窗口">滑动窗口</a></li>
+    <li><a href="#字符串">字符串</a></li>
+    <li><a href="#数论">数论</a>
+      <ul>
+        <li><a href="#快速幂">快速幂</a></li>
+        <li><a href="#质数筛">质数筛</a></li>
+        <li><a href="#组合数学">组合数学</a></li>
+        <li><a href="#质因数">质因数</a></li>
+      </ul>
+    </li>
+    <li><a href="#图论">图论</a>
+      <ul>
+        <li><a href="#搜索-1">搜索</a></li>
+        <li><a href="#拓扑排序">拓扑排序</a></li>
+        <li><a href="#最短路">最短路</a></li>
+        <li><a href="#最小生成树">最小生成树</a></li>
+        <li><a href="#并查集">并查集</a></li>
+        <li><a href="#lca">LCA</a></li>
+        <li><a href="#前缀树-trie">前缀树 Trie</a></li>
+      </ul>
+    </li>
+    <li><a href="#链表">链表</a></li>
+    <li><a href="#区间数据结构">区间数据结构</a>
+      <ul>
+        <li><a href="#线段树">线段树</a></li>
+        <li><a href="#树状数组">树状数组</a></li>
+      </ul>
+    </li>
+    <li><a href="#模拟">模拟</a>
+      <ul>
+        <li><a href="#日期模拟">日期模拟</a></li>
+      </ul>
+    </li>
+    <li><a href="#思维题">思维题</a>
+      <ul>
+        <li><a href="#哈希">哈希</a></li>
+        <li><a href="#双指针">双指针</a></li>
+        <li><a href="#异或和">异或和</a></li>
+        <li><a href="#贡献法">贡献法</a></li>
+        <li><a href="#鸽巢原理">鸽巢原理</a></li>
+      </ul>
+    </li>
+    <li><a href="#二分查找">二分查找</a></li>
+    <li><a href="#贪心">贪心</a></li>
+    <li><a href="#面试智力题">面试智力题</a>
+      <ul>
+        <li><a href="#鸡蛋坠楼">鸡蛋坠楼</a></li>
+        <li><a href="#概率论">概率论</a></li>
+        <li><a href="#五道股票题">五道股票题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#记忆化搜索">记忆化搜索</a></li>
+    <li><a href="#搜索">搜索</a>
+      <ul>
+        <li><a href="#回溯">回溯</a></li>
+      </ul>
+    </li>
+    <li><a href="#动态规划">动态规划</a>
+      <ul>
+        <li><a href="#资源分配-dp">资源分配 DP</a></li>
+        <li><a href="#区间-dp">区间 DP</a></li>
+        <li><a href="#打家劫舍型-dp">打家劫舍型 DP</a></li>
+        <li><a href="#状态机-dp">状态机 DP</a></li>
+        <li><a href="#经典线性-dp">经典线性 DP</a></li>
+        <li><a href="#状压-dp">状压 DP</a></li>
+        <li><a href="#博弈-dp">博弈 DP</a></li>
+        <li><a href="#数位-dp">数位 DP</a></li>
+        <li><a href="#其他-dp">其他 DP</a></li>
+      </ul>
+    </li>
+    <li><a href="#前缀和--差分数组">前缀和 &amp; 差分数组</a></li>
+    <li><a href="#堆--栈--队列--桶">堆 &amp; 栈 &amp; 队列 &amp; 桶</a>
+      <ul>
+        <li><a href="#栈">栈</a>
+          <ul>
+            <li><a href="#单调栈">单调栈</a></li>
+          </ul>
+        </li>
+        <li><a href="#堆">堆</a>
+          <ul>
+            <li><a href="#top-k">top K</a></li>
+          </ul>
+        </li>
+        <li><a href="#单调队列">单调队列</a></li>
+        <li><a href="#桶">桶</a></li>
+      </ul>
+    </li>
+    <li><a href="#滑动窗口">滑动窗口</a></li>
+    <li><a href="#字符串">字符串</a></li>
+    <li><a href="#数论">数论</a>
+      <ul>
+        <li><a href="#快速幂">快速幂</a></li>
+        <li><a href="#质数筛">质数筛</a></li>
+        <li><a href="#组合数学">组合数学</a></li>
+        <li><a href="#质因数">质因数</a></li>
+      </ul>
+    </li>
+    <li><a href="#图论">图论</a>
+      <ul>
+        <li><a href="#搜索-1">搜索</a></li>
+        <li><a href="#拓扑排序">拓扑排序</a></li>
+        <li><a href="#最短路">最短路</a></li>
+        <li><a href="#最小生成树">最小生成树</a></li>
+        <li><a href="#并查集">并查集</a></li>
+        <li><a href="#lca">LCA</a></li>
+        <li><a href="#前缀树-trie">前缀树 Trie</a></li>
+      </ul>
+    </li>
+    <li><a href="#链表">链表</a></li>
+    <li><a href="#区间数据结构">区间数据结构</a>
+      <ul>
+        <li><a href="#线段树">线段树</a></li>
+        <li><a href="#树状数组">树状数组</a></li>
+      </ul>
+    </li>
+    <li><a href="#模拟">模拟</a>
+      <ul>
+        <li><a href="#日期模拟">日期模拟</a></li>
+      </ul>
+    </li>
+    <li><a href="#思维题">思维题</a>
+      <ul>
+        <li><a href="#哈希">哈希</a></li>
+        <li><a href="#双指针">双指针</a></li>
+        <li><a href="#异或和">异或和</a></li>
+        <li><a href="#贡献法">贡献法</a></li>
+        <li><a href="#鸽巢原理">鸽巢原理</a></li>
+      </ul>
+    </li>
+    <li><a href="#二分查找">二分查找</a></li>
+    <li><a href="#贪心">贪心</a></li>
+    <li><a href="#面试智力题">面试智力题</a>
+      <ul>
+        <li><a href="#鸡蛋坠楼">鸡蛋坠楼</a></li>
+        <li><a href="#概率论">概率论</a></li>
+        <li><a href="#五道股票题">五道股票题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <blockquote>
+<p>由于我使用的 oj 平台比较杂，很多时候找不到自己做过的题。</p>
+<p>特此将有价值的题目分类索引。</p>
+<p>本分类从 2025.01 开始。</p>
+</blockquote>
+
+<h2 class="relative group">记忆化搜索
+    <div id="记忆化搜索" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%ae%b0%e5%bf%86%e5%8c%96%e6%90%9c%e7%b4%a2" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><a
+  href="https://leetcode.cn/problems/unique-paths-ii/"
+    target="_blank"
+  >leetcode 63.不同路径</a> - 经典走迷宫记忆化搜索</p>
+<p><a
+  href="https://leetcode.cn/problems/palindrome-partitioning-ii/"
+    target="_blank"
+  >leetcode 132. 分割回文串 Ⅱ</a> - 分割字符串，返回计数。此题做法先记忆化搜索来预处理子串，之后用简单的 <code>选或不选 DP</code> 进行分割。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/17117/learning/"
+    target="_blank"
+  >蓝桥 火车运输</a> - 完全背包的扩展，但用记忆化更简单点。核心剪枝的是当找到一个最优状态直接终止程序，基本上算是个猜结论题。</p>
+<p><a
+  href="https://leetcode.cn/problems/maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k/"
+    target="_blank"
+  >leetcode 3509. 最大化交错和为 K 的子序列乘积</a> -  完全背包的扩展。但需要对后缀零进行分类讨论，并在搜索前剪枝。</p>
+<p><a
+  href="https://leetcode.cn/problems/partition-equal-subset-sum/"
+    target="_blank"
+  >leetcode 416. 分割等和子集</a> - 记忆化搜索 + 剪枝。选或不选使得两个子集相等，有较多的剪枝技巧。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/17143/learning/"
+    target="_blank"
+  >蓝桥 划分</a> - 和 LC416 非常相似，当两个子集相等时取答案。注意要直接当已经相等时直接剪枝，进而才能在合理时间内结束。</p>
+<p><a
+  href="https://leetcode.cn/problems/ones-and-zeroes/"
+    target="_blank"
+  >leetcode 474. 一和零</a> - 两个维度的 01 背包</p>
+<p><a
+  href="https://leetcode.cn/problems/climbing-stairs-ii/"
+    target="_blank"
+  >leetcode 3693. 爬楼梯 II</a> - 和爬楼梯差不多的记忆化搜索</p>
+
+<h2 class="relative group">搜索
+    <div id="搜索" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%90%9c%e7%b4%a2" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><a
+  href="https://leetcode.cn/problems/subsets-ii/description/"
+    target="_blank"
+  >leetcode 90</a> - 类似选或不选的简单搜索</p>
+<p><a
+  href="https://leetcode.cn/problems/valid-palindrome-ii/"
+    target="_blank"
+  >leetcode 680</a>  - 经典题验证回文串</p>
+<p><a
+  href="https://leetcode.cn/problems/palindrome-partitioning/"
+    target="_blank"
+  >leetcode 131</a> - 经典回溯法，分割字符串</p>
+<p><a
+  href="https://leetcode.cn/problems/sum-of-all-subset-xor-totals/"
+    target="_blank"
+  >leetcode 1863. 找出所有子集的异或总和再求和</a> 选或不选的搜索，注意”异或操作“并不能直接累计</p>
+<p><a
+  href="https://leetcode.cn/problems/generate-parentheses/"
+    target="_blank"
+  >HOT100 22. 括号生成</a> - 虽然在回溯的提单，但其实只需要可以在搜索过程中剪枝即可</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/20112/learning/"
+    target="_blank"
+  >蓝桥 不同的总分值</a> - 最简答的选或不选搜索</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P9234"
+    target="_blank"
+  >蓝桥 买瓜</a> - DFS搜索的经典题，用后缀重量剪枝</p>
+
+<h3 class="relative group">回溯
+    <div id="回溯" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%9e%e6%ba%af" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/permutations/"
+    target="_blank"
+  >HOT100 46. 全排列</a> - 经典搜索回溯问题</p>
+<p><a
+  href="https://leetcode.cn/problems/subsets/"
+    target="_blank"
+  >HOT100 78. 子集</a> - 经典搜索回溯问题</p>
+<p><a
+  href="https://leetcode.cn/problems/letter-combinations-of-a-phone-number/"
+    target="_blank"
+  >HOT100 17. 电话号码的字母组合</a> - 哈希表 + 基础回溯</p>
+<p><a
+  href="https://leetcode.cn/problems/combination-sum/"
+    target="_blank"
+  >HOT100 39. 组合总和</a> - 对结果查重的回溯问题，需要注意分割数组</p>
+<p><a
+  href="https://leetcode.cn/problems/word-search/"
+    target="_blank"
+  >HOT100 79. 单词搜索</a> - 走格子回溯路径，注意剪枝。优化：词频判断提前返回</p>
+<p><a
+  href="https://leetcode.cn/problems/palindrome-partitioning/"
+    target="_blank"
+  >HOT100 131. 分割回文串</a>  - j 从 i 起枚举子串终点，判断是否回文，若是则加入路径并递归，完成后回溯。</p>
+<p><a
+  href="https://leetcode.cn/problems/n-queens/"
+    target="_blank"
+  >HOT100 51. N 皇后</a> - 经典题 N 皇后，回溯列剪枝，对角线检测，构造棋盘输出结果。</p>
+
+<h2 class="relative group">动态规划
+    <div id="动态规划" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">资源分配 DP
+    <div id="资源分配-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b5%84%e6%ba%90%e5%88%86%e9%85%8d-dp" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/"
+    target="_blank"
+  >leetcode 2209 用地毯覆盖后的最少白色砖块</a>  - 资源分配问题，dp[i][j]表示：前 i 个地砖用 j 个地毯后的最小白砖数量。其中 i 为进度轴、j 为资源轴。</p>
+<p><a
+  href="https://leetcode.cn/problems/palindrome-partitioning-iii/"
+    target="_blank"
+  >leetcode 1278. 分割回文串 III</a> - 是前面两个记忆化搜索的分割字符串的延续。思路还是<code>资源分配 DP</code>，前 i 给字符分割成 j 给字符串的最小修改次数。</p>
+<p><a
+  href="https://leetcode.cn/problems/palindrome-partitioning-iv/"
+    target="_blank"
+  >leecode 1745. 分割回文串 IV </a> - 和上面的 Ⅲ 几乎完全一致，不过是把维护修改数量改成维护 bool 值。</p>
+
+<h3 class="relative group">区间 DP
+    <div id="区间-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8c%ba%e9%97%b4-dp" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.acwing.com/problem/content/description/6138/"
+    target="_blank"
+  >奶牛体检</a>  - 区间DP + 前缀和，比较规矩的模板</p>
+<p><a
+  href="https://leetcode.cn/problems/stone-game-vii/"
+    target="_blank"
+  >leetcode 1690. 石子游戏 VII</a> - 区间DP + 前缀和，需要将博弈转化到递归，进而想到重复子问题。</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P1005"
+    target="_blank"
+  >luogu P1005</a> - 区间DP (记忆化版)，此题要处理大数输出。</p>
+
+<h3 class="relative group">打家劫舍型 DP
+    <div id="打家劫舍型-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%89%93%e5%ae%b6%e5%8a%ab%e8%88%8d%e5%9e%8b-dp" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.acwing.com/problem/content/description/5409/"
+    target="_blank"
+  >蓝桥 松散子序列</a> - 打家劫舍板子，一种做法 <code>dp[i][1] 表示 i 选了的最大值</code> <code>dp[i][0] 表示 i 没选的最大值</code>，空间优化做法为 <code>dp[i] 就表示当前最大值</code></p>
+<p><a
+  href="https://www.lanqiao.cn/problems/107/learning/?page=1&amp;first_category_id=1&amp;sort=problem_id&amp;second_category_id=3&amp;asc=1"
+    target="_blank"
+  >蓝桥 对局匹配</a> - 将数值分成 k 组，其中 i+k，i+2*k……为一组，可以保证组之间互不干扰。而在组中，就是<code>打家劫舍</code>问题。</p>
+<p><a
+  href="https://leetcode.cn/problems/the-number-of-beautiful-subsets/"
+    target="_blank"
+  >leetcode 2597. 美丽子集的数目</a> - 和上面的对局匹配几乎完全一致，不过要多想一下为什么 k 组之间相互独立</p>
+<p><a
+  href="https://leetcode.cn/problems/solving-questions-with-brainpower/"
+    target="_blank"
+  >leetcode 2140. 解决智力问题</a> - 打家劫舍变形，从左往右刷表法。每次维护的是 x + dx 下标的值、</p>
+<p><a
+  href="https://leetcode.cn/problems/find-maximum-number-of-non-intersecting-substrings/"
+    target="_blank"
+  >leetcode 3557. 不相交子字符串的最大数量</a> - 本质上还是选或不选问题，不过需要用 O1 维护该数的前一个相同数的位置，并保证 i - j &gt;= 3。当然也可能直接双指针贪心，最小的分割情况就是最好的。</p>
+
+<h3 class="relative group">状态机 DP
+    <div id="状态机-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%8a%b6%e6%80%81%e6%9c%ba-dp" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/substring-with-largest-variance/"
+    target="_blank"
+  >leetcode 2272. 最大波动的子字符串</a> - 此题转化成 <code>状态机DP</code> 的难度不低，小写字母双层外部遍历，内部遍历中维护两个状态。</p>
+<p><a
+  href="https://leetcode.cn/problems/minimum-cost-to-make-all-characters-equal/"
+    target="_blank"
+  >leetcode 2712. 使所有字符相等的最小成本</a> - 状态机 DP 板子，也可以用贪心做（但有点难想到）。</p>
+<p><a
+  href="https://www.acwing.com/file_system/file/content/whole/index/content/11302933/"
+    target="_blank"
+  >蓝桥 蜗牛</a>  - 二维状态 DP，几乎是板子了</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/18427/learning/"
+    target="_blank"
+  >蓝桥 翻转</a>  - 看懂题就是很简单的状态机</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/17149/learning/"
+    target="_blank"
+  >蓝桥 贸易航线</a>  - 线性 DP 部分非常简单，几乎就是最基础的维护前缀最大 DP。但数据预处理比较麻烦，即将题目的数据转化为 DP 直接能用的（价值、所需持续时间）二元组，题解中也有更优雅的不需要预处理的办法，此外也需要贪心发现 k 不影响买卖。</p>
+
+<h3 class="relative group">经典线性 DP
+    <div id="经典线性-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%8f%e5%85%b8%e7%ba%bf%e6%80%a7-dp" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/edit-distance/"
+    target="_blank"
+  >leetcode 72. 编辑距离</a> - 最长公共子序列板子。</p>
+<p><a
+  href="https://leetcode.cn/problems/largest-divisible-subset/"
+    target="_blank"
+  >leetcode 368. 最大整除子集</a> - 思路与最长上升子序列完全一致，需要维护具体的序列内容（而非标准的长度）</p>
+<p><a
+  href="https://leetcode.cn/problems/longest-increasing-subsequence/"
+    target="_blank"
+  >leetcode 300. 最长递增子序列</a> - 经典题：最长上升子序列。nlogn 是二分查找的做法</p>
+
+<h3 class="relative group">状压 DP
+    <div id="状压-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%8a%b6%e5%8e%8b-dp" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.lanqiao.cn/problems/20159/learning/"
+    target="_blank"
+  >蓝桥 羊圈</a> - 状态压缩 DP 的板子。其中 i 表示遍历到第几头羊，j 用状态压缩的二进制表示用了哪些羊圈，此题用了记忆化。</p>
+
+<h3 class="relative group">博弈 DP
+    <div id="博弈-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8d%9a%e5%bc%88-dp" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/cat-and-mouse/"
+    target="_blank"
+  >leetcode 913. 猫和老鼠</a> - 比较复杂的博弈，写了博客文章。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/19722/learning/"
+    target="_blank"
+  >蓝桥 砍柴</a> - 基本是最简单的博弈，记忆化和递推都好写。加一个线性筛判断质数，但这题卡常极其恶心。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/19731/learning/"
+    target="_blank"
+  >蓝桥 魔法迅游</a> - 比较复杂的状态机 DP，也包含了前缀优化 DP 的思路。状态转移很复杂，模拟量较大。</p>
+
+<h3 class="relative group">数位 DP
+    <div id="数位-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e4%bd%8d-dp" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/numbers-with-repeated-digits?envType=problem-list-v2&amp;envId=1FXH8Bdi"
+    target="_blank"
+  >leetcode 1012. 至少有 1 位重复的数字</a> - 先导零 + 掩码</p>
+<p><a
+  href="https://leetcode.cn/problems/count-of-integers?envType=problem-list-v2&amp;envId=1FXH8Bdi"
+    target="_blank"
+  >leetcode 2719. 统计整数数目</a> - 数位 DP 板子，无先导零</p>
+<p><a
+  href="https://leetcode.cn/problems/number-of-digit-one?envType=problem-list-v2&amp;envId=1FXH8Bdi"
+    target="_blank"
+  >leetcode 233. 数字 1 的个数</a> - 最基础的数位 DP，无先导零</p>
+<p><a
+  href="https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones?envType=problem-list-v2&amp;envId=1FXH8Bdi"
+    target="_blank"
+  >leetcode 600. 不含连续1的非负整数</a> - 简单数位 DP，无先导零，用一个 pre 存储上一个位置的数字。且此题是二进制串。</p>
+<p><a
+  href="https://leetcode.cn/problems/count-special-integers?envType=problem-list-v2&amp;envId=1FXH8Bdi"
+    target="_blank"
+  >leetcode 2376. 统计特殊整数</a> - 需要考虑掩码和先导零</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/3528/learning/"
+    target="_blank"
+  >蓝桥 奇怪的数</a> - 数位 DP 过 60%，后 40% 卡内存。正解是将 pos 转为奇或偶两种状态的五维 DP。</p>
+<p><a
+  href="https://leetcode.cn/problems/count-the-number-of-powerful-integers/"
+    target="_blank"
+  >leetcode 2999. 统计强大整数的数目</a> 上下界数位 DP，不用考虑先导零。判断后缀在状态转移方程中，如果 pos 到达后缀的位置，则只能在范围内选择后缀的数字。</p>
+
+<h3 class="relative group">其他 DP
+    <div id="其他-dp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%b6%e4%bb%96-dp" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.acwing.com/file_system/file/content/whole/index/content/11610280/"
+    target="_blank"
+  >蓝桥 选数异或</a>  转化任务为 O1 查找区间内是否存在 x。但区间长度最多支持 On，因此将问题在此转化为：以 r 为基准维护最短失败区间长度。而这步需要 ：维护 r 前最近的 x 位置（哈希表），如果 x 位置在区间外，则延续当前最短失败区间（状态转移方程）。想到这步之后就是基本的线性 DP 了。</p>
+
+<h2 class="relative group">前缀和 &amp; 差分数组
+    <div id="前缀和--差分数组" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e7%bc%80%e5%92%8c--%e5%b7%ae%e5%88%86%e6%95%b0%e7%bb%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><a
+  href="https://leetcode.cn/problems/count-submatrices-with-top-left-element-and-sum-less-than-k/"
+    target="_blank"
+  >leetcode 3070. 元素和小于等于 k 的子矩阵的数目</a> - 二维前缀和板子。</p>
+<p><a
+  href="https://www.acwing.com/solution/content/274731/"
+    target="_blank"
+  >ccfcsp 坐标变换（其二）</a> - 前缀和 + 模拟，注意下三角函数库函数输入为弧度制。并需要控制输出精度。</p>
+<p><a
+  href="https://leetcode.cn/problems/zero-array-transformation-i/"
+    target="_blank"
+  >leetcode 3355. 零数组变换 I</a> - 差分数组板子，最后有一个小贪心。</p>
+<p><a
+  href="https://www.acwing.com/file_system/file/content/whole/index/content/11722454/"
+    target="_blank"
+  >蓝桥 等差数列</a> - 给一个少了 n 个元素的数列，给出完全包含其全部元素的等差数列。说是差分数组，实际只是排序后记录临近差值，然后求全部 gcd。</p>
+<p><a
+  href="https://leetcode.cn/problems/subarray-sum-equals-k/"
+    target="_blank"
+  >HOT100 560. 和为 K 的子数组</a> - 前缀和 + 两数之和，也可以滑动窗口。用哈希表记录每一个前缀和，如果能和当前的前置和组成</p>
+<p><a
+  href="https://leetcode.cn/problems/maximum-subarray/"
+    target="_blank"
+  >HOT100 53. 最大子数组和</a> - 当前最大的前缀和减去最小的前缀和就是答案。（也可以更优雅的分治法）</p>
+<p><a
+  href="https://leetcode.cn/problems/product-of-array-except-self/"
+    target="_blank"
+  >HOT100 238. 除自身以外数组的乘积</a>  - 前缀后缀积，如果想控制 O1 空间复杂度，可以只维护 suf 数组和一个 “当前 pre”。</p>
+
+<h2 class="relative group">堆 &amp; 栈 &amp; 队列 &amp; 桶
+    <div id="堆--栈--队列--桶" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a0%86--%e6%a0%88--%e9%98%9f%e5%88%97--%e6%a1%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">栈
+    <div id="栈" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%88" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/resulting-string-after-adjacent-removals/"
+    target="_blank"
+  >leetcode 3561. 移除相邻字符</a>  栈的应用，这题其实和括号匹配一个意思</p>
+
+<h4 class="relative group">单调栈
+    <div id="单调栈" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8d%95%e8%b0%83%e6%a0%88" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p><a
+  href="https://leetcode.cn/problems/minimum-operations-to-convert-all-elements-to-zero/"
+    target="_blank"
+  >leetcode 3542. 将所有元素变为 0 的最少操作次数</a> - 贪心加单调栈，要从概念出发慢慢推出单调栈，思维难度不低。</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P5788"
+    target="_blank"
+  >洛谷 单调栈</a> - 单调栈板子，栈内单调递减，若 arr[i + 1] &lt;= arr[i] 则弹出 i + 1，单调栈内部存的是下标。</p>
+
+<h3 class="relative group">堆
+    <div id="堆" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a0%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/most-frequent-ids/"
+    target="_blank"
+  >3092. 最高频率的 ID</a> - 懒删除堆，实际上是哈希表加堆。</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P1090"
+    target="_blank"
+  >洛谷 合并果子</a> - 贪心 + 堆，用小根堆，每次拿出最小的两个合并即可</p>
+
+<h4 class="relative group">top K
+    <div id="top-k" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#top-k" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p><a
+  href="https://leetcode.cn/problems/kth-largest-element-in-an-array/"
+    target="_blank"
+  >leetcode 215. 数组中的第K个最大元素</a> topK 板子。我经常错写为把 k 弹出再压入，实际上是当 pq 的长度大于 k 时应该直接弹出旧的并压入新的。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/17120/learning/"
+    target="_blank"
+  >蓝桥 选段排序</a> 贪心 + topK：贪心可知，最优排序区间中至少有一段点是 p 或 q（这个贪心并不好想），因此问题转化为 p-&gt;n 和 q-&gt;0 的 topk 问题。</p>
+
+<h3 class="relative group">单调队列
+    <div id="单调队列" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8d%95%e8%b0%83%e9%98%9f%e5%88%97" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/sliding-window-maximum/"
+    target="_blank"
+  >HOT100 239. 滑动窗口最大值</a> - 滑动窗口维护<strong>单调递减</strong>队列板子题，用于 On 时间内查找窗口最值</p>
+
+<h3 class="relative group">桶
+    <div id="桶" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a1%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.lanqiao.cn/problems/20154/learning/"
+    target="_blank"
+  >蓝桥 限流器</a> - 经典桶（哈希）应用，对区间整除后加入桶中</p>
+
+<h2 class="relative group">滑动窗口
+    <div id="滑动窗口" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%bb%91%e5%8a%a8%e7%aa%97%e5%8f%a3" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><a
+  href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/"
+    target="_blank"
+  >HOT100 3. 无重复字符的最长子串</a> - 板子中的板子，尽量背诵</p>
+<p><a
+  href="https://leetcode.cn/problems/find-all-anagrams-in-a-string/"
+    target="_blank"
+  >HOT100 438. 找到字符串中所有字母异位词</a> - 定长滑动窗口，比普通的简单些。</p>
+<p><a
+  href="https://leetcode.cn/problems/minimum-window-substring/"
+    target="_blank"
+  >HOT100 76. 最小覆盖子串</a> - 滑动窗口板子，多写一个哈希判断字串是否在窗口中即可。</p>
+<p><a
+  href="https://leetcode.cn/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii/"
+    target="_blank"
+  >leetcode 3306. 元音辅音字符串计数 II</a> - 至少型 滑动窗口，题目要求恰好 k，但滑动窗口只能解决至少 k 和 至少 k + 1，则需要将其相减。此外可以参考下其求至少的思路，即 ans += l ，其中 l 左侧每个都可以成为一个满足条件的子数组。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/20149/learning/"
+    target="_blank"
+  >蓝桥 特殊的数组</a> - 逆向滑动窗口，维护的是窗口外的 cnt，用一个 num 记录当前还有几个数不符合要求，从而避免反复查询 cnt</p>
+
+<h2 class="relative group">字符串
+    <div id="字符串" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%97%e7%ac%a6%e4%b8%b2" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><a
+  href="https://leetcode.cn/problems/reverse-string-ii/description/"
+    target="_blank"
+  >leetcode 541</a> - 字符串反转、练习下切片</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/19719/learning/"
+    target="_blank"
+  >蓝桥 吊坠</a>  - 字符串破坏成链DP + 克鲁斯卡尔 能过 80%，优化常数能过 90%。想过 100% 需要后缀自动机</p>
+<p><a
+  href="https://leetcode.cn/problems/adding-spaces-to-a-string/"
+    target="_blank"
+  >leetcode 2109. 向字符串添加空格</a> - 字符串切片</p>
+
+<h2 class="relative group">数论
+    <div id="数论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e8%ae%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">快速幂
+    <div id="快速幂" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%bf%ab%e9%80%9f%e5%b9%82" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/count-good-numbers/"
+    target="_blank"
+  >leetcode 1922. 统计好数字的数目</a> - 快速幂板子</p>
+
+<h3 class="relative group">质数筛
+    <div id="质数筛" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b4%a8%e6%95%b0%e7%ad%9b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.luogu.com.cn/problem/P3383"
+    target="_blank"
+  >洛谷 线性筛</a> - 线性筛板子</p>
+<p><a
+  href="https://leetcode.cn/problems/prime-in-diagonal/"
+    target="_blank"
+  >leetcode 2614. 对角线上的质数</a> - 线性筛预处理</p>
+<p><a
+  href="https://leetcode.cn/problems/sum-of-largest-prime-substrings/"
+    target="_blank"
+  >leetcode 3556. 最大质数子字符串之和</a> - 直接判断质数，当查询量小时，直接判断比筛更快</p>
+
+<h3 class="relative group">组合数学
+    <div id="组合数学" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%84%e5%90%88%e6%95%b0%e5%ad%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.lanqiao.cn/problems/17116/learning/"
+    target="_blank"
+  >蓝桥 2023</a> - 组合数学 + 容斥定理。comb 部分用逆元法，容斥定理部分为二项式反演。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/17150/learning/"
+    target="_blank"
+  >蓝桥  困局</a> - 思维量较高才能发现组合数公式，此外还需与对每种 k 进行枚举其加权。</p>
+<p><a
+  href="https://leetcode.cn/problems/number-of-ways-to-assign-edge-weights-i/"
+    target="_blank"
+  >leetcode 3558. 给边赋权值的方案数 I</a> - 两个步骤：1. 遍历树的最深深度 2. 求该深度个数中（每个数都是1或2），一共有多少种总长度奇数的路径，因此可以用组合数学求和。其中求和 1 个奇数、3个奇数 …… 的组合数，根据二项式定理，就是 2 ^ (i - 1) 种。</p>
+
+<h3 class="relative group">质因数
+    <div id="质因数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b4%a8%e5%9b%a0%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.luogu.com.cn/problem/U507240"
+    target="_blank"
+  >洛谷 分解质因数</a> - 质因数分解板子，注意特判 n 为质数的情况</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/20117/learning/"
+    target="_blank"
+  >蓝桥 儿童数</a> - 利用唯一分解定理（每个正整数可以唯一表示为若干个质数的幂的乘积）将 1~2024 所有整数质因数分解，统计所有质因数总次数，若某质因数次数 ≥61，则按次数 //61 +1 参与组合乘积。</p>
+
+<h2 class="relative group">图论
+    <div id="图论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%be%e8%ae%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">搜索
+    <div id="搜索-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%90%9c%e7%b4%a2-1" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/number-of-provinces/"
+    target="_blank"
+  >leetcode 547. 省份数量</a> - 最基础的图论 DFS。</p>
+<p><a
+  href="https://leetcode.cn/problems/get-watched-videos-by-your-friends/"
+    target="_blank"
+  >leetcode 1311. 获取你好友已观看的视频</a> - 最基础的图论 BFS，加一个 map 转化 vector 用 lambda 排序。</p>
+<p><a
+  href="https://leetcode.cn/problems/shortest-path-with-alternating-colors/"
+    target="_blank"
+  >leetcode 1129. 颜色交替的最短路径</a> - 必须交替走两种颜色的路径，由于路径长度都为一，因此还是 BFS。不过要维护两种颜色的 visited 和 两种颜色分别作为第一步的 ans。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/17118/learning/"
+    target="_blank"
+  >蓝桥 走方格</a>  比较板子的走迷宫 BFS，但题目描述和样例都很烂，没有大样例的 debug 需要花一段时间。</p>
+<p><a
+  href="https://leetcode.cn/problems/number-of-islands/"
+    target="_blank"
+  >HOT100 200. 岛屿数量</a> - 最基础的 BFS</p>
+<p><a
+  href="https://leetcode.cn/problems/rotting-oranges/"
+    target="_blank"
+  >HOT100 994. 腐烂的橘子</a> - 同样基础的 BFS</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/20260/learning/"
+    target="_blank"
+  >蓝桥 马与象</a> - 双向 BFS，从马和象分别进行 BFS ，得到其和每个点的 DIS。找所有点中两者的最小距离。</p>
+
+<h3 class="relative group">拓扑排序
+    <div id="拓扑排序" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8b%93%e6%89%91%e6%8e%92%e5%ba%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/course-schedule/"
+    target="_blank"
+  >HOT100 207. 课程表</a> - 判断是否有环，可以拓扑排序或 DFS</p>
+<p><a
+  href="https://leetcode.cn/problems/course-schedule-iv/"
+    target="_blank"
+  >leetcode 1462. 课程表 IV</a> - 拓扑排序。维护一个 dp 数组，拓扑排序时，已确认 node 是 next 的先导。则状态转移方程：<code>dp[i][next] = dp[i][next] || dp[i][node]</code>。其中<code>dp[i][j]</code> 表示 i 是 j 的先导。</p>
+<p><a
+  href="https://leetcode.cn/problems/redundant-connection-ii/"
+    target="_blank"
+  >leetcode 685. 冗余连接 II</a> - 基环树 + 分类讨论。需要的算法是判断入度和判断环，都是基于拓扑排序。</p>
+<p><a
+  href="https://leetcode.cn/problems/longest-cycle-in-a-graph/"
+    target="_blank"
+  >leetcode 2360. 图中的最长环</a> - 由于每个节点最多一个出边。因此不存在嵌套的环，每个节点至多在一个环中。拓扑排序：找到在环中的节点 + DFS：遍历每个环。</p>
+<p><a
+  href="https://leetcode.cn/problems/maximum-weighted-k-edge-path/"
+    target="_blank"
+  >leetcode 3543. K 条边路径的最大边权和</a> - 先拓扑排序判断有向图顺序，在根据排序进行 DP。状态 <code>dp[i][j]</code> 表示 终点在 i 点、经过 j 条路径的全部可能的总长度大小。通过拓扑排序可以保证只需要遍历一轮 n。或者使用记忆化搜索更加简单。</p>
+<p><a
+  href="https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/"
+    target="_blank"
+  >leetcode 1857. 有向图中最大颜色值</a> - 拓扑排序 + 图上 DP，拓扑排序判断环，并顺便完成 DP 状态的更新。<code>dp[v][c]</code> 表示以 v 为终点，颜色 c 的最大数量 ，当然也可以 DFS 记忆化搜索。</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/B3644"
+    target="_blank"
+  >洛谷 拓扑排序</a> - 拓扑排序板子</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P4017"
+    target="_blank"
+  >洛谷 最大食物链</a> - 拓扑排序经典题，要找从起始到终止的食物链数量。拓扑排序只会遍历一次 <code>x -&gt; y </code>的关系，因此只需要按顺序记录每个节点的路径，然后累加即可（此处思路很类似 DP）。</p>
+
+<h3 class="relative group">最短路
+    <div id="最短路" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9c%80%e7%9f%ad%e8%b7%af" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/network-delay-time/"
+    target="_blank"
+  >leetocde 743. 网络延迟时间</a> - spfa 和 dijk 都写了。</p>
+<p><a
+  href="https://leetcode.cn/problems/path-with-maximum-probability/"
+    target="_blank"
+  >leetcode 1514. 概率最大的路径</a> - dijk 做法。</p>
+<p><a
+  href="https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/"
+    target="_blank"
+  >leetcode 2642. 设计可以求最短路径的图类</a> - spfa 做法。</p>
+<p><a
+  href="https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-i/"
+    target="_blank"
+  >leetcode 3341. 到达最后一个房间的最少时间 I</a> - 经典网格图 dijk</p>
+<p><a
+  href="https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-ii/"
+    target="_blank"
+  >leetcode 3342. 到达最后一个房间的最少时间 II</a> - 网格图最短路，由于需要判断当前 dis 和 dis_num 因此不太适合 BFS。此题我用了 SPFA，会卡常数。网格图这种稠密图更适合 Dijk。</p>
+<p><a
+  href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/"
+    target="_blank"
+  >leetcode 1334. 阈值距离内邻居最少的城市</a> Floyd 多源最短路。</p>
+<p><a
+  href="https://leetcode.cn/problems/grid-teleportation-traversal/"
+    target="_blank"
+  >leetcode 3552. 网格传送门旅游</a> - 01BFS，实际上是将 queue 换成双端队列，不消耗步数就插入队列顶部，也可以视作只有01距离的 dijk</p>
+
+<h3 class="relative group">最小生成树
+    <div id="最小生成树" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9c%80%e5%b0%8f%e7%94%9f%e6%88%90%e6%a0%91" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.lanqiao.cn/problems/19719/learning/"
+    target="_blank"
+  >蓝桥 吊坠</a>  - 字符串破坏成链DP + 克鲁斯卡尔 能过 80%，优化常数能过 90%。想过 100% 需要后缀自动机。此题用图论的并查集克鲁斯卡尔。</p>
+<p><a
+  href="https://leetcode.cn/problems/min-cost-to-connect-all-points/"
+    target="_blank"
+  >leetcode 1584. 连接所有点的最小费用</a> 克鲁斯卡尔板子。</p>
+
+<h3 class="relative group">并查集
+    <div id="并查集" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b9%b6%e6%9f%a5%e9%9b%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/minimum-swaps-to-sort-by-digit-sum/"
+    target="_blank"
+  >leetcode 3551. 数位和排序需要的最小交换次数</a> - 排序最小交换次数问题，实际上就是寻找数组中的连通块数量（将下标视作链表），找连通块可以用 BFS DFS 并查集等等。</p>
+
+<h3 class="relative group">LCA
+    <div id="lca" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lca" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.lanqiao.cn/problems/17124/learning/"
+    target="_blank"
+  >蓝桥 彩色二叉树</a> - 完全二叉树的两点 LCA，倍增法的缩减版。用树上两点距离 x y，存储所有标记操作。遍历标记操作，找 x y 距离小于 y 并最晚标记的颜色。 理论复杂度较高，但实际能过全部数据。</p>
+<p><a
+  href="https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves/"
+    target="_blank"
+  >leetcode 1123. 最深叶节点的最近公共祖先</a> - 也可以不用 LCA 做，但可以练一下</p>
+<p><a
+  href="https://leetcode.cn/problems/number-of-ways-to-assign-edge-weights-ii/"
+    target="_blank"
+  >leetcode 3559. 给边赋权值的方案数 II</a> - 用倍增法 LCA 求两节点距离，后续的组合数学部分见 3558 题。</p>
+
+<h3 class="relative group">前缀树 Trie
+    <div id="前缀树-trie" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e7%bc%80%e6%a0%91-trie" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/implement-trie-prefix-tree/"
+    target="_blank"
+  >HOT100 208. 实现 Trie (前缀树)</a> - Trie 树板子，构造题</p>
+
+<h2 class="relative group">链表
+    <div id="链表" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%93%be%e8%a1%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><strong>比赛很少考，面试经常考</strong></p>
+<p><a
+  href="https://www.acwing.com/problem/content/description/5725/"
+    target="_blank"
+  >CSP 十滴水</a> - 递归加双向链表模拟即可。实际上 map 的底层是红黑树，能够实现 log 级别模拟双向链表 ，因此可以直接用 map 逃课。</p>
+<p><a
+  href="https://leetcode.cn/problems/linked-list-cycle-ii/"
+    target="_blank"
+  >HOT100 142. 环形链表 II</a> - 快慢指针找入环的第一个节点，技巧题。当快慢指针第一次相遇时候，将快指针重新回到头节点，快慢同步走，再次相遇就是环入口。</p>
+<p><a
+  href="https://leetcode.cn/problems/reverse-linked-list"
+    target="_blank"
+  >HOT100 206. 反转链表</a>  经典反转链表，可以迭代或者递归。</p>
+<p><a
+  href="https://leetcode.cn/problems/reverse-nodes-in-k-group/"
+    target="_blank"
+  >HOT100 25. K 个一组翻转链表</a>  经典中的经典，反转链表 + 前后指针。</p>
+
+<h2 class="relative group">区间数据结构
+    <div id="区间数据结构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8c%ba%e9%97%b4%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">线段树
+    <div id="线段树" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ba%bf%e6%ae%b5%e6%a0%91" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/range-frequency-queries/description/"
+    target="_blank"
+  >leetcode 2080</a> - 统计区间内数字频数，将静态线段树板子的 max 改成统计词频的哈希表即可。（此题<code>二分 + 前缀和</code>更优）</p>
+<p><a
+  href="https://leetcode.cn/problems/range-sum-query-mutable/description/"
+    target="_blank"
+  >leetcode 307</a> - 经典的区间和检索，静态线段树板子</p>
+<p><a
+  href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/"
+    target="_blank"
+  >leetcode 1438. 绝对差不超过限制的最长连续子数组</a> - 区间线段树 + 滑动窗口，CPP 能过，python 卡常。更好的解法是单调队列</p>
+
+<h3 class="relative group">树状数组
+    <div id="树状数组" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%91%e7%8a%b6%e6%95%b0%e7%bb%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.luogu.com.cn/problem/P3374"
+    target="_blank"
+  >洛谷 树状数组1</a> - 树状数组板子</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P3368"
+    target="_blank"
+  >洛谷 树状数组2</a> - 树状数组 + 差分数组</p>
+
+<h2 class="relative group">模拟
+    <div id="模拟" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a8%a1%e6%8b%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><a
+  href="https://www.lanqiao.cn/problems/19729/learning/"
+    target="_blank"
+  >蓝桥 连连看</a> - 需要先简单转化一下，得到模拟所有主副对角线，之后哈希统计。转化稍微需要一点思维。</p>
+<p><a
+  href="https://leetcode.cn/problems/difference-of-number-of-distinct-values-on-diagonals/"
+    target="_blank"
+  >leetcode 2711. 对角线上不同值的数量差</a> - 简单二维模拟，用个 set 就秒了</p>
+<p><a
+  href="https://www.acwing.com/problem/content/description/5085/"
+    target="_blank"
+  >ccfcsp 矩阵计算</a> - 模拟矩阵的点乘和积乘，此题正常算的复杂度很勉强。矩阵计算需要把点乘放到最后，因此用乘法交换律从右向左算。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/17145/learning/"
+    target="_blank"
+  >蓝桥 交易账本</a> - 中高强度的模拟，幸好样例给的不错</p>
+<p><a
+  href="https://leetcode.cn/problems/push-dominoes/"
+    target="_blank"
+  >leetcode 838. 推多米诺</a> - 小模拟多米诺骨牌，用 BFS 能减少分类讨论</p>
+<p><a
+  href="https://leetcode.cn/problems/minimum-domino-rotations-for-equal-row/"
+    target="_blank"
+  >leetcode 1007. 行相等的最少多米诺旋转</a> - 小模拟找最小</p>
+<p><a
+  href="https://leetcode.cn/problems/longest-palindrome-by-concatenating-two-letter-words/"
+    target="_blank"
+  >leetcode 2131. 连接两字母单词得到的最长回文串</a> - 分类讨论，分别模拟自身是回文串的数量、能分别组成回文串的左右字串、最中间可以放一个回文串。</p>
+<p><a
+  href="https://leetcode.cn/problems/set-matrix-zeroes/"
+    target="_blank"
+  >HOT100 73. 矩阵置零</a> - 模拟，要找节约内存的最优解。用第一行和第一列的来记录本行或列是否要归零。用 bool 记录第一行或列自己是否要归零</p>
+<p><a
+  href="https://leetcode.cn/problems/spiral-matrix/"
+    target="_blank"
+  >HOT100 54. 螺旋矩阵</a> - 纯模拟，右下左上的顺序</p>
+<p><a
+  href="https://leetcode.cn/problems/rotate-image/"
+    target="_blank"
+  >HOT100 48. 旋转图像</a> - 纯模拟 先换主对角线 再换左右 就是向右选择 90°</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/20128/learning/"
+    target="_blank"
+  >蓝桥 记事本</a> - 经典模拟 vim，易错切片的区间边界问题。值得注意的是，切片的时候 ans[:max(index - n, 0):] 经常容易忘掉下边界最小为零。</p>
+<p><a
+  href="https://www.luogu.com.cn/record/221609427"
+    target="_blank"
+  >洛谷 文字处理软件</a> - STL string 板子</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P1308"
+    target="_blank"
+  >洛谷 统计单词数</a> - 通过在匹配串加 “ ” 使其适配 string::find，比较聪明的写法</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P5266"
+    target="_blank"
+  >洛谷 学籍管理</a> - STL map 板子</p>
+
+<h3 class="relative group">日期模拟
+    <div id="日期模拟" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%97%a5%e6%9c%9f%e6%a8%a1%e6%8b%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.lanqiao.cn/problems/19730/learning/"
+    target="_blank"
+  >蓝桥 神奇闹钟</a> - 日期时间模拟，考库函数。日期做差。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/2271/learning/"
+    target="_blank"
+  >蓝桥 跑步</a> - 日期时间模拟，注意 weekday() 下标从 0 开始。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/17113/learning/"
+    target="_blank"
+  >蓝桥 跑步计划</a> - 日期时间模拟，和上一道题十分相似</p>
+
+<h2 class="relative group">思维题
+    <div id="思维题" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%9d%e7%bb%b4%e9%a2%98" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><a
+  href="https://leetcode.cn/problems/element-appearing-more-than-25-in-sorted-array/"
+    target="_blank"
+  >leetcode 1287. 有序数组中出现次数超过25%的元素</a> - 有序数组中找 1/4 以上的连续数。其logn 复杂度下，思想角度类似鸽巢原理，或者从字符串角度看有一点像 kmp。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/19700/learning/?page=1&amp;first_category_id=1&amp;second_category_id=3&amp;name=%E5%8F%AC%E5%94%A4%E6%95%B0%E5%AD%A6%E7%B2%BE%E7%81%B5"
+    target="_blank"
+  >蓝桥 召唤数学精灵</a> - 杯特有的找规律，不得不品尝。前面位置的题不会了就缩小数据范围找规律试试。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/19714/learning/"
+    target="_blank"
+  >蓝桥 数字诗意</a> - 还是那个找规律，答案是所有的 2 ** n ，用 n &amp; (n - 1) == 0 判断</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/19735/learning/"
+    target="_blank"
+  >蓝桥 村的真相</a> - 稍微难一点的找规律，和考公题一样。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/3526/learning/"
+    target="_blank"
+  >蓝桥 子树的大小</a> - 思维 + 完全 N 叉树概念了解即可。之后通过遍历最左和最右节点来进行求和。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/3527/learning/"
+    target="_blank"
+  >蓝桥 阶乘的和</a> - 将阶乘和数组，模拟从最小因子开始合并，若可整除则升级，贪心推进求出最终最大因子值 （需要一点点 gcd 的知识）</p>
+<p><a
+  href="https://leetcode.cn/problems/rabbits-in-forest/"
+    target="_blank"
+  >leetcode 781. 森林中的兔子</a> - 思维题：如果同种兔子数量不大于他所说的个数，则有 i+1 种兔子，如果大于，则进行分组即可。</p>
+<p><a
+  href="https://leetcode.cn/problems/count-the-hidden-sequences/"
+    target="_blank"
+  >leetcode 2145. 统计隐藏数组数目</a> - 找最小最大，中间相隔的就是能放下的距离</p>
+<p><a
+  href="https://leetcode.cn/problems/domino-and-tromino-tiling/"
+    target="_blank"
+  >leetcode 790. 多米诺和托米诺平铺</a> - 排方块找规律，规律有难度。标注的考思维量的题。</p>
+<p><a
+  href="https://leetcode.cn/problems/majority-element/"
+    target="_blank"
+  >HOT100 169. 多数元素</a> - 找数组中数量大于 n // 2 的数。法1：当作 LC1287 的弱化版，排序后下表 n // 2 就是答案。法2：<code>时间On，空间O1</code> 摩尔投票法，不太好理解，尤其证明 candidate 需要仔细看。</p>
+<p><a
+  href="https://leetcode.cn/problems/next-permutation/"
+    target="_blank"
+  >HOT100 31. 下一个排列</a> - 经典下一个排序算法，需要两次从后向前遍历找两个下标，交换后反转降序数组。</p>
+<p><a
+  href="https://leetcode.cn/problems/merge-intervals/"
+    target="_blank"
+  >HOT100 56. 合并区间</a> - 区间排序后，重叠则合并，不重叠则加入结果。</p>
+<p><a
+  href="https://leetcode.cn/problems/rotate-array/"
+    target="_blank"
+  >HOT100 189. 轮转数组</a> - 最优解法是：reverse(0, n - 1) ; reverse(0, k - 1); reverse(k, n - 1)</p>
+<p><a
+  href="https://leetcode.cn/problems/first-missing-positive/"
+    target="_blank"
+  >HOT100 41. 缺失的第一个正数</a> - 利用交换将正数放入对应下标，最终首个不匹配位置即为缺失的最小正整数。</p>
+<p><a
+  href="https://leetcode.cn/problems/search-a-2d-matrix-ii/"
+    target="_blank"
+  >HOT100 240. 搜索二维矩阵 II</a> - 最优解法是将其视作一根以右上角为顶点的二分查找树，时间复杂度是 O(m + n)</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P1367"
+    target="_blank"
+  >洛谷 蚂蚁</a> - 脑筋急转弯。两蚂蚁相撞后分别向反方向走，实际上和他们直接路过没有区别。</p>
+
+<h3 class="relative group">哈希
+    <div id="哈希" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%93%88%e5%b8%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/two-sum/"
+    target="_blank"
+  >HOT100 1. 两数之和</a> - 哈希表的 find 或者默认值设置两种语法</p>
+<p><a
+  href="https://leetcode.cn/problems/group-anagrams/"
+    target="_blank"
+  >HOT100 49. 字母异位词分组</a> - 注意下简洁写法的哈希语法</p>
+<p><a
+  href="https://leetcode.cn/problems/longest-consecutive-sequence/"
+    target="_blank"
+  >HOT100 128. 最长连续序列</a> - 用集合判断连续序列起点，元素最多遍历两次。</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P1102"
+    target="_blank"
+  >洛谷 A-B数对 </a> - 两数之和，洛谷版本</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P5250"
+    target="_blank"
+  >洛谷 木材仓库</a> - set 的二分库函数和迭代器使用，注意 set 的迭代器不能直接减，要用 prev，加要用 next</p>
+
+<h3 class="relative group">双指针
+    <div id="双指针" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%8c%e6%8c%87%e9%92%88" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/valid-palindrome-ii/"
+    target="_blank"
+  >leetcode 680</a>  - 经典题验证回文串</p>
+<p><a
+  href="https://leetcode.cn/problems/find-the-duplicate-number/"
+    target="_blank"
+  >HOT100 287. 寻找重复数</a> - 将数组下标的映射视作链表，之后就与快慢指针找环入口一致</p>
+<p><a
+  href="https://leetcode.cn/problems/sort-colors/"
+    target="_blank"
+  >HOT100 75. 颜色分类</a> - 荷兰国旗，双指针。从前向后的指针好理解，但从后向前的指针需要 while，进而在数组原地交换。</p>
+<p><a
+  href="https://leetcode.cn/problems/move-zeroes/"
+    target="_blank"
+  >HOT100 283. 移动零</a> - left 表示非零的已经好的位置，right 遇到非零就和 left 交换</p>
+<p><a
+  href="https://leetcode.cn/problems/container-with-most-water/"
+    target="_blank"
+  >HOT100 11. 盛最多水的容器</a> - 因为面积由 <code>min(height[l], height[r]) </code>决定，因此先挪更短指针一定是最优解</p>
+<p><a
+  href="https://leetcode.cn/problems/3sum/"
+    target="_blank"
+  >HOT100 15. 三数之和</a> - 思路先排序，遍历 i 作为基准，之后 l r 双指针。如果 l 和 r 的 sum 大于目标，则减小 r，反之增加 l。但此题要求不能重复，因此要去掉重复的 i ，和重复的 j，导致边界条件非常麻烦。</p>
+<p><a
+  href="https://leetcode.cn/problems/trapping-rain-water/"
+    target="_blank"
+  >HOT100 42. 接雨水</a> - <strong>典中典</strong> 1. 前缀后缀法：通法，思维量较小。统计每个数的最大前后缀；2. 双指针实际上就说前缀后缀的优化版，核心就是哪侧前或后缀更小，就缩那测 ；3.单调递减栈，找上一个更大的，然后填坑。<strong>双指针是最优解，前缀后缀和单调栈更常用</strong></p>
+
+<h3 class="relative group">异或和
+    <div id="异或和" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%bc%82%e6%88%96%e5%92%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/single-number/"
+    target="_blank"
+  >HOT100 136. 只出现一次的数字</a> - 最基础的异或和，原理 ： a ^ a = 0 ; a ^ b ^ a = b</p>
+<p><a
+  href="https://leetcode.cn/problems/count-the-number-of-beautiful-subarrays/"
+    target="_blank"
+  >leetcode 2588. 统计美丽子数组数目</a> - 巧妙的异或和例子</p>
+<p><a
+  href="https://www.acwing.com/problem/content/description/5004/"
+    target="_blank"
+  >蓝桥 异或和之和</a> - 异或和 加 贡献法</p>
+
+<h3 class="relative group">贡献法
+    <div id="贡献法" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b4%a1%e7%8c%ae%e6%b3%95" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.acwing.com/problem/content/description/6125/"
+    target="_blank"
+  >农夫约翰的奶酪块</a> - 贡献法，三维映射到二维</p>
+<p><a
+  href="https://www.acwing.com/problem/content/6126/"
+    target="_blank"
+  >哞叫时间</a> - 比较麻烦的模拟，基本方法是：先尝试该某点，获取哈希表计数，撤回对该点的修改</p>
+<p><a
+  href="https://www.acwing.com/problem/content/description/6137/"
+    target="_blank"
+  >哞叫时间Ⅱ</a> - 在遍历过程中维护三个数组，“遍历右，维护左”</p>
+
+<h3 class="relative group">鸽巢原理
+    <div id="鸽巢原理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%b8%bd%e5%b7%a2%e5%8e%9f%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://www.lanqiao.cn/problems/2206/learning/"
+    target="_blank"
+  >蓝桥 取模</a> - 乍一看是中国剩余定理。但实际上是 “反证 + 鸽巢原理”，若模值两两不同，则必为 n % m == m - 1（因为小于 m - 1 的已经被占了），遍历验证是否存在不满足的情况。</p>
+
+<h2 class="relative group">二分查找
+    <div id="二分查找" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%8c%e5%88%86%e6%9f%a5%e6%89%be" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><a
+  href="https://leetcode.cn/problems/magnetic-force-between-two-balls/description/"
+    target="_blank"
+  >leetcode 1552</a> - 最大化最小</p>
+<p><a
+  href="https://leetcode.cn/problems/minimum-limit-of-balls-in-a-bag/description/"
+    target="_blank"
+  >leetcode 1760</a> - 最小化最大</p>
+<p><a
+  href="https://leetcode.cn/problems/minimum-time-to-repair-cars/description/"
+    target="_blank"
+  >leetcode 2594</a> - 最小化最大，本质上是最小化</p>
+<p><a
+  href="https://leetcode.cn/problems/find-the-smallest-divisor-given-a-threshold/"
+    target="_blank"
+  >leetcode 1283. 使结果不超过阈值的最小除数</a> - 基础的最小化最大</p>
+<p><a
+  href="https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/"
+    target="_blank"
+  >leetcode 81. 搜索选择排序数组Ⅱ</a> - 经典旋转数组二分，要考虑比较多的边界</p>
+<p><a
+  href="https://leetcode.cn/problems/search-in-rotated-sorted-array/"
+    target="_blank"
+  >leetcode 33. 搜索选择排序数组</a> - 上一道题的简化版</p>
+<p><a
+  href="https://www.luogu.com.cn/problem/P1068"
+    target="_blank"
+  >luogu P1068</a> - 模拟排序 记得看下字符串输入输出</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/2383/learning/"
+    target="_blank"
+  >蓝桥 卡片</a> - 找规律 + 二分答案。规律和二分都非常好想。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/20136/learning/"
+    target="_blank"
+  >蓝桥 切木棍</a> - 经典最大化最小，注意切的时候是 (i - 1) / num 即可</p>
+
+<h2 class="relative group">贪心
+    <div id="贪心" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b4%aa%e5%bf%83" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><a
+  href="https://leetcode.cn/problems/maximum-distance-in-arrays/description/"
+    target="_blank"
+  >leetcode 624</a> - 经典的遍历右，维护左。</p>
+<p><a
+  href="https://www.acwing.com/solution/content/267363/"
+    target="_blank"
+  >蛋糕游戏</a> - 博弈中的贪心，要使用到前缀和</p>
+<p><a
+  href="https://leetcode.cn/problems/break-a-palindrome/"
+    target="_blank"
+  >leetcode 1328. 破坏回文串 </a>- 有一些贪心做法，不过暴力也能过。</p>
+<p><a
+  href="https://leetcode.cn/problems/most-beautiful-item-for-each-query/"
+    target="_blank"
+  >leetcode 2070. 每一个查询的最大美丽值</a> - 经典遍历右，维护左</p>
+<p><a
+  href="https://leetcode.cn/problems/minimum-number-of-swaps-to-make-the-string-balanced/"
+    target="_blank"
+  >leetcode 1963. 使字符串平衡的最小交换次数</a> - 可以交换的括号匹配，当遇到无法匹配的右括号时，贪心从后向前的左括号交换。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/19715/learning/"
+    target="_blank"
+  >蓝桥 回文数组 </a> - 贪心，前后做差。可以看作差分数组的简化版本。</p>
+<p><a
+  href="https://leetcode.cn/problems/maximum-or/"
+    target="_blank"
+  >leetcode 2680. 最大或值</a> - 贪心，将 k 都给一个元素是最好的。为了 On 实现，需要维护前后缀和。要注意此题并非维护区间和，区间和需要线段树。</p>
+<p><a
+  href="https://leetcode.cn/problems/check-if-a-parentheses-string-can-be-valid/"
+    target="_blank"
+  >leetcode 2116. 判断一个括号字符串是否有效 </a> - 指定可变括号位置的括号匹配。分别将可变的括号视作 “(“ 和 “)”，如果两次匹配都能成功，说明可变的位置是灵活的，说明能成功匹配。</p>
+<p><a
+  href="https://leetcode.cn/problems/maximum-value-of-an-ordered-triplet-ii/"
+    target="_blank"
+  >leetcode2874. 有序三元组中的最大值 II</a> - 贪心使得 nums[i] 和 nums[k] 最大，因此只用维护最大前缀后缀即可</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/17148/learning/"
+    target="_blank"
+  >蓝桥 最长回文前后缀</a> - 双指针回文贪心，如果严格复杂度需要马拉车算法，实际上用双指针处理前后缀即可。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/3518/learning/"
+    target="_blank"
+  >蓝桥 三国游戏</a> - 贪心 + 排序。同一选择只会有一种赢。</p>
+<p><a
+  href="https://www.lanqiao.cn/problems/20137/learning/"
+    target="_blank"
+  >蓝桥 球衣号码</a> - 简单推理可得，编码的最大值只和最小和最大的号有关</p>
+<p><a
+  href="https://leetcode.cn/problems/longest-binary-subsequence-less-than-or-equal-to-k/"
+    target="_blank"
+  >leetcode 2311. 小于等于 K 的最长二进制子序列</a>  -  从后往前找尽量多的 1 ，多余的 0 直接补上即可</p>
+<p><a
+  href="https://leetcode.cn/problems/greatest-sum-divisible-by-three/"
+    target="_blank"
+  >leetcode 1262. 可被三整除的最大和</a> - 经典凑 mod3 的贪心，思路挺有意思的。可以找最小的 x1 % 3 == 1 和 x2 % 3 == 2，为这个 x1 x2 也可以是其他数凑的。状态转移比如当 x2 % 3 == 2 时： x1 = min(x1, x2 + nums[i]), x2 = min(x2, nums[i])，从而包装 x1 和 x2 没有依赖关系。最后 用 s - x1 或 s - x2 做答案。</p>
+
+<h2 class="relative group">面试智力题
+    <div id="面试智力题" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%9d%a2%e8%af%95%e6%99%ba%e5%8a%9b%e9%a2%98" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">鸡蛋坠楼
+    <div id="鸡蛋坠楼" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%b8%a1%e8%9b%8b%e5%9d%a0%e6%a5%bc" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/egg-drop-with-2-eggs-and-n-floors/"
+    target="_blank"
+  >leetcode 1884. 鸡蛋掉落-两枚鸡蛋</a> - 找到所有 n * (1 + n) / 2 即全部累计的数</p>
+<p><a
+  href="https://leetcode.cn/problems/super-egg-drop/"
+    target="_blank"
+  >leetcode 887. 鸡蛋掉落</a> ：</p>
+<ol>
+<li>
+<p>从 n 直接得到次数比较难，类似上一题（k == 2）的特例</p>
+<p>可以枚举 i 找其能找的最大楼层，降低难度</p>
+</li>
+<li>
+<p>考虑子问题，关键两个因素是“剩余的尝试次数 i 和剩余的鸡蛋数量 j“</p>
+<p>此外其时间复杂度 n * k 为 1e6，更能考虑其 i 与 j 为关键状态</p>
+</li>
+<li>
+<p>在某楼层扔鸡蛋，会产生两种状态</p>
+<p>鸡蛋碎了 -&gt; 产生 dfs(i - 1, j - 1) 的子问题 -&gt; 其本身也测出来该楼层正误 -&gt; 获得 dfs(i - 1, j - 1) + 1 的楼层</p>
+<p>鸡蛋没碎 -&gt; 产生 dfs(i - 1, j) 的子问题 -&gt; 即该楼层以上能测出多少楼层</p>
+<p>该楼层以下 + 该楼层以上 -&gt; dfs(i - 1, j - 1) + 1 + dfs(i - 1, j)</p>
+</li>
+<li>
+<p>当 i == 0 或 j == 0 时测不出来楼层 返回 0</p>
+</li>
+</ol>
+
+<h3 class="relative group">概率论
+    <div id="概率论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a6%82%e7%8e%87%e8%ae%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/airplane-seat-assignment-probability/"
+    target="_blank"
+  >leetcode 1227. 飞机座位分配概率</a> - 除第一人外，每人坐对概率对称，最终乘客有一半概率坐上自己的座位。</p>
+
+<h3 class="relative group">五道股票题
+    <div id="五道股票题" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%94%e9%81%93%e8%82%a1%e7%a5%a8%e9%a2%98" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><a
+  href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/"
+    target="_blank"
+  >leetcode 121. 买卖股票的最佳时机</a> - 前缀最小值模拟即可</p>
+<p><a
+  href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/"
+    target="_blank"
+  >leetcode 122. 买卖股票的最佳时机 II</a> - 按题干模拟即可，或者理解为 相邻元素正的差值之和</p>
+<p><a
+  href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/"
+    target="_blank"
+  >leetcode 123. 买卖股票的最佳时机 III</a>  - 前缀后缀法，或 <code>买卖股票 4</code> 的 dp 法。 前缀后缀都视作 <code>买卖股票1</code> ，分别记录其前后缀的最大利润，就能找到两次买卖的最大利润。</p>
+<p><a
+  href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/"
+    target="_blank"
+  >leetcode 188. 买卖股票的最佳时机 IV</a> - 资源分配型记忆化搜索，从最后状态往前推，状态转移稍微有些复杂。</p>
+<ul>
+<li>
+<p>i 是数组下标即当前最后统计的元素，记忆化搜索从后向前容易</p>
+</li>
+<li>
+<p>j 是当前剩余的买卖次数</p>
+</li>
+<li>
+<p>hold 标记当前是否存有股票</p>
+</li>
+<li>
+<p>如果转成 DP 需要三维</p>
+</li>
+</ul>
+<p><a
+  href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-v/"
+    target="_blank"
+  >leetcode 3573. 买卖股票的最佳时机 V</a> - 在 <code>买卖股票4</code> 的基础上多一个状态转移，还没来得及做</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+  
+  
+    <h2 class="mt-8 text-2xl font-extrabold mb-10">相关文章</h2>
+    <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+  
+
+
+
+<article
+  class="relative min-h-full min-w-full overflow-hidden rounded border border-2 border-neutral-200 shadow-2xl dark:border-neutral-700">
+  
+  
+  <div class="px-6 py-4">
+    <header>
+      <a
+        
+          href="/posts/%E5%8F%8B%E9%93%BE/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          友链
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+    
+      
+      
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <span>52 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="prose dark:prose-invert py-1"></div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+      
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+  
+
+
+
+<article
+  class="relative min-h-full min-w-full overflow-hidden rounded border border-2 border-neutral-200 shadow-2xl dark:border-neutral-700">
+  
+  
+  <div class="px-6 py-4">
+    <header>
+      <a
+        
+          href="/posts/%E5%85%B3%E4%BA%8E%E6%88%91/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          关于我
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+    
+      
+      
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <span>439 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/%E6%9D%82%E8%B0%88/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    杂谈
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="prose dark:prose-invert py-1"></div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+      
+    </section>
+  
+
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/算法题-索引.md"
+          data-oid-likes="likes_posts/算法题-索引.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/%E5%8F%8B%E9%93%BE/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;友链
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-01-01T23:27:38&#43;08:00">2025 年 1 月 1 日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/house_price/">
+              <span class="leading-6">
+                kaggle 房价预测：课程报告&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-01-10T15:54:40&#43;08:00">2025 年 1 月 10 日</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2025
+      陈驰水
+    </p>
+    
+    
+
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400" style="text-align: right; margin: 0;">
+      
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow" style="text-decoration: none; color: inherit; display: block; margin-bottom: 4px;">
+        京ICP备2025110615号
+      </a>
+      
+      <span style="display: inline-flex; align-items: center; justify-content: flex-end;">
+        <span style="display: inline-block; width: 16px; height: 16px; background-image: url('/img/beian.png'); background-size: contain; background-repeat: no-repeat; margin-right: 4px;"></span>
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11011502038545" rel="noreferrer" target="_blank" style="text-decoration: none; color: inherit;">
+          京公网安备11011502038545号
+        </a>
+      </span>
+    </p>
+
+    
+    
+
+  </div>
+
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+
+  
+  
+
+</footer>
+
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="https://blog.chencs.online/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

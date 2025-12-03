@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>机器学习 on 陈驰水-个人博客</title>
+    <link>https://blog.chencs.online/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 机器学习 on 陈驰水-个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-ch</language>
+    <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
+    <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
+    <copyright>© 2025 陈驰水</copyright>
+    <lastBuildDate>Fri, 14 Feb 2025 18:10:27 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <follow_challenge>
+      <feedId>your-rss-feed</feedId>
+      <userId>your-rss-user</userId>
+    </follow_challenge>
+    
+    
+    <item>
+      <title>机器学习 - 应试笔记</title>
+      <link>https://blog.chencs.online/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%94%E8%AF%95%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 14 Feb 2025 18:10:27 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%94%E8%AF%95%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

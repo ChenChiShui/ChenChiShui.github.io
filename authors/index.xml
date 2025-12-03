@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on 陈驰水-个人博客</title>
+    <link>https://blog.chencs.online/authors/</link>
+    <description>Recent content in Authors on 陈驰水-个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-ch</language>
+    <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
+    <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
+    <copyright>© 2025 陈驰水</copyright>
+    <atom:link href="https://blog.chencs.online/authors/index.xml" rel="self" type="application/rss+xml" />
+    <follow_challenge>
+      <feedId>your-rss-feed</feedId>
+      <userId>your-rss-user</userId>
+    </follow_challenge>
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数论 on 陈驰水-个人博客</title>
+    <link>https://blog.chencs.online/tags/%E6%95%B0%E8%AE%BA/</link>
+    <description>Recent content in 数论 on 陈驰水-个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-ch</language>
+    <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
+    <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
+    <copyright>© 2025 陈驰水</copyright>
+    <lastBuildDate>Sat, 15 Feb 2025 19:28:36 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <follow_challenge>
+      <feedId>your-rss-feed</feedId>
+      <userId>your-rss-user</userId>
+    </follow_challenge>
+    
+    
+    <item>
+      <title>基础数论 - 模板 &amp; 分析</title>
+      <link>https://blog.chencs.online/posts/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sat, 15 Feb 2025 19:28:36 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/posts/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

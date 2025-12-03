@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>论文阅读 on 陈驰水-个人博客</title>
+    <link>https://blog.chencs.online/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+    <description>Recent content in 论文阅读 on 陈驰水-个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-ch</language>
+    <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
+    <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
+    <copyright>© 2025 陈驰水</copyright>
+    <lastBuildDate>Tue, 02 Sep 2025 20:34:12 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
+    <follow_challenge>
+      <feedId>your-rss-feed</feedId>
+      <userId>your-rss-user</userId>
+    </follow_challenge>
+    
+    
+    <item>
+      <title>CollabLLM - 论文阅读</title>
+      <link>https://blog.chencs.online/posts/readpaper2/</link>
+      <pubDate>Tue, 02 Sep 2025 20:34:12 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/posts/readpaper2/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>FlashAttention - 论文阅读与安装技巧</title>
+      <link>https://blog.chencs.online/posts/readpaper1/</link>
+      <pubDate>Thu, 17 Jul 2025 20:34:12 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/posts/readpaper1/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

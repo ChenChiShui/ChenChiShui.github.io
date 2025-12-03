@@ -1,0 +1,3095 @@
+<!doctype html>
+<html
+  lang="cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-ch">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>操作系统 - 应试笔记 &middot; 陈驰水-个人博客</title>
+    <meta name="title" content="操作系统 - 应试笔记 &middot; 陈驰水-个人博客">
+  
+
+  
+  
+    <meta name="description" content="来自陈驰水的一个关于算法与编程的技术博客">
+  
+  
+    <meta name="keywords" content="操作系统,">
+  
+  
+  
+  <link rel="canonical" href="https://blog.chencs.online/posts/os-note/">
+  
+
+  
+  
+    <meta name="author" content="陈驰水">
+  
+  
+    
+      
+        
+          <link href="https://github.com/ChenChiShui" rel="me">
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://leetcode.cn/u/walter_chen/" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.kaggle.com/walterchencs" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.xiaohongshu.com/user/profile/61cda3a2000000000201d31d" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://steamcommunity.com/profiles/76561198325927123/" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://blog.chencs.online/posts/os-note/">
+  <meta property="og:site_name" content="陈驰水-个人博客">
+  <meta property="og:title" content="操作系统 - 应试笔记">
+  <meta property="og:description" content="来自陈驰水的一个关于算法与编程的技术博客">
+  <meta property="og:locale" content="zh_ch">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-14T17:41:50+08:00">
+    <meta property="article:modified_time" content="2025-02-14T17:41:50+08:00">
+    <meta property="article:tag" content="操作系统">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="操作系统 - 应试笔记">
+  <meta name="twitter:description" content="来自陈驰水的一个关于算法与编程的技术博客">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION">
+  
+  
+    <meta name="msvalidate.01" content="YOUR_BING_SITE_VERIFICATION">
+  
+  
+    <meta name="p:domain_verify" content="YOUR_PINTEREST_SITE_VERIFICATION">
+  
+  
+    <meta name="yandex-verification" content="YOUR_YANDEX_SITE_VERIFICATION">
+  
+  
+    <meta name="fediverse:creator" content="@yourhandle@mastodon.instance">
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.609ab222ee8a0be99169823d7982c8964dde6d7c4e0118054e190183ff6bb424e2bdb939cc66a393c0068c00836a921e48d871dd7e14a6e0e159f20ff25dfc55.css"
+    integrity="sha512-YJqyIu6KC&#43;mRaYI9eYLIlk3ebXxOARgFThkBg/9rtCTivbk5zGajk8AGjACDapIeSNhx3X4UpuDhWfIP8l38VQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9cc802d09f28c6af56ceee7bc6e320a39251fdae98243f2a9942f221ac57a9f49c51609699a91794a7b2580ee1deaa8e4d794a68ffa94aa317c66e893ce51e02.js"
+      integrity="sha512-nMgC0J8oxq9Wzu57xuMgo5JR/a6YJD8qmULyIaxXqfScUWCWmakXlKeyWA7h3qqOTXlKaP&#43;pSqMXxm6JPOUeAg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "",
+    "name": "操作系统 - 应试笔记",
+    "headline": "操作系统 - 应试笔记",
+    
+    
+    "inLanguage": "zh-ch",
+    "url" : "https://blog.chencs.online/posts/os-note/",
+    "author" : {
+      "@type": "Person",
+      "name": "陈驰水"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-02-14T17:41:50\u002b08:00",
+    "datePublished": "2025-02-14T17:41:50\u002b08:00",
+    
+    "dateModified": "2025-02-14T17:41:50\u002b08:00",
+    
+    "keywords": ["操作系统"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "6271"
+  }]
+  </script>
+
+
+
+  
+  
+    
+  
+  <script
+    defer
+    src="https://analytics.yoursite.com/script.js"
+    data-site="ABC12345"></script>
+
+
+
+
+
+  
+
+  <script
+    data-id="umami-script"
+    async
+    src="https://analytics.yoursite.com/script.js"
+    data-website-id="ABC12345"
+    ></script>
+
+
+
+
+  <script type="text/javascript">
+    document.querySelector('script[data-id="umami-script"]').addEventListener("load", function () {
+      const type = document.head.querySelector('meta[property = "og:type"]').getAttribute("content");
+      let title = document.head.querySelector('meta[property = "og:title"]').getAttribute("content");
+      let url = document.head.querySelector('meta[property = "og:url"]').getAttribute("content");
+      umami.track(type + ":" + title, { url: url });
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+      <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCcZ7EjQ2Uz89-YfrDGtBCI6RLbjtnY-Bw",
+      authDomain: "walter-blog-d4a72.firebaseapp.com",
+      projectId: "walter-blog-d4a72",
+      storageBucket: "walter-blog-d4a72.firebasestorage.app",
+      messagingSenderId: "328082427833",
+      appId: "1:328082427833:web:f9dc1638b594e8c7443068",
+      measurementId: "G-YHMGY7E0PL"
+    };
+
+        var app = firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+        var auth = firebase.auth();
+
+      </script>
+    
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+
+
+<div id="island-header"
+  class="fixed rounded-full place-self-center top-4 pl-[24px] pr-[24px] w-full min-w-se max-w-se se:max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl"
+  style="z-index: 100;">
+  <div id="menu-blur"
+    class="absolute rounded-full opacity-0 inset-x-0 h-full nozoom shadow-2xl backdrop-blur-2xl shadow-lg">
+  </div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+      class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+      
+      
+      
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">陈驰水-个人博客</span>
+
+          
+          <img id="logo-bar" src="/img/Sick%20Shooting%20Star%20Sticker.gif" width="250"
+            height="250"
+            class="logo max-h-[2rem] max-w-[2rem] object-scale-down object-left nozoom" alt="陈驰水-个人博客" />
+          
+
+        </a>
+      </div>
+      
+      <div class="flex flex-1 items-center justify-between">
+        <nav id="title-bar"  class="hidden se:flex md:ml-7">
+
+          
+          <a id="page-title-bar" href="/"
+            class="relative text-base font-bold text-gray-500 hover:text-gray-900">陈驰水-个人博客</a>
+          
+          <a id="article-title-bar" href="#the-top"
+            class="absolute se:flex text-sm md:text-base font-bold text-gray-500 hover:text-gray-900">操作系统 - 应试笔记</a>
+        </nav>
+        <nav class="space-x-3"></nav>
+        <nav class="main-menu hidden md:flex items-center space-x-5 md:ml-12 h-12">
+            
+            
+            
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        文章
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        标签
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        分类
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/posts/%E5%8F%8B%E9%93%BE/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="友链">
+        友链
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/posts/%E5%85%B3%E4%BA%8E%E6%88%91/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="关于我">
+        关于
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search"
+              class="text-base hover:text-primary-600 dark:hover:text-primary-400" title="搜索 (/)">
+              <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+            </button>
+            
+
+          
+          
+          <div
+            class="ltr:mr-14 rtl:ml-14 flex items-center">
+            <button id="appearance-switcher" aria-label="Dark mode switcher" type="button"
+              class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+              <div class="flex items-center justify-center dark:hidden">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+              </div>
+              <div class="items-center justify-center hidden dark:flex">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+              </div>
+            </button>
+          </div>
+          
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+          <span></span>
+
+          
+
+
+          
+          <button id="search-button-mobile" aria-label="Search"
+            class="text-base hover:text-primary-600 dark:hover:text-primary-400" title="搜索 (/)">
+            <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+          </button>
+          
+
+          
+          
+          <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button"
+            class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+            <div class="flex items-center justify-center dark:hidden">
+              <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div class="items-center justify-center hidden dark:flex">
+              <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+          
+
+        </div>
+      </div>
+      <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" class="block">
+          
+          <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+          </div>
+          <div id="menu-wrapper" style="padding-top:5px;"
+            class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+            <ul
+              class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+              <li id="menu-close-button">
+                <span
+                  class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span>
+              </li>
+
+              
+
+              
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            文章
+        </p>
+    </a>
+</li>
+
+
+
+
+              
+
+              
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            标签
+        </p>
+    </a>
+</li>
+
+
+
+
+              
+
+              
+  <li class="mt-1">
+    <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            分类
+        </p>
+    </a>
+</li>
+
+
+
+
+              
+
+              
+  <li class="mt-1">
+    <a href="/posts/%E5%8F%8B%E9%93%BE/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="友链">
+            友链
+        </p>
+    </a>
+</li>
+
+
+
+
+              
+
+              
+  <li class="mt-1">
+    <a href="/posts/%E5%85%B3%E4%BA%8E%E6%88%91/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="关于我">
+            关于
+        </p>
+    </a>
+</li>
+
+
+
+
+              
+
+            </ul>
+            
+            
+
+          </div>
+        </label>
+      </div>
+    </div>
+
+    
+
+    
+    <script>
+      (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+          $(e).children('p').addClass('active');
+        });
+      })();
+    </script>
+    
+
+  </div>
+</div>
+
+<script>
+let lastScroll = 0;
+let isArticleTitleVisible = false;
+
+window.addEventListener("scroll", function (e) {
+  const scroll = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollDirection = scroll > lastScroll ? "down" : "up";
+
+  const title_bar = document.getElementById("title-bar");
+  const heading = document.querySelector("h1");
+
+  var background_blur = document.getElementById('menu-blur');
+  background_blur.style.opacity = (scroll / 300);
+
+  if (heading && window.location.pathname !== "/") {
+    const headingRect = heading.getBoundingClientRect();
+    const headingOffset = headingRect.bottom + scroll;
+    const switchPoint = headingOffset - 50; 
+    const restorePoint = headingOffset + 50; 
+
+    if (scrollDirection === "down" && scroll > switchPoint && !isArticleTitleVisible) {
+      title_bar.classList.add("title-switched");
+      isArticleTitleVisible = true;
+    } else if (scrollDirection === "up" && scroll < restorePoint && isArticleTitleVisible) {
+      title_bar.classList.remove("title-switched");
+      isArticleTitleVisible = false;
+    }
+  }
+
+  lastScroll = scroll <= 0 ? 0 : scroll; 
+});
+</script>
+
+<script>
+let lastScrollTop = 0;
+let lastScrollDirection = 0;
+let island_header_style_top = 1;
+let accumulated_scroll = 0;
+
+window.addEventListener("scroll", function (e) {
+  const scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  let currScrollDirection = scroll - lastScrollTop > 0 ? 1 : -1; 
+
+  const island_header = document.getElementById("island-header");
+  const heading = document.querySelector("h1");
+  const headingDistance = heading.getBoundingClientRect();
+  const headingOffset = headingDistance.bottom + scroll;
+  const threshold = headingOffset * 2.8;
+
+  if (scroll > headingOffset) {
+    if (currScrollDirection !== lastScrollDirection) {
+      accumulated_scroll = 0;
+    } else {
+      accumulated_scroll += Math.abs(scroll - lastScrollTop);
+    }
+
+    if ((accumulated_scroll > threshold || currScrollDirection == -1) && (scroll > headingOffset + threshold / 2)) {
+      island_header_style_top = Math.max(
+        -4.5,
+        Math.min(
+          1,
+          (island_header_style_top - ((scroll - lastScrollTop) / 12) ** 3)
+        )
+      );
+
+      island_header.style.top = island_header_style_top + "rem";
+    }
+  }
+
+  lastScrollTop = scroll;
+  lastScrollDirection = currScrollDirection;
+});
+
+</script>
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+    
+    
+  
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/img/hero1_hu_28a323972c46b86b.png"
+      alt="操作系统 - 应试笔记"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+      integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/img/hero1_hu_28a323972c46b86b.png"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >陈驰水-个人博客</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/"
+      >posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/os-note/"
+      >操作系统 - 应试笔记</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        操作系统 - 应试笔记
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-02-14T17:41:50&#43;08:00">2025 年 2 月 14 日</time><span class="px-2 text-primary-500">&middot;</span><span>6271 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">13 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title="啟用阅读模式"
+    data-title-i18n-disable="啟用阅读模式"
+    data-title-i18n-enable="停用阅读模式">
+    <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg></span></span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/%E5%BA%94%E8%AF%95%E7%AC%94%E8%AE%B0/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    应试笔记
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    操作系统
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="陈驰水"
+        src="/img/avatar1_hu_63b293dd7b22b4b6.png"
+        data-zoom-src="/img/avatar1_hu_543b8db368682948.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        陈驰水
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">感谢您看到这里，祝您生活愉快</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/ChenChiShui"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:walter_chen.cc@foxmail.com"
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://leetcode.cn/u/walter_chen/"
+          target="_blank"
+          aria-label="Leetcode"
+          title="Leetcode"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill=currentColor width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <path d="M21.469 23.907l-3.595 3.473c-0.624 0.625-1.484 0.885-2.432 0.885s-1.807-0.26-2.432-0.885l-5.776-5.812c-0.62-0.625-0.937-1.537-0.937-2.485 0-0.952 0.317-1.812 0.937-2.432l5.76-5.844c0.62-0.619 1.5-0.859 2.448-0.859s1.808 0.26 2.432 0.885l3.595 3.473c0.687 0.688 1.823 0.663 2.536-0.052 0.708-0.713 0.735-1.848 0.047-2.536l-3.473-3.511c-0.901-0.891-2.032-1.505-3.261-1.787l3.287-3.333c0.688-0.687 0.667-1.823-0.047-2.536s-1.849-0.735-2.536-0.052l-13.469 13.469c-1.307 1.312-1.989 3.113-1.989 5.113 0 1.996 0.683 3.86 1.989 5.168l5.797 5.812c1.307 1.307 3.115 1.937 5.115 1.937 1.995 0 3.801-0.683 5.109-1.989l3.479-3.521c0.688-0.683 0.661-1.817-0.052-2.531s-1.849-0.74-2.531-0.052zM27.749 17.349h-13.531c-0.932 0-1.692 0.801-1.692 1.791 0 0.991 0.76 1.797 1.692 1.797h13.531c0.933 0 1.693-0.807 1.693-1.797 0-0.989-0.76-1.791-1.693-1.791z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.kaggle.com/walterchencs"
+          target="_blank"
+          aria-label="Kaggle"
+          title="Kaggle"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="currentColor" width="800px" height="800px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione-monotone" preserveAspectRatio="xMidYMid meet"><path d="M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2m6.016 44.508l-8.939-12.666l-2.922 2.961v9.705h-5.963V17.492h5.963v11.955l11.211-11.955h7.836L33.293 29.426l12.518 17.082h-7.795" fill="currentColor"></path></svg></span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.xiaohongshu.com/user/profile/61cda3a2000000000201d31d"
+          target="_blank"
+          aria-label="Xiaohongshu"
+          title="Xiaohongshu"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="256"
+   height="256"
+   viewBox="0 0 256 256"
+   sodipodi:docname="XiaohongshuLOGO.png"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.6914062"
+     inkscape:cx="127.81422"
+     inkscape:cy="128"
+     inkscape:window-width="1600"
+     inkscape:window-height="928"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <path
+       style="fill:currentColor;stroke:none"
+       d="M 29,0.33332825 C 13.959937,3.4666748 1.5356731,15.204498 0,31 -1.586103,47.314209 0,64.597672 0,81 v 102 c 0,18.76035 -4.7369685,44.19888 7.3333335,60 C 20.372129,260.06897 44.156731,256 63,256 h 111 35 c 5.78276,0 12.33244,0.84741 18,-0.33333 15.0401,-3.13336 27.46432,-14.87115 29,-30.66667 1.58612,-16.31419 0,-33.59769 0,-50 V 73 C 256,54.239685 260.73697,28.801102 248.66667,13 235.62787,-4.0689697 211.84329,0 193,0 H 82 47 C 41.217228,0 34.667561,-0.84741211 29,0.33332825 M 120,91 l -7,19 h 12 l -10,24 9,1 c -0.98794,2.68155 -2.31718,7.73317 -4.33334,9.83334 C 118.18945,146.3721 115.92654,146 114,146 c -4.35942,0 -13.16798,1.80539 -15.5,-3 -1.069664,-2.20416 0.465553,-4.98451 1.333336,-7 1.813624,-4.21228 4.222554,-8.51549 5.166664,-13 -2.17548,0 -4.92464,0.42967 -7,-0.33333 -7.778526,-2.85974 0.874031,-15.36435 2.66666,-19.66667 1.25875,-3.020981 2.75652,-9.584732 5.5,-11.5 C 110.01874,88.810822 115.88325,90.674988 120,91 m -79,63 c 2.750713,0 6.837379,0.81721 8.5,-2 1.769028,-2.99753 0.5,-9.58963 0.5,-13 V 106 C 50,102.90659 48.438198,93.464493 51.166668,91.5 53.41069,89.884308 62.832935,90.226166 63.833332,93 65.47065,97.539825 64,105.16241 64,110 v 32 c 0,5.48389 0.949112,11.8645 -1.333332,17 -2.177158,4.89861 -12.303417,9.27243 -17.333336,5.5 C 43.120155,162.84012 41.545292,156.59013 41,154 M 193,91 v 5 c 3.72887,0 8.4108,-0.763367 12,0.333328 11.97635,3.659424 11,15.422502 11,25.666672 1.99706,0 4.04419,-0.15562 6,0.33333 11.49335,2.87334 10,14.36401 10,23.66667 0,4.95615 0.93086,10.82184 -2.33333,15 -3.59567,4.60246 -9.48195,4 -14.66667,4 -1.6116,0 -4.26318,0.51051 -5.66667,-0.5 -2.62326,-1.88875 -3.78159,-7.50485 -4.33333,-10.5 3.28711,0 9.2179,1.12517 11.83333,-1.33334 C 219.9164,149.76859 218.65411,138.43454 215,136.5 c -1.93661,-1.02527 -4.88672,-0.5 -7,-0.5 h -15 v 29 h -14 v -29 h -14 v -14 h 14 v -12 h -9 V 96 h 9 v -5 h 14 m -32,5 v 14 h -8 v 42 h 13 v 13 H 120 L 125.33334,152.5 138,152 v -42 h -8 V 96 h 31 m 57,14 c 0,-2.84204 -0.51608,-6.25871 0.33333,-9 3.34434,-10.793121 19.61577,-2.093994 11.5,6.83333 -0.92279,1.01507 -2.54419,1.51106 -3.83333,1.83334 C 223.43948,110.30679 220.61993,110 218,110 M 41,110 36.833332,147 30,159 24,143 27,110 h 14 m 46,0 3,33 -6,15 h -2 c -5.366936,-8.49765 -6.053299,-17.26251 -7,-27 -0.672195,-6.91406 -2,-14.04004 -2,-21 h 14 m 106,0 v 12 h 9 v -12 h -9 m -75,42 -5,13 H 91 L 96.333336,151.5 104,151.66666 Z"
+       id="path1" />
+  </g>
+</svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://steamcommunity.com/profiles/76561198325927123/"
+          target="_blank"
+          aria-label="Steam"
+          title="Steam"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111.2 248-248.4 248-113.8 0-209.6-76.3-239-180.4l95.2 39.3c6.4 32.1 34.9 56.4 68.9 56.4 39.2 0 71.9-32.4 70.2-73.5l84.5-60.2c52.1 1.3 95.8-40.9 95.8-93.5 0-51.6-42-93.5-93.7-93.5s-93.7 42-93.7 93.5v1.2L176.6 279c-15.5-.9-30.7 3.4-43.5 12.1L0 236.1C10.2 108.4 117.1 8 247.6 8 384.8 8 496 119 496 256zM155.7 384.3l-30.5-12.6a52.79 52.79 0 0 0 27.2 25.8c26.9 11.2 57.8-1.6 69-28.4 5.4-13 5.5-27.3.1-40.3-5.4-13-15.5-23.2-28.5-28.6-12.9-5.4-26.7-5.2-38.9-.6l31.5 13c19.8 8.2 29.2 30.9 20.9 50.7-8.3 19.9-31 29.2-50.8 21zm173.8-129.9c-34.4 0-62.4-28-62.4-62.3s28-62.3 62.4-62.3 62.4 28 62.4 62.3-27.9 62.3-62.4 62.3zm.1-15.6c25.9 0 46.9-21 46.9-46.8 0-25.9-21-46.8-46.9-46.8s-46.9 21-46.9 46.8c.1 25.8 21.1 46.8 46.9 46.8z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#考试范围">考试范围</a></li>
+    <li><a href="#第一章-绪论">第一章 绪论</a></li>
+    <li><a href="#第二章-进程管理">第二章 进程管理</a>
+      <ul>
+        <li><a href="#多道程序设计">多道程序设计</a></li>
+        <li><a href="#进程">进程</a></li>
+        <li><a href="#线程">线程</a></li>
+      </ul>
+    </li>
+    <li><a href="#第三章-中断和调度">第三章 中断和调度</a>
+      <ul>
+        <li><a href="#中断">中断</a></li>
+      </ul>
+    </li>
+    <li><a href="#第五章-死锁">第五章 死锁</a></li>
+    <li><a href="#第六章-主存">第六章 主存</a></li>
+    <li><a href="#第八章-文件">第八章 文件</a></li>
+    <li><a href="#学习通简答题">学习通简答题</a>
+      <ul>
+        <li><a href="#作业进程线程whatwhy"><strong>作业、进程、线程（what，why）</strong></a></li>
+        <li><a href="#忙式等待与排队等待"><strong>忙式等待与排队等待</strong></a></li>
+        <li><a href="#区分进程间的互斥与同步"><strong>区分进程间的互斥与同步</strong></a></li>
+        <li><a href="#面包店思路"><strong>面包店思路</strong></a></li>
+        <li><a href="#活动进程"><strong>活动进程</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#考试范围">考试范围</a></li>
+    <li><a href="#第一章-绪论">第一章 绪论</a></li>
+    <li><a href="#第二章-进程管理">第二章 进程管理</a>
+      <ul>
+        <li><a href="#多道程序设计">多道程序设计</a></li>
+        <li><a href="#进程">进程</a></li>
+        <li><a href="#线程">线程</a></li>
+      </ul>
+    </li>
+    <li><a href="#第三章-中断和调度">第三章 中断和调度</a>
+      <ul>
+        <li><a href="#中断">中断</a></li>
+      </ul>
+    </li>
+    <li><a href="#第五章-死锁">第五章 死锁</a></li>
+    <li><a href="#第六章-主存">第六章 主存</a></li>
+    <li><a href="#第八章-文件">第八章 文件</a></li>
+    <li><a href="#学习通简答题">学习通简答题</a>
+      <ul>
+        <li><a href="#作业进程线程whatwhy"><strong>作业、进程、线程（what，why）</strong></a></li>
+        <li><a href="#忙式等待与排队等待"><strong>忙式等待与排队等待</strong></a></li>
+        <li><a href="#区分进程间的互斥与同步"><strong>区分进程间的互斥与同步</strong></a></li>
+        <li><a href="#面包店思路"><strong>面包店思路</strong></a></li>
+        <li><a href="#活动进程"><strong>活动进程</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+  
+
+
+
+<div
+  
+    class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900"
+  
+  >
+  <span
+    
+      class="text-primary-400 pe-3 flex items-center"
+    
+    >
+    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+  </span>
+
+  <span
+    
+      class="dark:text-neutral-300"
+    
+    >本博客为 <strong>吉林大学软件学院 操作系统课程</strong> 复习笔记。</span>
+</div>
+
+<blockquote>
+<p>本文内容基本只包括 <strong>简答题</strong> 的复习。</p>
+<p>名词解释题，网上已经有很多学长学姐的笔记，推荐 <code>gonghr</code> 学长。</p>
+<p>如果想 <strong>系统学习操作系统</strong>，本文也能起到一定的梳理作用。</p>
+<p>考试范围来自 <strong>2022级</strong></p>
+</blockquote>
+
+<h2 class="relative group">考试范围
+    <div id="考试范围" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%80%83%e8%af%95%e8%8c%83%e5%9b%b4" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image-20240617215234385"
+    src="/img/image-20240617215234385.png"
+    ></figure>
+</p>
+
+<h2 class="relative group">第一章 绪论
+    <div id="第一章-绪论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e7%ab%a0-%e7%bb%aa%e8%ae%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>操作系统（名词解释）：操作系统是位于硬件层(HAL)之上，所有其它软件层之下的一个系统软件，是<strong>管理系统中各种软硬件资源</strong>，方便用户使用计算机系统的程序集合。</p>
+<p>类别与发展（<strong>考过至少写出六种类别</strong>）</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image-20240618142330408"
+    src="/img/image-20240618142330408.png"
+    ></figure>
+</p>
+
+<h2 class="relative group">第二章 进程管理
+    <div id="第二章-进程管理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e8%bf%9b%e7%a8%8b%e7%ae%a1%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">多道程序设计
+    <div id="多道程序设计" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%9a%e9%81%93%e7%a8%8b%e5%ba%8f%e8%ae%be%e8%ae%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>吞吐量 = 作业道数 / 全部处理时间</p>
+<p>利用率 = CPU使用时间 / 运行总时间</p>
+<blockquote>
+<p><strong>CPU利用率越高，说明系统效率越高对不对？</strong></p>
+<p>不对，比如程序中出现死循环使得 CPU 利用率解决百分之百，无法处理其他请求，系统效率极低。</p>
+</blockquote>
+</li>
+<li>
+<p>单道程序设计资源利用率低</p>
+</li>
+<li>
+<p><strong>Multiprogramming（多道程序设计）</strong>：多道程序设计是指在一台处理机上同时并发运行多个程序，即在一台处理机上有多个程序同时进入主存并发运行，宏观上并行，微观上串行交替运行。</p>
+</li>
+<li>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image-20240617211220254"
+    src="/img/image-20240617211220254.png"
+    ></figure>
+</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>思考：内存中的程序数量是否越多越好</strong></p>
+<p>道数过少，系统资源利用率低</p>
+<p>道数过多，系统开销(system overhead)增大，程序响应速度下降</p>
+</blockquote>
+
+<h3 class="relative group">进程
+    <div id="进程" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%9b%e7%a8%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>1.<em><strong>重中之重</strong></em></p>
+<blockquote>
+<p><strong>4. 操作系统为什么提出“作业、进程、线程”的概念？</strong></p>
+<p>PPT小结：</p>
+<p>作业与进程</p>
+<ul>
+<li>
+<p>作业进入内存后变为进程</p>
+</li>
+<li>
+<p>一个作业通常与多个进程相对应</p>
+</li>
+</ul>
+<p>进程与线程</p>
+<ul>
+<li>
+<p>一个进程一般包含多个线程，至少包含一个线程</p>
+</li>
+<li>
+<p>不支持多线程的系统，可视为单线程进程</p>
+</li>
+</ul>
+<p>**作业：**用户在一次解题或一个事物处理过程中要求计算机系统所做工作的集合。它包括用户程序、所需要的数据及控制指令等。作业是由一系列有序的步骤组成的。</p>
+<p><strong>进程：</strong></p>
+<p>进程是程序的一次执行</p>
+<p>进程是可以参与并发执行的程序</p>
+<p>进程是程序和数据一道通过处理器执行时所发生的活动</p>
+<p>进程是具有一定独立功能的程序关于一个数据集合的一次运行活动</p>
+<p><strong>程序和进程</strong></p>
+<ul>
+<li>
+<p>程序静态，进程动态。这是<strong>进程和程序</strong>的本质差异</p>
+</li>
+<li>
+<p>程序可长期保存，进程有生存期</p>
+</li>
+<li>
+<p>一个程序可对应多个进程，一个进程只能执行一个程序</p>
+</li>
+<li>
+<p>并发：可与其它进程同时执行</p>
+</li>
+<li>
+<p>宏观同时，“交替执行”，不要求多个CPU</p>
+</li>
+</ul>
+<p>**线程：**线程是进程中的一个实体，是被系统独立调度和执行的基本单位。</p>
+<p>作业是在早期的多道批处理系统中提出的，在现代操作系统中基本没有概念及应用。</p>
+<p>引入进程的目的是更好地使多道程序并发执行，提高资源利用率和系统吞吐量</p>
+<p>引入线程地目的使减小程序在并发执行时所付出地时空开销（上下文切换），提高操作系统地并发性能。</p>
+</blockquote>
+<ol start="2">
+<li>
+<p>进程状态转化</p>
+<blockquote>
+<p><strong>进程创建时是什么状态</strong></p>
+<p>就绪态</p>
+<p>当进程已分配到除处理器(CPU)以外的所有必要资源后，只要再获得处理器就可以执行的状态称为就绪状态。在一个系统里,可以有多个进程同时处于就绪状态，通常把这些就绪进程排成一个或多个队列，称为就绪队列。</p>
+<p><strong>进程结束时是什么状态</strong></p>
+<p>终止态</p>
+<p>当一个进程已经正常结束或异常结束，操作系统已将其从系统队列中移出，但是，尚未撤消，这时称为终止状态。</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>下图为考试原题</strong></p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image-20240618103517696"
+    src="/img/image-20240618103517696.png"
+    ></figure>
+</p>
+<ol start="3">
+<li>
+<p>进程控制块PCB 标志进程存在的数据结构，其中保存系统管理进程所需的全部信息：pid、进程状态、现场信息、调度参数、所属用户(uid)……</p>
+<blockquote>
+<p>当调度某进程执行时，需要从该进程的PCB中查询其状态及优先级等参数</p>
+<p>当调度到某进程后，根据PCB中的<strong>现场信息恢复现场</strong>，并根据PCB中的程序和数据的内存地址找到程序和数据</p>
+<p>进程执行过程中，当需要与其它<strong>进程通信</strong>时，也要访问PCB</p>
+<p>当进程发生<strong>进程切换</strong>时，需要将<strong>现场信息从系统栈弹出</strong>，保存于PCB中</p>
+<p><strong>系统建立进程时建立PCB，撤销进程时撤销PCB.</strong></p>
+</blockquote>
+<p>进程上下文：PCB + 程序</p>
+<p>系统开销：运行操作系统程序完成系统管理工作所花费的时间和空间</p>
+<p>UNIX中分为 P区（proc）和U区（user）</p>
+<p>P区有Pid Uid 进程状态等 需要常驻内存</p>
+<p>U区是有进程被使用的时候才用的 不需要常驻</p>
+</li>
+<li>
+<p>进程切换时需要保存的现场信息</p>
+<blockquote>
+<p><strong>16. 进程的现场信息包括什么，可能存放的位置</strong></p>
+<p>a 地址寄存器</p>
+<p>​	保存当前CPU所访问的内存单元的地址</p>
+<p>b 通用寄存器</p>
+<p>​	用于传送和暂存数据，也可参与算术逻辑运算，并保存运算结果</p>
+<p>c 浮点寄存器</p>
+<p>​	用于存储浮点数字，它决定着计算机的计算精度。</p>
+<p>d. SP(系统栈指针)</p>
+<p>e. PSW(程序状态字)</p>
+<p>f. PC(指令计数器)</p>
+<p>g. 打开文件表</p>
+<p><strong>存放位置</strong>：进程栈（不是系统栈）</p>
+</blockquote>
+</li>
+<li>
+<p>进程的特征</p>
+<p>§并发性 §动态性 §独立性 §交互性 §异步性 §结构性</p>
+</li>
+<li>
+<p>进程的创建与撤销</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>进程创建</strong>
+§向系统申请一个空闲PCB，并指定唯一的进程标识</p>
+<p>§为新进程分配资源</p>
+<p>§初始化新进程的PCB</p>
+<p>§加载程序</p>
+<p>§将PCB入就绪队列.</p>
+<p><strong>考试原题！！考了两次</strong></p>
+<p>引起进程创建的事件</p>
+<p>用户登录 作业调度 提供服务 应用请求</p>
+<p><strong>进程撤销 exit()</strong></p>
+<p>从系统PCB表中找到被撤销进程的PCB</p>
+<p>检查被撤销进程的状态是否为执行状态。若是，则立即停止该进程的执行</p>
+<p>设置重新调度标志，以便在该进程撤销后将处理器分配给其它进程</p>
+<p>检查被撤销进程是否有子孙进程，若有子孙进程还应撤销该进程的子孙进程</p>
+<p>回收该进程占有的全部资源并回收其PCB</p>
+<p><strong>进程等待</strong></p>
+<p>停止当前进程的执行，由于该进程正处于执行状态，故应停止该进程的执行</p>
+<p>保存该进程的现场信息。为了使进程以后能够重新调度运行，应将进程的现场信息送入其PCB中保存</p>
+<p>将进程状态改为等待.</p>
+<p><strong>进程唤醒(事件发生)</strong></p>
+<p>将被唤醒进程从相应的等待队列中移除</p>
+<p>将进程状态改为就绪，并将该进程插入就绪队列.</p>
+</blockquote>
+<p><strong>思考：父进程创建子进程与主程序调用子程序区别?</strong></p>
+<p>父进程创建子进程后，父进程与子进程可同时执行</p>
+<p>主程序调用子程序后，主程序暂停在调用点，子程序开始执行，直到子程序执行完毕返回，主程序才开始执行</p>
+<p>​	<strong>思考</strong></p>
+<p>​	若系统中没有运行进程，是否一定没有就绪进程？</p>
+<p>​	a：不一定比如死锁</p>
+<p>​	若系统中即没有运行进程，也没有就绪进程，系统中是否就没有进程？</p>
+<p>​	a：可能有等待状态的进程</p>
+<p>​	在采用优先级进行调度时，运行进程是否一定是系统中优先级最高的进程？</p>
+<p>​	a：就绪队列中的最高优先级进程</p>
+<p>​	某进程被唤醒后立即投入运行，就说这个系统采用的是剥夺式调度方法？</p>
+<p>​	a：不是，若当前CPU空闲，则非剥夺</p>
+
+<h3 class="relative group">线程
+    <div id="线程" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ba%bf%e7%a8%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>**线程是进程中一个相对独立的执行流。**一个进程可以包含多个线程，这些线程执行同一程序中的相同代码段或不同代码段，共享数据区和堆。一般认为，进程是资源的分配单位，线程是CPU的调度单位。</p>
+<p><strong>多线程优点：</strong></p>
+<p>§切换速度快（地址空间不变，避免了上下文切换（PCB+程序））</p>
+<p>§系统开销小</p>
+<p>§通讯容易（共享数据空间）</p>
+<p><strong>线程控制块TCB(Thread control block)</strong></p>
+<p>标志线程存在的数据结构，其中包含对线程管理需要的全部信息</p>
+<p>内容：线程标志 线程状态 调度参数 现场(通用寄存器,PC,SP) 链接指针</p>
+<p>存放位置：</p>
+<p>用户级线程：目态空间（用户空间）</p>
+<p>核心级线程：系统空间</p>
+<p><strong>！考试原题：用户级线程与系统级的线程的区别（优缺点）</strong></p>
+<p>用户级线程：</p>
+<p>§若同一进程中的多个线程至少有一个处于运行态，则该进程的状态为运行态</p>
+<p>§若同一进程中的多个线程均不处于运行态，但至少有一个线程处于就绪态，则该进程的状态为就绪态</p>
+<p>§若同一进程中的多个线程均处于等待态，则该进程的状态为等待态</p>
+<ul>
+<li>
+<p>优点</p>
+<ul>
+<li>
+<p>不依赖于操作系统，调度灵活</p>
+<p>同一进程中多线程切换速度快(不需进入操作系统)</p>
+</li>
+<li>
+<p>调度算法可以是进程专用的，不同的进程可以根据需要，对自己的线程选择不同的调度算法。</p>
+</li>
+<li>
+<p>用户级线程的实现于操作系统平台无关，对线程管理的代码是属于用户程序的一部分。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>缺点</p>
+<ul>
+<li>当线程执行一个系统调用时，不仅该线程被阻塞，而且进程内的所有线程都被阻塞。</li>
+<li>不能发挥多处理机的优势，内核每次分配给进程仅有一个 CPU，因此进程中仅有一个线程能执行。</li>
+</ul>
+</li>
+</ul>
+<p>内核级线程</p>
+<ul>
+<li>优点
+<ul>
+<li>能充分发挥多处理机优势，内核能同时调度同一进程中多个线程并行执行。</li>
+<li>如果进程中一个线程被阻塞，内核可以调度该进程中的其他线程占用处理机，也可以运行其他进程中的线程。</li>
+<li>非新版本：内核支持线程具有很小的数据结构和堆栈，线程切换比较快、开销小。</li>
+<li>非新版本：内核本身也可以采用多线程技术，可以提高系统的执行速度和效率。</li>
+</ul>
+</li>
+<li>缺点
+<ul>
+<li>同一进程中的线程切换，需要从用户态到核心态进行，系统开销大。</li>
+<li>非新版本：线程的创建、撤销、调度在操作系统核心态，占用系统资源，增加系统开销。</li>
+</ul>
+</li>
+</ul>
+<p>具体区别</p>
+<ul>
+<li>
+<p>核心级别线程操作系统<strong>可见</strong>；用户级别线程操作系统<strong>不可见</strong></p>
+</li>
+<li>
+<p>用户级别线程的创建、撤销和调度<strong>不需要</strong>操作系统的支持，且是在（程序）语言这一级处理的。核心级别线程的创建、撤销和调度都<strong>需要</strong>操作系统内核的支持</p>
+</li>
+<li>
+<p>用户级别线程执行系统调用命令将导致其所属<strong>进程</strong>被中断，核心级别线程执行系统调用命令将导致<strong>线程</strong>被中断</p>
+</li>
+<li>
+<p>在仅有用户线程的系统内，CPU调度以<strong>进程</strong>为单位。在有核心级别线程的系统内，CPU调度以<strong>线程</strong>为单位</p>
+</li>
+<li>
+<p>用户级别线程的实体是运行在<strong>用户态</strong>下的程序，而核心级别线程的实体则是可以运行在<strong>任何状态</strong>下的程序</p>
+</li>
+</ul>
+
+<h2 class="relative group">第三章 中断和调度
+    <div id="第三章-中断和调度" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e4%b8%ad%e6%96%ad%e5%92%8c%e8%b0%83%e5%ba%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">中断
+    <div id="中断" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%ad%e6%96%ad" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>定义：处理器在运行过程中，出现了某一事件，<strong>必须中止</strong>正在运行的程序，转去处理这个事件，然后再返回原来运行的程序</p>
+<p><strong>引入中断的目的</strong></p>
+<ul>
+<li>
+<p>实现并发活动</p>
+</li>
+<li>
+<p>实现实时处理</p>
+</li>
+<li>
+<p>故障自动处理</p>
+</li>
+</ul>
+<p>中断类型：<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image-20240618150517423"
+    src="/img/image-20240618150517423.png"
+    ></figure>
+</p>
+<p>自愿性主要的是系统调用、访管指令</p>
+<p>强迫性是硬件故障、程序性中断、外部中断、IO中断</p>
+<p><strong>中断嵌套与中断屏蔽</strong> 计组学的</p>
+<p>中断屏蔽（关中断）-&gt; 保护现场-&gt;开中断（开放高优先级）-&gt;中断处理-&gt;关中断-&gt;恢复现场（用PCB）-&gt;开中断-&gt;中断返回</p>
+<p>中断相当于一种特殊的子程序调用，发生时刻具有不确定性</p>
+<p><strong>§思考1</strong>：中断现场保存在什么地方？进程现场保存在什么地方？</p>
+<p>中断现场主要保护PC PSW（中断向量），一般在系统栈中保存。</p>
+<p>进程以PCB进程控制块的形式保存在所有进程共享的内核空间中。</p>
+<p><strong>§思考2</strong>：为什么说PCB保存的是核心级别现场？用户级别现场保存在什么地方？</p>
+<p>PCB保存在内核空间中，可以供操作系统内核以及其他进程访问。</p>
+<p>用户级现场保存在用户堆栈中，指的是线程级别的上下文信息，存储在目态空间。</p>
+<ol>
+<li><strong>使用临界区的四个必要条件</strong>
+①空闲让进：临界区空闲时应该允许一个进程访问；
+②忙则等待：临界区被访问时，其余想访问他的进程必须等待；
+③有限等待：等待的进程在外等待的时间必须是有限的；
+④让权等待：若等待进程一直等待，迟迟进不到临界区时，应该让出cpu，防止忙等待。</li>
+</ol>
+
+<h2 class="relative group">第五章 死锁
+    <div id="第五章-死锁" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%94%e7%ab%a0-%e6%ad%bb%e9%94%81" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p><strong>死锁</strong>：一组进程中的每一个进程，均无限期地等待此组进程中其它进程所占有的，因而永远无法得到的资源，这种现象称为进程死锁</p>
+</li>
+<li>
+<p>类型：竞争资源引起的死锁（可以竞争相同或不同的资源）、进程通讯引起的死锁、其他</p>
+</li>
+<li>
+<p><strong>饥饿(starvation)</strong></p>
+<p>当等待时间给进程推进和响应带来明显影响时,称发生了进程饥饿</p>
+<p>饥饿到一定程度的进程所赋予的使命即使完成也不再具有实际意义时称该进程被饿死</p>
+<blockquote>
+<p>§饥饿 vs 死锁</p>
+<p>§死锁进程处于等待状态，忙式等待的进程并非处于等待状态, 但却可能被饿死</p>
+<p>§死锁进程等待永远不会释放的资源, 饿死进程等待可能被释放,但却不会分给自己的资源,其等待时间没有上界</p>
+<p>§死锁一定发生了循环等待,饿死不然</p>
+<p>§死锁至少涉及两个进程, 饿死进程可能只有一个</p>
+</blockquote>
+</li>
+</ul>
+
+<h2 class="relative group">第六章 主存
+    <div id="第六章-主存" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e5%85%ad%e7%ab%a0-%e4%b8%bb%e5%ad%98" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>动态异长分区的分配</p>
+<blockquote>
+<p>空闲区域表</p>
+<ul>
+<li>
+<p>最先适应 (First Fit)</p>
+<p>​	从低地址到高地址</p>
+</li>
+<li>
+<p>次适应法(Next Fit)</p>
+<p>​	从低地址到高地址，从上次的地址开始继续找</p>
+</li>
+<li>
+<p>最佳适应 (Best Fit)</p>
+<p>​	从小到大排序，会出碎片</p>
+</li>
+<li>
+<p>最坏适应 (Worst Fit)</p>
+<p>​	从大到小排序，大进程无处可用</p>
+</li>
+</ul>
+</blockquote>
+<p>碎片</p>
+<blockquote>
+<p>动态异常分区存储分配可能形成很小的空闲区域，称为碎片(fragment)</p>
+<p>如果碎片很多，将造成严重的存储资源浪费</p>
+<p>解决方法-紧凑(compaction)</p>
+<p>移动所有的占有区域，以使所有的空闲区域连成一片。缺点：开销大</p>
+</blockquote>
+<p>内存管理方式</p>
+<ul>
+<li>
+<p>§界地址管理方式（一维地址）</p>
+<p>§页式管理方式（一维地址）</p>
+<p>§段式管理方式（二维地址）</p>
+<p>§段页式管理方式（二维地址）</p>
+</li>
+<li>
+<p>页式管理方式：具体和计组一样 多加了快表、页表</p>
+<p><strong>页表</strong>对应 逻辑页号-&gt;页框号 （存在多级页表）</p>
+<blockquote>
+<p><strong>传统页表</strong>面向进程空间</p>
+<p>每个进程逻辑页面有一表项</p>
+<p>当进程空间很大时，页表很大</p>
+<p><strong>反置页表</strong>面向内存空间</p>
+<p>对每个内存页框设置一个表项，表项的序号为物理页框号f，表项的内容为进程标识pid与逻辑页号p的有序对</p>
+<p>反置页表大小固定</p>
+<p>整个系统一个反置页表，为所有进程所共用</p>
+</blockquote>
+<p><strong>快表</strong>相同，是更快的页表，但空间小</p>
+</li>
+</ul>
+<p>段的共享（标记当前多少进程正在使用，归零后才能写入）</p>
+<p>段的保护-&gt;</p>
+<ul>
+<li>
+<p>对于保存共享代码的段，任何进程都不能修改它</p>
+</li>
+<li>
+<p>对于具有保密要求的段，某些进程不能读取它</p>
+</li>
+<li>
+<p>对于属于系统数据的段，某些进程不能修改等</p>
+</li>
+</ul>
+<p><strong>考试原题</strong></p>
+<p>分段和分页的区别和优缺点</p>
+<p>页的大小是固定的，由操作系统决定，而段的大小不固定，取决于我们当前运行的程序。</p>
+<p>分页仅仅是为了满足操作系统内存管理的需求，而段是逻辑信息的单位，它含有一组其意义相对完整的信息，在程序中可以体现为代码段，数据段，是为了满足用户的需要。</p>
+<p>段一般比页大，因而段表比页表短，可以缩短查找时间，提高访问速度。</p>
+<p>分页对用户是透明的，分段对用户是可见的　　　　</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image-20240625235930590"
+    src="/img/image-20240625235930590.png"
+    ></figure>
+</p>
+
+<h2 class="relative group">第八章 文件
+    <div id="第八章-文件" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e5%85%ab%e7%ab%a0-%e6%96%87%e4%bb%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>物理结构（顺序、链接、索引、倒排、散列）</p>
+<p>文件块：逻辑块号 + 块内地址（和页面一个道理）</p>
+<p>fcb：类似pcb 存储首地址，长度等信息</p>
+<ul>
+<li>
+<p>顺序：整块的内存，用长度判越界</p>
+</li>
+<li>
+<p>链接：fcb存储块数，用指针形成链表</p>
+</li>
+<li>
+<p>索引：多加一个索引表，fcb存储索引表号和数量</p>
+</li>
+</ul>
+
+<h2 class="relative group">学习通简答题
+    <div id="学习通简答题" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%a6%e4%b9%a0%e9%80%9a%e7%ae%80%e7%ad%94%e9%a2%98" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group"><strong>作业、进程、线程（what，why）</strong>
+    <div id="作业进程线程whatwhy" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bd%9c%e4%b8%9a%e8%bf%9b%e7%a8%8b%e7%ba%bf%e7%a8%8bwhatwhy" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>见上述表达</p>
+
+<h3 class="relative group"><strong>忙式等待与排队等待</strong>
+    <div id="忙式等待与排队等待" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%bf%99%e5%bc%8f%e7%ad%89%e5%be%85%e4%b8%8e%e6%8e%92%e9%98%9f%e7%ad%89%e5%be%85" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>忙等待：当某进程正在使用临界区，其他试图进入临界区的进程都必须在进入区内连续空循环，会持续调用CPU查询临界区状态。</p>
+<p>排队等待：当某进程正在使用临界区，其他试图进入临界区的进程按顺序加入排队队列，当该临界区进入空闲时，给队首信号，让其进入临界区。在等待过程中不需要持续占用CPU。</p>
+
+<h3 class="relative group"><strong>区分进程间的互斥与同步</strong>
+    <div id="区分进程间的互斥与同步" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8c%ba%e5%88%86%e8%bf%9b%e7%a8%8b%e9%97%b4%e7%9a%84%e4%ba%92%e6%96%a5%e4%b8%8e%e5%90%8c%e6%ad%a5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>两者都属于进程的竞态，其都有多个进程竞争使用不能被同时使用的只有，使得其一定要出现时间上的先后处理。</p>
+<p>互斥指的是当一个进程进入临界区时，其他程序一定要等待，当其退出临界区后，另一个进程才能访问该临界资源，其临界资源的使用是互斥的，在宏观上是串行的。</p>
+<p>同步指的是进程间具有前后执行顺序要求的，具有某种合作关系。</p>
+
+<h3 class="relative group"><strong>面包店思路</strong>
+    <div id="面包店思路" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%9d%a2%e5%8c%85%e5%ba%97%e6%80%9d%e8%b7%af" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>说明一下面包店算法的思想? 如何实现的互斥与公平性问题?</p>
+<p>将每个线程想象成面包店的顾客，其想获得临界资源的操作为进入面包店，面包店每次只能进入一个人即临界资源只能同时被一个线程使用。想获取临界资源的线程获取一个号码，该号码逐次加一。但是当多个线程同时取号时，number修改前都进行了max，则他们会取到相同的number，但在执行时按照字典序进行。按照签到号码从小到大获取临界资源，完成后号码归零。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span>  
+</span></span><span class="line"><span class="cl"><span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">{</span><span class="n">number</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="err">…</span><span class="p">,</span><span class="n">number</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]}</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">For</span> <span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// 遍历 n 个进程  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">While</span> <span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>       <span class="c1">// 当有线程 j 正在获取号码，阻塞
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">While</span> <span class="p">((</span><span class="n">number</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">number</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">j</span><span class="p">)</span><span class="o">&lt;</span><span class="p">(</span><span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">i</span><span class="p">));</span> <span class="c1">// 如果找到线程 j 比 i 小，则等待 j 线程结束
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">i</span> <span class="err">进入临界区……</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 清空 i 的号码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span></code></pre></div><p>其中 i 是某个当前有想要进入临界区的线程，j 是遍历全部线程找有没有比 i 号码靠前的线程。</p>
+<blockquote>
+<p>书中表达是 (a,b) &lt; (c,d)</p>
+</blockquote>
+<p>A数组表示当前i是否正在取号，number数组表示取到的号码</p>
+<p><strong>互斥性</strong></p>
+<p>多个进程竞争进入临界区时, 抓到号且二元组(number[i],i)最小的进程获准进入临界区, 其它进程将在第一个while循环（ j正在抓号 ）或第二个while循环处（ 有比 i 更优先的 j）等待, 因而满足互斥性。</p>
+<p><strong>公平性</strong></p>
+<p>其本质上还是先进先出，一般情况下先申请的先获得号码，号码小的先执行。</p>
+<p><strong>进展性</strong></p>
+<p>只有一个线程申请进入临界区时，会直接执行。多个同时申请时，会有（number[i]，i）二元组最小的执行。</p>
+<p><strong>优先等待性</strong></p>
+<p>不会饿死</p>
+
+<h3 class="relative group"><strong>活动进程</strong>
+    <div id="活动进程" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b4%bb%e5%8a%a8%e8%bf%9b%e7%a8%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>管程机制中的&quot;活动进程“指的是什么进程?为什么在管程中只能有一个活动进程?</p>
+<p>活动进程：指的是处于就绪态或者是运行态的进程。
+管程每次只允许一个进程进入，从而实现了进程的互斥，避免死锁</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+  
+  
+    <h2 class="mt-8 text-2xl font-extrabold mb-10">相关文章</h2>
+    <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+  
+
+
+
+<article
+  class="relative min-h-full min-w-full overflow-hidden rounded border border-2 border-neutral-200 shadow-2xl dark:border-neutral-700">
+  
+  
+  <div class="px-6 py-4">
+    <header>
+      <a
+        
+          href="/posts/%E4%BB%8E%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          从记忆化搜索到动态规划
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+    
+      
+      
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <span>645 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    算法与数据结构
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    记忆化搜索
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    动态规划
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="prose dark:prose-invert py-1"></div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+      
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+  
+
+
+
+<article
+  class="relative min-h-full min-w-full overflow-hidden rounded border border-2 border-neutral-200 shadow-2xl dark:border-neutral-700">
+  
+  
+  <div class="px-6 py-4">
+    <header>
+      <a
+        
+          href="/posts/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E6%80%BB%E7%BB%93%E4%B8%8E%E4%BE%8B%E9%A2%98/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          “二分查找” 总结与例题
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+    
+      
+      
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <span>3315 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">7 分钟</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    算法与数据结构
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E4%BA%8C%E5%88%86/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    二分
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E6%A8%A1%E6%9D%BF/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    模板
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="prose dark:prose-invert py-1"></div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+      
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+  
+
+
+
+<article
+  class="relative min-h-full min-w-full overflow-hidden rounded border border-2 border-neutral-200 shadow-2xl dark:border-neutral-700">
+  
+  
+  <div class="px-6 py-4">
+    <header>
+      <a
+        
+          href="/posts/%E7%8C%AB%E5%92%8C%E8%80%81%E9%BC%A0-lc/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          从“猫和老鼠”题解看博弈题型
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+    
+      
+      
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <span>3540 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">8 分钟</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    算法与数据结构
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E5%8D%9A%E5%BC%88/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    博弈
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    动态规划
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E5%9B%BE%E8%AE%BA/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    图论
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    拓扑排序
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="prose dark:prose-invert py-1"></div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+      
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+  
+
+
+
+<article
+  class="relative min-h-full min-w-full overflow-hidden rounded border border-2 border-neutral-200 shadow-2xl dark:border-neutral-700">
+  
+  
+  <div class="px-6 py-4">
+    <header>
+      <a
+        
+          href="/posts/customer_churn/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          kaggle 顾客流失：课程报告
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+    
+      
+      
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <span>3091 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">7 分钟</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    机器学习
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/pytorch/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Pytorch
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    分类任务
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E8%AF%BE%E7%A8%8B%E6%8A%A5%E5%91%8A/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    课程报告
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="prose dark:prose-invert py-1"></div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+      
+    </section>
+  
+
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/os-note.md"
+          data-oid-likes="likes_posts/os-note.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/%E4%BB%8E%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;从记忆化搜索到动态规划
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-02-13T20:34:12&#43;08:00">2025 年 2 月 13 日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%94%E8%AF%95%E7%AC%94%E8%AE%B0/">
+              <span class="leading-6">
+                机器学习 - 应试笔记&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-02-14T18:10:27&#43;08:00">2025 年 2 月 14 日</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2025
+      陈驰水
+    </p>
+    
+    
+
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400" style="text-align: right; margin: 0;">
+      
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow" style="text-decoration: none; color: inherit; display: block; margin-bottom: 4px;">
+        京ICP备2025110615号
+      </a>
+      
+      <span style="display: inline-flex; align-items: center; justify-content: flex-end;">
+        <span style="display: inline-block; width: 16px; height: 16px; background-image: url('/img/beian.png'); background-size: contain; background-repeat: no-repeat; margin-right: 4px;"></span>
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11011502038545" rel="noreferrer" target="_blank" style="text-decoration: none; color: inherit;">
+          京公网安备11011502038545号
+        </a>
+      </span>
+    </p>
+
+    
+    
+
+  </div>
+
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+
+  
+  
+
+</footer>
+
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="https://blog.chencs.online/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

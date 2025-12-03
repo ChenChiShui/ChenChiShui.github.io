@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>动态规划 on 陈驰水-个人博客</title>
+    <link>https://blog.chencs.online/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+    <description>Recent content in 动态规划 on 陈驰水-个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-ch</language>
+    <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
+    <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
+    <copyright>© 2025 陈驰水</copyright>
+    <lastBuildDate>Fri, 21 Feb 2025 14:48:57 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/index.xml" rel="self" type="application/rss+xml" />
+    <follow_challenge>
+      <feedId>your-rss-feed</feedId>
+      <userId>your-rss-user</userId>
+    </follow_challenge>
+    
+    
+    <item>
+      <title>“资源分配型” 动态规划总结</title>
+      <link>https://blog.chencs.online/posts/%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D%E5%BC%8F%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+      <pubDate>Fri, 21 Feb 2025 14:48:57 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/posts/%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D%E5%BC%8F%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>从记忆化搜索到动态规划</title>
+      <link>https://blog.chencs.online/posts/%E4%BB%8E%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+      <pubDate>Thu, 13 Feb 2025 20:34:12 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/posts/%E4%BB%8E%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>从“猫和老鼠”题解看博弈题型</title>
+      <link>https://blog.chencs.online/posts/%E7%8C%AB%E5%92%8C%E8%80%81%E9%BC%A0-lc/</link>
+      <pubDate>Mon, 10 Feb 2025 15:55:43 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/posts/%E7%8C%AB%E5%92%8C%E8%80%81%E9%BC%A0-lc/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
