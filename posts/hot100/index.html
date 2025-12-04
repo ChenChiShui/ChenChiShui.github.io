@@ -271,7 +271,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "19839"
+    "wordCount": "20149"
   }]
   </script>
 
@@ -933,7 +933,7 @@ window.addEventListener("scroll", function (e) {
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-21T22:27:38&#43;08:00">2025 年 11 月 21 日</time><span class="px-2 text-primary-500">&middot;</span><span>19839 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">40 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <time datetime="2025-11-21T22:27:38&#43;08:00">2025 年 11 月 21 日</time><span class="px-2 text-primary-500">&middot;</span><span>20149 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">41 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1236,6 +1236,12 @@ window.addEventListener("scroll", function (e) {
     <li><a href="#动态规划">动态规划</a></li>
     <li><a href="#多维动态规划">多维动态规划</a></li>
     <li><a href="#技巧">技巧</a></li>
+    <li><a href="#备忘录">备忘录</a>
+      <ul>
+        <li><a href="#完整输入输出">完整输入输出</a></li>
+        <li><a href="#import-包">import 包</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -1266,6 +1272,12 @@ window.addEventListener("scroll", function (e) {
     <li><a href="#动态规划">动态规划</a></li>
     <li><a href="#多维动态规划">多维动态规划</a></li>
     <li><a href="#技巧">技巧</a></li>
+    <li><a href="#备忘录">备忘录</a>
+      <ul>
+        <li><a href="#完整输入输出">完整输入输出</a></li>
+        <li><a href="#import-包">import 包</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -1392,6 +1404,16 @@ window.addEventListener("scroll", function (e) {
 <p>此外，还有些面试常见题也会写在后面。</p>
 <p>和  &lsquo;算法题 - 分类索引&rsquo; 有一定的重复。</p>
 <p>HOT 100 的分类其实有点问题，暂时先按顺序写了，比如很多题的知识点和类别就关系不大。</p>
+<hr>
+<blockquote>
+<p>此文章全部用 python，我也建议面试全部使用 python，原因如下：</p>
+<ol>
+<li>现在很多面试会搓 torch，直接用 python 写代码题避免切换麻烦</li>
+<li>python 功能更强大且写的快，比如切片和 @cache 等</li>
+<li>面试一般不要求大样本，python 的速度劣势体现不出来</li>
+<li>python 语法不严格，避免了面试看到编译错误紧张</li>
+</ol>
+</blockquote>
 
 <h2 class="relative group">哈希
     <div id="哈希" class="anchor"></div>
@@ -4549,6 +4571,83 @@ rose -&gt; ros (删除 &#39;e&#39;)
 </span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">fast</span>
 </span></span><span class="line"><span class="cl">            
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span>
+</span></span></code></pre></div>
+<h2 class="relative group">备忘录
+    <div id="备忘录" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%87%e5%bf%98%e5%bd%95" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">完整输入输出
+    <div id="完整输入输出" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ae%8c%e6%95%b4%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>尤其涉及到 class 的代码，类和完整输入输出可能会忘了怎么写。</p>
+<p>下面以反转链表的题目为例，完整版本如下。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">node</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">next</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="nb">next</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">reversed_list</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pre</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cur</span> <span class="o">=</span> <span class="n">head</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">cur</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tmp</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cur</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">pre</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pre</span> <span class="o">=</span> <span class="n">cur</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cur</span> <span class="o">=</span> <span class="n">tmp</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pre</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dummy</span> <span class="o">=</span> <span class="n">node</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cur</span> <span class="o">=</span> <span class="n">dummy</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">arr</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tmp</span> <span class="o">=</span> <span class="n">node</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cur</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">tmp</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cur</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dummy</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_node</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cur</span> <span class="o">=</span> <span class="n">head</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">cur</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">cur</span><span class="o">.</span><span class="n">val</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cur</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">arr</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">head</span> <span class="o">=</span> <span class="n">build</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">    <span class="n">head_re</span> <span class="o">=</span> <span class="n">reversed_list</span><span class="p">(</span><span class="n">head</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">print_node</span><span class="p">(</span><span class="n">head_re</span><span class="p">)</span>
+</span></span></code></pre></div>
+<h3 class="relative group">import 包
+    <div id="import-包" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#import-%e5%8c%85" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">bisect</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 递归防止爆栈</span>
+</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">setrecursionlimit</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">)</span>
 </span></span></code></pre></div>
           
           
