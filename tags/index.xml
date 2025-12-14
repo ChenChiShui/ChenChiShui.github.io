@@ -9,7 +9,7 @@
     <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
     <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
     <copyright>© 2025 陈驰水</copyright>
-    <lastBuildDate>Tue, 02 Sep 2025 20:34:12 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Dec 2025 19:33:19 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/tags/index.xml" rel="self" type="application/rss+xml" />
     <follow_challenge>
       <feedId>your-rss-feed</feedId>
       <userId>your-rss-user</userId>
@@ -17,11 +17,41 @@
     
     
     <item>
+      <title>Attention</title>
+      <link>https://blog.chencs.online/tags/attention/</link>
+      <pubDate>Sun, 14 Dec 2025 19:33:19 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/tags/attention/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>LLM</title>
       <link>https://blog.chencs.online/tags/llm/</link>
-      <pubDate>Tue, 02 Sep 2025 20:34:12 +0800</pubDate>
+      <pubDate>Sun, 14 Dec 2025 19:33:19 +0800</pubDate>
       <author>walter.chen.bj@gmail.com (陈驰水)</author>
       <guid>https://blog.chencs.online/tags/llm/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>https://blog.chencs.online/tags/pytorch/</link>
+      <pubDate>Sun, 14 Dec 2025 19:33:19 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/tags/pytorch/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>HOT100</title>
+      <link>https://blog.chencs.online/tags/hot100/</link>
+      <pubDate>Fri, 21 Nov 2025 22:27:38 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/tags/hot100/</guid>
       <description></description>
       
     </item>
@@ -37,31 +67,11 @@
     </item>
     
     <item>
-      <title>Attention</title>
-      <link>https://blog.chencs.online/tags/attention/</link>
-      <pubDate>Thu, 17 Jul 2025 20:34:12 +0800</pubDate>
-      <author>walter.chen.bj@gmail.com (陈驰水)</author>
-      <guid>https://blog.chencs.online/tags/attention/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>环境安装</title>
       <link>https://blog.chencs.online/tags/%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</link>
       <pubDate>Thu, 17 Jul 2025 20:34:12 +0800</pubDate>
       <author>walter.chen.bj@gmail.com (陈驰水)</author>
       <guid>https://blog.chencs.online/tags/%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Pytorch</title>
-      <link>https://blog.chencs.online/tags/pytorch/</link>
-      <pubDate>Thu, 06 Mar 2025 19:33:19 +0800</pubDate>
-      <author>walter.chen.bj@gmail.com (陈驰水)</author>
-      <guid>https://blog.chencs.online/tags/pytorch/</guid>
       <description></description>
       
     </item>

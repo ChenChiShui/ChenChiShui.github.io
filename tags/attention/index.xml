@@ -9,12 +9,22 @@
     <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
     <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
     <copyright>© 2025 陈驰水</copyright>
-    <lastBuildDate>Thu, 17 Jul 2025 20:34:12 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/tags/attention/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Dec 2025 19:33:19 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/tags/attention/index.xml" rel="self" type="application/rss+xml" />
     <follow_challenge>
       <feedId>your-rss-feed</feedId>
       <userId>your-rss-user</userId>
     </follow_challenge>
     
+    
+    <item>
+      <title>PyTorch手搓网络结构</title>
+      <link>https://blog.chencs.online/posts/pytorch_hand_by_hand/</link>
+      <pubDate>Sun, 14 Dec 2025 19:33:19 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/posts/pytorch_hand_by_hand/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>FlashAttention - 论文阅读与安装技巧</title>

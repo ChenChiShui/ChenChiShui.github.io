@@ -9,12 +9,22 @@
     <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
     <webMaster>walter.chen.bj@gmail.com (陈驰水)</webMaster>
     <copyright>© 2025 陈驰水</copyright>
-    <lastBuildDate>Fri, 21 Nov 2025 22:27:38 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Dec 2025 19:33:19 +0800</lastBuildDate><atom:link href="https://blog.chencs.online/categories/index.xml" rel="self" type="application/rss+xml" />
     <follow_challenge>
       <feedId>your-rss-feed</feedId>
       <userId>your-rss-user</userId>
     </follow_challenge>
     
+    
+    <item>
+      <title>机器学习</title>
+      <link>https://blog.chencs.online/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 14 Dec 2025 19:33:19 +0800</pubDate>
+      <author>walter.chen.bj@gmail.com (陈驰水)</author>
+      <guid>https://blog.chencs.online/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>算法与数据结构</title>
@@ -42,16 +52,6 @@
       <pubDate>Tue, 02 Sep 2025 20:34:12 +0800</pubDate>
       <author>walter.chen.bj@gmail.com (陈驰水)</author>
       <guid>https://blog.chencs.online/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>机器学习</title>
-      <link>https://blog.chencs.online/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Thu, 06 Mar 2025 19:33:19 +0800</pubDate>
-      <author>walter.chen.bj@gmail.com (陈驰水)</author>
-      <guid>https://blog.chencs.online/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
       
     </item>
