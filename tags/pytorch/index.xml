@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pytorch on 陈驰水-个人博客</title>
+    <title>PyTorch on 陈驰水-个人博客</title>
     <link>https://blog.chencs.online/tags/pytorch/</link>
-    <description>Recent content in Pytorch on 陈驰水-个人博客</description>
+    <description>Recent content in PyTorch on 陈驰水-个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-ch</language>
     <managingEditor>walter.chen.bj@gmail.com (陈驰水)</managingEditor>
