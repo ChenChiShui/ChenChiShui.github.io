@@ -194,8 +194,8 @@
       defer
       type="text/javascript"
       id="script-bundle"
-      src="/js/main.bundle.min.9cc802d09f28c6af56ceee7bc6e320a39251fdae98243f2a9942f221ac57a9f49c51609699a91794a7b2580ee1deaa8e4d794a68ffa94aa317c66e893ce51e02.js"
-      integrity="sha512-nMgC0J8oxq9Wzu57xuMgo5JR/a6YJD8qmULyIaxXqfScUWCWmakXlKeyWA7h3qqOTXlKaP&#43;pSqMXxm6JPOUeAg=="
+      src="/js/main.bundle.min.c586c752b99483da1d0b024cb91220f5defda40000f3549b073a52dea6c99c78c50d376eb71e78969112c5dbc24bc4001182bd096c47d2e025053efd92d91b4c.js"
+      integrity="sha512-xYbHUrmUg9odCwJMuRIg9d79pAAA81SbBzpS3qbJnHjFDTdutx54lpESxdvCS8QAEYK9CWxH0uAlBT79ktkbTA=="
       data-copy="复制"
       data-copied="已复制"></script>
   
@@ -957,7 +957,7 @@ window.addEventListener("scroll", function (e) {
     
     <img
       id="background-image"
-      src="/img/hero1_hu_28a323972c46b86b.png"
+      src="/img/hero1_hu_ee8549f9d35a1c31.png"
       alt="从“猫和老鼠”题解看博弈题型"
       loading="eager"
       decoding="async"
@@ -978,11 +978,11 @@ window.addEventListener("scroll", function (e) {
     
     <script
       type="text/javascript"
-      src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
-      integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+      src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+      integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
       data-blur-id="background-blur"
       data-image-id="background-image"
-      data-image-url="/img/hero1_hu_28a323972c46b86b.png"></script>
+      data-image-url="/img/hero1_hu_ee8549f9d35a1c31.png"></script>
   
       
     
@@ -1225,8 +1225,8 @@ window.addEventListener("scroll", function (e) {
         width="96"
         height="96"
         alt="陈驰水"
-        src="/img/avatar1_hu_63b293dd7b22b4b6.png"
-        data-zoom-src="/img/avatar1_hu_543b8db368682948.png">
+        src="/img/avatar1_hu_ccf60d48b2d2b275.png"
+        data-zoom-src="/img/avatar1_hu_65998a9a90e5bf3.png">
     
   
   <div class="place-self-center">
@@ -1754,9 +1754,9 @@ OOOO OOOO OOOO OOOO
 <p>请问，对于以上四种情况，如果小蓝和小乔都是按照对自己最优的策略来玩游戏，小蓝是否能获胜。如果获胜，请用 V 表示，否则用 L 表示。请将四种情况的胜负结果按顺序连接在一起提交。</p>
 <p><strong>24年题解如下</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">check</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">){</span><span class="c1">//判断是否只有一个O
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">   <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">s</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">       <span class="n">cnt</span> <span class="o">+=</span> <span class="n">i</span><span class="o">==</span><span class="sc">&#39;O&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
@@ -1766,16 +1766,16 @@ OOOO OOOO OOOO OOOO
 </span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">   <span class="k">if</span><span class="p">(</span><span class="n">mp</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">s</span><span class="p">))</span><span class="k">return</span> <span class="n">mp</span><span class="p">[</span><span class="n">s</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">   <span class="k">if</span><span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">s</span><span class="p">)){</span><span class="c1">//当当前状态只有一个O时标记为必败态
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>       <span class="n">mp</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">       <span class="n">mp</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">       <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="c1">// 核心思路是只有遍历能到达一个必败态，此态就是必胜的（两人都是最优策略）
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="c1">// 如果一个必败态都无法到达，此态就是必败的
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="c1">// 进行记忆化搜素
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   
+</span></span></span><span class="line"><span class="cl">   <span class="c1">// 如果一个必败态都无法到达，此态就是必败的
+</span></span></span><span class="line"><span class="cl">   <span class="c1">// 进行记忆化搜素
+</span></span></span><span class="line"><span class="cl">   
 </span></span><span class="line"><span class="cl">   <span class="c1">// 放置一个
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span> <span class="o">++</span><span class="p">){</span>
+</span></span></span><span class="line"><span class="cl">   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span> <span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">       <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;O&#39;</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">           <span class="n">string</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">           <span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;X&#39;</span><span class="p">;</span>
@@ -1786,7 +1786,7 @@ OOOO OOOO OOOO OOOO
 </span></span><span class="line"><span class="cl">       <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">// 放置两个
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span> <span class="o">++</span><span class="p">){</span>
+</span></span></span><span class="line"><span class="cl">   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span> <span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">       <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;O&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;O&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">           <span class="n">string</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">           <span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;X&#39;</span><span class="p">;</span>
@@ -1979,42 +1979,42 @@ OOOO OOOO OOOO OOOO
     
 </h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">   <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">   <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">graph</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">   <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">inDegree</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// 记录每个节点的入度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="c1">// 读取边信息
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">   <span class="c1">// 读取边信息
+</span></span></span><span class="line"><span class="cl">   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">       <span class="kt">int</span> <span class="n">from</span><span class="p">,</span> <span class="n">to</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">       <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">from</span> <span class="o">&gt;&gt;</span> <span class="n">to</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">       <span class="n">graph</span><span class="p">[</span><span class="n">from</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">to</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">       <span class="n">inDegree</span><span class="p">[</span><span class="n">to</span><span class="p">]</span><span class="o">++</span><span class="p">;</span> <span class="c1">// 目标节点的入度增加
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">// 小顶堆（优先队列）保证字典序最小
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">priority_queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">greater</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">q</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">   <span class="n">priority_queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">greater</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">q</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">// 将所有入度为 0 的节点入队
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">       <span class="k">if</span> <span class="p">(</span><span class="n">inDegree</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">           <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">       <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">topoOrder</span><span class="p">;</span> <span class="c1">// 记录拓扑排序结果
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">   <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">       <span class="kt">int</span> <span class="n">node</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">       <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">       <span class="n">topoOrder</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">       <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">neighbor</span> <span class="p">:</span> <span class="n">graph</span><span class="p">[</span><span class="n">node</span><span class="p">])</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">           <span class="n">inDegree</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span><span class="o">--</span><span class="p">;</span> <span class="c1">// 删除当前节点的出边
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>           <span class="k">if</span> <span class="p">(</span><span class="n">inDegree</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 若入度变为 0，则加入队列
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>               <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">neighbor</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">           <span class="k">if</span> <span class="p">(</span><span class="n">inDegree</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 若入度变为 0，则加入队列
+</span></span></span><span class="line"><span class="cl">               <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">neighbor</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">           <span class="p">}</span>
 </span></span><span class="line"><span class="cl">       <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">// 如果排序结果中的节点数小于总节点数，说明有环
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">if</span> <span class="p">(</span><span class="n">topoOrder</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">   <span class="k">if</span> <span class="p">(</span><span class="n">topoOrder</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;unworkable project&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">       <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">node</span> <span class="p">:</span> <span class="n">topoOrder</span><span class="p">)</span> <span class="p">{</span>
