@@ -415,7 +415,7 @@
     "keywords": ["PyTorch","LLM","attention"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2485"
+    "wordCount": "2534"
   }]
   </script>
 
@@ -1077,7 +1077,7 @@ window.addEventListener("scroll", function (e) {
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-14T19:33:19&#43;08:00">2025 年 12 月 14 日</time><span class="px-2 text-primary-500">&middot;</span><span>2485 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">5 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <time datetime="2025-12-14T19:33:19&#43;08:00">2025 年 12 月 14 日</time><span class="px-2 text-primary-500">&middot;</span><span>2534 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1581,10 +1581,10 @@ window.addEventListener("scroll", function (e) {
 </h2>
 <p>经典题：用梯度下降法求 $\sqrt{x}$
 由于有
-$$ \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 $$
-带尖的 $\hat{y}_i$ 是第 $i$ 个样本的预测值
-$y_i$ 是第 $i$ 个样本真实值
-因此此题就是把 $x^2$ 作为更新值去拟合输入 $y$
+$$ \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 $$</p>
+<p>$\hat{y}_i$ 是第 $i$ 个样本的预测值</p>
+<p>$y_i$ 是第 $i$ 个样本真实值</p>
+<p>因此此题就是把 $x^2$ 作为更新值去拟合输入 $y$
 带入 MSE 公式对 $x$ 求梯度，就有 $\nabla = 4x(x^2 - y)$</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="mi">500</span>
 </span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">/</span> <span class="mi">2</span>
@@ -1694,10 +1694,15 @@ y = 2.00x + 1.00
 <p>带有温度的公式是</p>
 <p>$$P(y_i) = \frac{\exp(z_i / T)}{\sum_{j} \exp(z_j / T)}$$</p>
 <p>T = 1 就是原始公式，T 越大越平滑，T 越小越尖锐</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">):</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span> <span class="c1"># 不考虑维度的版本</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span> <span class="o">/</span> <span class="n">T</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">exps</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">exps</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>  <span class="c1"># 考虑维度和数值溢出的版本</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># logits: shape (batch_size, num_classes)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">logits_stable</span> <span class="o">=</span> <span class="n">logits</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># 防止数值溢出</span>
-</span></span><span class="line"><span class="cl">    <span class="n">exps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">logits_stable</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">logits_stable</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span>  <span class="c1"># 在指数运算前除以温度 T</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">exps</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">exps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">logits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
 </span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
